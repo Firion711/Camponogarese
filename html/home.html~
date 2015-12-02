@@ -10,8 +10,9 @@
 	<meta name="language" content="italian it" />
 	<!-- Come mettere più author? 1 meta con più nomi, separati da virgola, o più meta (valida)-->
 	<meta name="author" content="Emanuele Carraro" />
-	<link rel="stylesheet" type="text/css" href="..\css\style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 
+	<meta http-equiv="refresh" content="3" />
 </head>
 
 <body>
@@ -19,23 +20,19 @@
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+		<!-- aggiungere action -->
+		<form method="post" action="">
+			<fieldset>
+				<!-- Rivedere maxlenght -->
+				<legend>Ricerca</legend>
+				<label for="searchinput">Cerca</label>
+				<input name="searchinput" id="searchinput" value="Inserire il testo da ricercare " maxlength="30" />
+			</fieldset>
+		</form>
 	</div>
 
 	<div id="path">
 		<p>Ti trovi in: <span xml:lang="en">Home</span></p>
-	</div>
-
-	<!-- menu "rapido" di fianco al logo, orientamento orizzontale -->
-	<!-- modificato in casella di ricerca -->
-	<div id="search">
-		<!-- aggiungere action -->
-		<form method="post" action="">
-			<fieldset>
-				<legend>Casella di ricerca</legend>
-				<!-- Rivedere maxlenght -->
-				<input name="SearchInput" id="SearchInput" value="Inserire il testo da ricercare " maxlength="30" />
-			</fieldset>
-		</form>
 	</div>
 
 	<!-- menu laterale sotto al logo, orientamento verticale -->

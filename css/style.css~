@@ -10,16 +10,22 @@ body, html{
 	font-family: Verdana, Helvetica, sans-serif;
 	/*Controllare che il bg-color sia compatibile*/
 	background-color: #FFCC99;
-	/*Mettere width?*/
 }
+
+body {
+	width: 90%;
+	border: 2px solid black;
+}
+
+/* Sezione header */
 
 #header{
 	background-color: #C63939;
-	padding: 1em;
 	padding-top: 0.1em;
-	padding-bottom: 1.0em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
 	color:black;
-	height: 6em;
 }
 
 #logo{
@@ -27,25 +33,40 @@ body, html{
 	display: block;
 	/*Controllare width e height...*/
 	width: 10%;
-	height: 5em;
+	height: 6em;
 	float: left;
 	/*Il logo lo lasciamo in formato jpg?*/
 	background-image: url(../immagini/logo.jpg);
 	background-repeat:no-repeat;
 	/*RI-controllare le proporzioni per il logo*/
-	margin-top: 0.5em;
-	margin-left: 1.5em;
-	margin-bottom: 0.5em;
-	margin-right: 1.5em;
-	padding-left: 1.0em;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	padding-right: 1.0em;
+	margin-top: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 #header h1 {
 	padding-top: 1em;
+	margin-bottom:1.5em;
 }
+
+#header form {
+	display: block;
+	/*Controllare width e height...*/
+	float: right;
+	margin-top: 5.5em;
+	margin-left:0.5em;
+}
+
+#header form fieldset {
+	border: none;
+}
+
+#header legend {
+	font-size: 0;
+	margin-left: -99999em;
+}
+
+/* Sezione path */
 
 #path {
     background-color: #000;
@@ -54,32 +75,13 @@ body, html{
     padding-left: 1.0em;
 }
 
-#search{
-	float: right;
-	width: 20%;
-	padding-top:1em;
-	padding-right: 2em;
-}
-
-#search legend {
-	font-size: 0.8em;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-
-#search input {
-	padding-left: 1em;
-	margin-left: 0.5em;
-	margin-bottom: 0.5em;
-}
-
 #menu{
 	float: left;
 	width: 18%;
 	margin-top: 1.0em;
-	margin-right: 1.0em;
+	margin-right: 1em;
 	margin-bottom: 1.0em;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 
 #menu ul {
@@ -88,7 +90,7 @@ body, html{
 
 #CurrentLink {
 	float: left;
-	width: 90%;
+	width: 100%;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	/*Controllare se il colore va bene*/
@@ -100,7 +102,7 @@ body, html{
 
 #menu a{
 	float: left;
-	width: 90%;
+	width: 100%;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
     color: white;
@@ -153,7 +155,6 @@ body, html{
 /* Sezione News */
 #news {
 	border: 0.2em solid black;
-	margin-top: 1em;
 	margin-top: 1.0em;
 	margin-left: 1.0em;
 	margin-right: 1.0em;
