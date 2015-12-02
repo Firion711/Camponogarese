@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+	<title>Squadra Calcio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="title" content="Associazione calcistica dilettantistica Camponogarese" />
+	<meta name="description" content="Home page del sito A.C.D. Camponogarese" />
+	<!-- Aggiungere categorie? es: pulcini camponogara, esordienti camponogara... -->
+	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita" />
+	<meta name="language" content="italian it" />
+	<!-- Come mettere più author? 1 meta con più nomi, separati da virgola, o più meta (valida)-->
+	<meta name="author" content="Emanuele Carraro" />
+	<link rel="stylesheet" type="text/css" href="..\css\style.css" />
+
+</head>
+
+<body>
+	<div id="header">
+		<!-- questo span viola la divisione tra presentazione e struttura -->
+		<span id="logo"></span>
+		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+	</div>
+
+	<div id="path">
+		<p>Ti trovi in: <a href="home.html" xml:lang="en">Home</a> &gt;&gt; Orari</p>
+	</div>
+
+	<!-- menu "rapido" di fianco al logo, orientamento orizzontale -->
+	<!-- modificato in casella di ricerca -->
+	<div id="search">
+		<!-- aggiungere action -->
+		<form method="post" action="">
+			<fieldset>
+				<legend>Casella di ricerca</legend>
+				<!-- Rivedere maxlenght -->
+				<input name="SearchInput" id="SearchInput" value="Inserire il testo da ricercare " maxlength="30" />
+			</fieldset>
+		</form>
+	</div>
+
+	<!-- menu laterale sotto al logo, orientamento verticale -->
+	<div id="menu">
+		<ul>
+			<!-- Controllare se ci va lo span... -->
+			<li><a href="home.html"><span xml:lang="en">Home Page</span></a></li>
+			<li><a href="info.html">Chi siamo</a></li>
+			<li><a href="squadre.html">Squadre</a></li>
+			<!-- Modifica: Ho diviso orari e squadre; -->
+			<li id="CurrentLink">Orari</li>
+			<!-- Photo Gallery in una pagina diversa dalla home -->
+			<li><span xml:lang="en"><a href="gallery.html">Photo Gallery</a></span></li>
+			<li><a href="dovesiamo.html">Dove siamo</a></li>
+			<li><a href="contatti.html">Contatti</a></li>
+		</ul>
+	</div>
+
+	<div id="section">
+		<table id="tabellaOrari"  summary="summario_tabella">
+			<caption>Orari</caption>
+			<tr class="tabHeaders">
+				<th class="tabHeaders" scope="col">Squadra</th>
+				<th class="tabHeaders" scope="col">Luned&igrave;</th>
+				<th class="tabHeaders" scope="col">Marted&igrave;</th>
+				<th class="tabHeaders" scope="col">Mercoled&igrave;</th>
+				<th class="tabHeaders" scope="col">Gioved&igrave;</th>
+				<th class="tabHeaders" scope="col">Venerd&igrave;</th>
+				<th class="tabHeaders" scope="col">Sabato</th>
+				<th class="tabHeaders" scope="col">Domenica</th>
+			</tr>
+			<tr>
+				<th class="tabHeaders" scope="row">Piccoli amici</th>
+				<td>15:30-18:30</td>
+				<td></td>
+				<td>15:30-18:30</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+			<th class="tabHeaders" scope="row">Esordienti</th>
+			<td></td>
+			<td>15:30-18:30</td>
+			<td></td>
+			<td>15:30-18:30</td>
+			<td></td>
+			<td></td>
+			<td></td>
+	
+			</tr>
+			<tr>
+				<th class="tabHeaders" scope="row">Prima squadra</th>	
+				<td></td>
+				<td></td>
+				<td>19:00-21:00</td>
+				<td></td>
+				<td>15:30-18:30</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="footer">
+		<img class="imgValidCode" src="..\immagini\valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" src="..\immagini\vcss.gif" alt="CSS valido" />
+	</div>
+</body>
+</html>
