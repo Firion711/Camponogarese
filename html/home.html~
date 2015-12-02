@@ -12,8 +12,6 @@
 	<meta name="author" content="Emanuele Carraro" />
 	<link rel="stylesheet" type="text/css" href="..\css\style.css" />
 
-	<!-- Per il refresh della pagina, da togliere; -->
-	<meta http-equiv="refresh" content="5" />
 </head>
 
 <body>
@@ -66,12 +64,16 @@
 					<li class="alternate">News 1</li>
 					<li>News 2</li>
 					<li class="alternate">News 3</li>
+					<li>News 4</li>
+					<li class="alternate">News 5</li>
+					<li>News 6</li>
+					<li class="alternate">News 7</li>
 				</ul>
 		</div>
 	</div>
 
 	<div id="footer">
-		<img class="imgValidCode" src="..\immagini\valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" src="..\immagini\vcss.gif" alt="CSS valido" />
+		<img class="imgValidCode" src="../immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" src="../immagini/vcss.gif" alt="CSS valido" />
 	</div>
 </body>
 </html>
