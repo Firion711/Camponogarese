@@ -79,9 +79,9 @@ body {
 	float: left;
 	width: 18%;
 	margin-top: 1.0em;
-	margin-right: 1em;
+	margin-right: 1%;
 	margin-bottom: 1.0em;
-	margin-left: 1em;
+	margin-left: 1%;
 }
 
 #menu ul {
@@ -179,4 +179,10 @@ body {
 
 #news ul > li {
 	color: #333;
+}
+
+.immev {
+
+width:100px;
+height:100px;
 }
