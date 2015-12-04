@@ -10,9 +10,9 @@
 	<meta name="language" content="italian it" />
 	<!-- Come mettere più author? 1 meta con più nomi, separati da virgola, o più meta (valida)-->
 	<meta name="author" content="Emanuele Carraro, Davide Santimaria" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 
-<!--	<meta http-equiv="refresh" content="3" /> -->
+	<meta http-equiv="refresh" content="3" />
 </head>
 
 <body>
@@ -53,21 +53,16 @@
 	</div>
 
 	<div id="section">
-		<h1>Presentazione</h1>
-		<p>Testo presentazione...</p>
-		<span id="immPres">Immagine presentazione </span>
-		<div id="news">
-			<h1>Ultime novit&agrave;</h1>
-				<ul>
-					<li class="alternate">News 1</li>
-					<li>News 2</li>
-					<li class="alternate">News 3</li>
-					<li>News 4</li>
-					<li class="alternate">News 5</li>
-					<li>News 6</li>
-					<li class="alternate">News 7</li>
-				</ul>
-		</div>
+		<h1 id="contenuto">Dove siamo</h1>
+				<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo</p>
+				<p>Indirizzo: Via Parolini, 11 30010 Camponogara VE</p>
+				<p>Telefono: 041 462804 </p>
+				<div id="divMappa">
+					<p>Consulta la seguente mappa:</p>
+					<div id="visualizzaMappa">
+						<a href="https://www.google.it/maps/place/Via+Parolini,+11,+30010+Camponogara+VE/@45.3842953,12.075781,17z/data=!4m2!3m1!1s0x477ec7ace369e9db:0xfe2a4c9605f9ae2b"><img id="Gmap" src="images/map.png" alt="Mappa della posizione del campo" /></a>
+					</div>
+				</div>
 	</div>
 
 	<div id="footer">

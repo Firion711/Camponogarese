@@ -9,7 +9,7 @@ body, html{
 	/*Da rivedere il font-family;*/
 	font-family: Verdana, Helvetica, sans-serif;
 	/*Controllare che il bg-color sia compatibile*/
-	background-color: #FFCC99;
+	background-color: #D9D9D9;
 }
 
 body {
@@ -20,12 +20,12 @@ body {
 /* Sezione header */
 
 #header{
-	background-color: #C63939;
+	background-color: #660000;
 	padding-top: 0.1em;
 	padding-bottom: 0.5em;
 	padding-left: 1em;
 	padding-right: 1em;
-	color:black;
+	color: white;
 }
 
 #logo{
@@ -96,7 +96,7 @@ body {
 	/*Controllare se il colore va bene*/
     color: black;
 	text-decoration: none;
-	background-color: #CC3300;
+	background-color: #660000;
 	text-align: center;
 }
 
@@ -107,17 +107,14 @@ body {
 	padding-bottom: 0.5em;
     color: white;
 	text-decoration: none;
-	background-color: #CC3300;
+	background-color: #660000;;
 	text-align: center;
 }
 
-/* Cambiare colore */
-#menu a:visited {
-	color: #A0A;
-}
+/*a:visited colore diverso???*/
 
 #menu a:hover {
-	background-color: orange;
+	background-color: #990000;
 }
 
 /*Sistemare l'inquadratura...*/
@@ -183,6 +180,6 @@ body {
 
 .immev {
 
-width:100px;
-height:100px;
+width:300px;
+height:300px;
 }
