@@ -23,7 +23,6 @@
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
-		<!-- aggiungere action -->
 	</div>
 
 	<div id="path">
@@ -33,13 +32,10 @@
 	<!-- menu laterale sotto al logo, orientamento verticale -->
 	<div id="menu">
 		<ul>
-			<!-- Modifica: Ho tolto la possibilita' di cliccare su Home Page, ci siamo già -->
 			<li><a href="index.html"><span xml:lang="en">Home Page</span></a></li>
 			<li><a href="info.html">Chi siamo</a></li>
 			<li><a href="squadre.html">Squadre</a></li>
-			<!-- Modifica: Ho diviso orari e squadre; -->
 			<li><a href="orario.html">Orari</a></li>
-			<!-- Photo Gallery in una pagina diversa dalla home -->
 			<li><span xml:lang="en"><a href="photogallery.html">Photo Gallery</a></span></li>
 			<li id="CurrentLink">Dove siamo</li>
 			<li><a href="contatti.html">Contatti</a></li>
@@ -52,14 +48,21 @@
 				<input class="casella_input" id="cerca" value="Cerca... " />
 			</fieldset>
 		</form>
-		<h1 id="contenuto">Dove siamo</h1>
-				<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo</p>
+
+		<h1>Dove siamo</h1>
+			<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo</p>
+			<div id="info">
 				<p>Indirizzo: Via Parolini, 11 30010 Camponogara VE</p>
 				<p>Telefono: 041 462804 </p>
-				<div id="divMappa">
+				<!-- Inserire indirizzo email, href con "mailto:..." -->
+				<p>E-mail: <a href="">nomeutente@dominio</a></p>
+			</div>
+
+			<!-- in javascript, aggiungere funzione onload per rimpiazzare la mappa-->
+			<div id="divMappa">
 					<p>Consulta la seguente mappa:</p>
 					<div id="visualizzaMappa">
-						<a href="https://www.google.it/maps/place/Via+Parolini,+11,+30010+Camponogara+VE/@45.3842953,12.075781,17z/data=!4m2!3m1!1s0x477ec7ace369e9db:0xfe2a4c9605f9ae2b"><img id="Gmap" src="images/map.png" alt="Mappa della posizione del campo" width="20%" height="20%"/></a>
+						<a href="https://www.google.it/maps/place/Via+Parolini,+11,+30010+Camponogara+VE/@45.384382,12.075781,17z/data=!4m2!3m1!1s0x477ec7ace369e9db:0xfe2a4c9605f9ae2b"><img id="googleMaps" src="../immagini/mappa.png" alt="Mappa della posizione del campo" width="100%" height="100%"/></a>
 					</div>
 				</div>
 	</div>
