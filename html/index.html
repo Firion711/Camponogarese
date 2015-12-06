@@ -14,6 +14,7 @@
 	<meta name="author" content="Jordan Gottardo" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 
+<!--	<meta http-equiv="refresh" content="3" /> -->
 </head>
 
 <body>
@@ -21,47 +22,65 @@
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+		<!-- aggiungere action -->
 	</div>
 
 	<div id="path">
-		<p>Ti trovi in: <a href="../index.html" xml:lang="en">Home</a> &gt;&gt; 
-		<a href="photogallery.html" xml:lang="en">Photo gallery</a></p> &gt;&gt; Evento1
+		<p>Ti trovi in: <span xml:lang="en">Home</span></p>
 	</div>
-
-	<!-- menu "rapido" di fianco al logo, orientamento orizzontale -->
-	<!-- modificato in casella di ricerca -->
 
 	<!-- menu laterale sotto al logo, orientamento verticale -->
 	<div id="menu">
 		<ul>
-			<!-- Controllare se ci va lo span... -->
-			<li><a href="index.html"><span xml:lang="en">Home</span></a></li>
+			<li id="CurrentLink"><span xml:lang="en">Home Page</span></li>
 			<li><a href="info.html">Chi siamo</a></li>
 			<li><a href="squadre.html">Squadre</a></li>
 			<!-- Modifica: Ho diviso orari e squadre; -->
 			<li><a href="orario.html">Orari</a></li>
-			<!-- Photo Gallery in una pagina diversa dalla home -->
-			<li id="CurrentLink"><span xml:lang="en">Photo Gallery</span></li>
+			<li><span xml:lang="en"><a href="photogallery.html">Photo Gallery</a></span></li>
 			<li><a href="dovesiamo.html">Dove siamo</a></li>
 			<li><a href="contatti.html">Contatti</a></li>
 		</ul>
 	</div>
 
 	<div id="section">
-		<form method="post" action="">
+	    <form method="post" action="">
 			<fieldset id="ricerca">
-				<input class="casella_input" id="cerca" value="Cerca... " />
+				<input id="cerca" class="casella_input" value="Cerca... " />
 			</fieldset>
 		</form>
-		<img class="immev" src="../immagini/pa1.jpg">
-		<img class="immev" src="../immagini/pa2.jpg">
-		<img class="immev" src="../immagini/pa3.jpg">
-		<img class="immev" src="../immagini/pa4.jpg">
-		<img class="immev" src="../immagini/pa5.jpg">
+		<h1>Presentazione</h1>
+		<p>Testo presentazione...</p>
+		<span id="immPres">Immagine presentazione </span>
+		<div id="news">
+			<h2>Ultime novit&agrave; </h2>
+				<ul>
+					<li class="alternate">News 1</li>
+					<li>News 2</li>
+					<li class="alternate">News 3</li>
+					<li>News 4</li>
+					<li class="alternate">News 5</li>
+					<li>News 6</li>
+					<li class="alternate">News 7</li>
+				</ul>
+		</div>
+	</div>
+	
+	<div id="login">
+		<form action="" method="post">
+			<fieldset>
+				<legend>Login amministratore</legend>
+				<label for="username">Username</label>
+				<input class="casella_input" name="username" id="username" value "Username" maxlength="20" />
+				<label for="password">Password</label>
+				<input class="casella_input" type="password" name="password" id="password" value="Password" maxlength="20" />
+			</fieldset>
+		</form>
 	</div>
 
 	<div id="footer">
-		<img class="imgValidCode" src="../immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" src="../immagini/vcss.gif" alt="CSS valido" />
+		<img class="imgValidCode" src="../immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" 
+		src="../immagini/vcss.gif" alt="CSS valido" />
 	</div>
 </body>
 </html>

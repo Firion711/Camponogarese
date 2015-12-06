@@ -4,12 +4,15 @@
 	<title>Squadra Calcio</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="title" content="Associazione calcistica dilettantistica Camponogarese" />
-	<meta name="description" content="Home page del sito A.C.D. Camponogarese" />
+	<meta name="description" content="Indicazioni per raggiungere la sede dell'associazione sportiva Camponogarese" />
 	<!-- Aggiungere categorie? es: pulcini camponogara, esordienti camponogara... -->
 	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita" />
 	<meta name="language" content="italian it" />
 	<!-- Come mettere più author? 1 meta con più nomi, separati da virgola, o più meta (valida)-->
-	<meta name="author" content="Emanuele Carraro, Davide Santimaria" />
+	<meta name="author" content="Daniel De Gaspari" />
+	<meta name="author" content="Davide Santimaria" />
+	<meta name="author" content="Emanuele Carraro" />
+	<meta name="author" content="Jordan Gottardo" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 
 	<meta http-equiv="refresh" content="3" />
@@ -19,15 +22,6 @@
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
-		<form method="post" action="">
-			<fieldset>
-				<!-- Rivedere maxlenght -->
-				<legend>Ricerca</legend>
-				<label for="searchinput">Cerca</label>
-				<input name="searchinput" id="searchinput" value="Inserire il testo da ricercare " maxlength="30" />
-			</fieldset>
-		</form>
-
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 		<!-- aggiungere action -->
 	</div>
@@ -40,19 +34,24 @@
 	<div id="menu">
 		<ul>
 			<!-- Modifica: Ho tolto la possibilita' di cliccare su Home Page, ci siamo già -->
-			<li id="CurrentLink"><span xml:lang="en">Home Page</span></li>
+			<li><a href="index.html"><span xml:lang="en">Home Page</span></a></li>
 			<li><a href="info.html">Chi siamo</a></li>
 			<li><a href="squadre.html">Squadre</a></li>
 			<!-- Modifica: Ho diviso orari e squadre; -->
-			<li><a href="html/orario.html">Orari</a></li>
+			<li><a href="orario.html">Orari</a></li>
 			<!-- Photo Gallery in una pagina diversa dalla home -->
-			<li><span xml:lang="en"><a href="html/photogallery.html">Photo Gallery</a></span></li>
-			<li><a href="dovesiamo.html">Dove siamo</a></li>
+			<li><span xml:lang="en"><a href="photogallery.html">Photo Gallery</a></span></li>
+			<li id="CurrentLink">Dove siamo</li>
 			<li><a href="contatti.html">Contatti</a></li>
 		</ul>
 	</div>
 
 	<div id="section">
+		<form method="post" action="">
+			<fieldset id="ricerca">
+				<input class="casella_input" id="cerca" value="Cerca... " />
+			</fieldset>
+		</form>
 		<h1 id="contenuto">Dove siamo</h1>
 				<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo</p>
 				<p>Indirizzo: Via Parolini, 11 30010 Camponogara VE</p>
@@ -66,8 +65,8 @@
 	</div>
 
 	<div id="footer">
-		<img class="imgValidCode" src="immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" 
-		src="immagini/vcss.gif" alt="CSS valido" />
+		<img class="imgValidCode" src="../immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" 
+		src="../immagini/vcss.gif" alt="CSS valido" />
 	</div>
 </body>
 </html>
