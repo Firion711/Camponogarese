@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.camponogarese.it"
+    targetNamespace="http://www.camponogarese.it"
+    elementFormDefault="qualified">
+	
+	<xs:element name="organizzazione" type="Torganizzazione" />
+	
+	
+	<xs:complexType name="Torganizzazione">
+		<xs:sequence>
+			<xs:element name="amministratori" type="Tamministratori" />
+			<xs:element name="dipendenti" type="Tdipendenti" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- amministratori prima di manager per dare la possibilità di aggiungere altre figure all'interno dell'organizzazione -->
+	<xs:complexType name="Tamministratori" >
+		<xs:sequence>
+			<xs:element name="manager" type="Tdati" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- si chiama Tdati perchè riuso il tipo anche per i dipendenti-->
+	<xs:complexType name="Tdati" >
+		<xs:sequence>
+			<xs:element name="nome" type="xs:string" />
+			<xs:element name="cognome" type="xs:string" />
+			<xs:element name="dataNascita" type="xs:string" />
+			<xs:element name="telefono" type="Ttelefono" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<!-- ok anche numeri di cellulare, ho evitato il 0039 iniziale -->
+	<xs:complexType name="Ttelefono">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="0?[0..9]{2,3}-[0..9]+" />
+		</xs:restriction>
+	</xs:complexType>
+	
+	<xs:complexType name="Tdipendenti">
+		<xs:sequence>
+			<xs:element name="allenatore" type="Tdati" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>
