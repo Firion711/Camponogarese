@@ -3,10 +3,10 @@
 <head>
 	<title>Squadra Calcio</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="title" content="Associazione calcistica dilettantistica Camponogarese" />
+	<meta name="title" content="Orario allenamenti - Camponogarese associazione calcistica dilettantistica " />
 	<meta name="description" content="Orari di allenamento squadre Camponogarese" />
 	<!-- Aggiungere categorie? es: pulcini camponogara, esordienti camponogara... -->
-	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita" />
+	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, orario allenamento, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara" />
 	<meta name="language" content="italian it" />
 	<meta name="author" content="Daniel De Gaspari" />
 	<meta name="author" content="Davide Santimaria" />
@@ -20,24 +20,32 @@
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
+
+		<!-- link "nascosto" che porta direttamente al contenuto della pagina -->
+		<a tabindex="1" href="#contenutopagina" class="nascosto">Vai al contenuto della pagina</a>
+
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 	</div>
 
 	<div id="path">
-		<p>Ti trovi in: <a href="../index.html" xml:lang="en">Home</a> &gt;&gt; Orari</p>
+		<p>Ti trovi in: <a href="index.html" xml:lang="en">Home</a> &gt;&gt; Orari</p>
 	</div>
 	<div id="menu">
+
+		<!-- link "nascosto" del menù -->
+		<a name="menuNascosto" class="nascosto">Menù</a>
+
 		<ul>
 			<!-- Controllare se ci va lo span... -->
-			<li><a href="index.html"><span xml:lang="en">Home</span></a></li>
-			<li><a href="info.html">Chi siamo</a></li>
-			<li><a href="squadre.html">Squadre</a></li>
+			<li><a tabindex="2" href="index.html"><span xml:lang="en">Home</span></a></li>
+			<li><a tabindex="3" href="info.html">Chi siamo</a></li>
+			<li><a tabindex="4" href="squadre.html">Squadre</a></li>
 			<!-- Modifica: Ho diviso orari e squadre; -->
 			<li id="CurrentLink">Orari</li>
 			<!-- Photo Gallery in una pagina diversa dalla home -->
-			<li><span xml:lang="en"><a href="photogallery.html">Photo Gallery</a></span></li>
-			<li><a href="dovesiamo.html">Dove siamo</a></li>
-			<li><a href="contatti.html">Contatti</a></li>
+			<li><a tabindex="5" href="photogallery.html"> <span xml:lang="en">Photo Gallery </span></a></li>
+			<li><a tabindex="6" href="dovesiamo.html">Dove siamo</a></li>
+			<li><a tabindex="7" href="contatti.html">Contatti</a></li>
 		</ul>
 	</div>
 
@@ -47,8 +55,9 @@
 				<input class="casella_input" id="cerca" value="Cerca... " />
 			</fieldset>
 		</form>
-		<table id="tabellaOrari"  summary="Descrive gli orari settimanali delle categorie">
-			<caption>Orari</caption>
+		<a tabindex="8" name="contenutopagina">
+		<table id="tabellaOrari"  summary="Descrive gli orari settimanali delle categorie"></a>
+			<caption>Orari d'allenamento</caption>
 			<thead>
 			<tr class="tabHeaders">
 				<th class="tabHeaders" scope="col">Squadra</th>
@@ -63,18 +72,18 @@
 			<!-- Aggiunta di tag br per non visualizzare l'orario su una riga -->
 			<tr>
 				<th class="tabHeaders" scope="row">Piccoli amici</th>
-				<td>15:30<br />-18:30</td>
+				<td>dalle 15:30<br />alle 18:30</td>
 				<td></td>
-				<td>15:30<br />-18:30</td>
+				<td>dalle 15:30<br />alle 18:30</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
 			<th class="tabHeaders" scope="row">Esordienti</th>
 			<td></td>
-			<td>15:30<br />-18:30</td>
+			<td>dalle 15:30<br />alle 18:30</td>
 			<td></td>
-			<td>15:30<br />-18:30</td>
+			<td>dalle 15:30<br />alle 18:30</td>
 			<td></td>
 	
 			</tr>
@@ -82,12 +91,14 @@
 				<th class="tabHeaders" scope="row">Giovanissimi</th>	
 				<td></td>
 				<td></td>
-				<td>19:00<br />-21:00</td>
+				<td>dalle 19:00<br />alle 21:00</td>
 				<td></td>
-				<td>15:30<br />-18:30</td>
+				<td>dalle 15:30<br />alle 18:30</td>
 			</tr>
 			</tbody>
 		</table>
+		<!-- Link nascosto che porta al menù -->
+		<a tabindex="9" href="#menuNascosto" class="nascosto">Torna al menu</a>
 	</div>
 
 	<div id="footer">

@@ -3,10 +3,11 @@
 <head>
 	<title>Squadra Calcio</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta name="title" content="Associazione calcistica dilettantistica Camponogarese" />
 	<meta name="description" content="Home page del sito A.C.D. Camponogarese" />
 	<!-- Aggiungere categorie? es: pulcini camponogara, esordienti camponogara... -->
-	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita" />
+	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara" />
 	<meta name="language" content="italian it" />
 	<meta name="author" content="Daniel De Gaspari" />
 	<meta name="author" content="Davide Santimaria" />
@@ -21,6 +22,10 @@
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
+
+		<!-- link "nascosto" che "skippa" e porta direttamente al contenuto della pagina -->
+			<a tabindex="1" href="#contenutopagina" class="nascosto">Vai al contenuto della pagina</a>
+
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 		<!-- aggiungere action -->
 	</div>
@@ -31,15 +36,19 @@
 
 	<!-- menu laterale sotto al logo, orientamento verticale -->
 	<div id="menu">
+
+		<!-- link "nascosto" del menù -->
+		<a name="menuNascosto" class="nascosto">Menù</a>
+
 		<ul>
 			<li id="CurrentLink"><span xml:lang="en">Home Page</span></li>
-			<li><a href="info.html">Chi siamo</a></li>
-			<li><a href="squadre.html">Squadre</a></li>
+			<li><a tabindex="2" href="info.html">Chi siamo</a></li>
+			<li><a tabindex="3" href="squadre.html">Squadre</a></li>
 			<!-- Modifica: Ho diviso orari e squadre; -->
-			<li><a href="orario.html">Orari</a></li>
-			<li><span xml:lang="en"><a href="photogallery.html">Photo Gallery</a></span></li>
-			<li><a href="dovesiamo.html">Dove siamo</a></li>
-			<li><a href="contatti.html">Contatti</a></li>
+			<li><a tabindex="4" href="orario.html">Orari</a></li>
+			<li><a tabindex="5" href="photogallery.html"> <span xml:lang="en">Photo Gallery</span> </a></li>
+			<li><a tabindex="6" href="dovesiamo.html">Dove siamo</a></li>
+			<li><a tabindex="7" href="contatti.html">Contatti</a></li>
 		</ul>
 	</div>
 
@@ -49,7 +58,7 @@
 				<input id="cerca" class="casella_input" value="Cerca... " />
 			</fieldset>
 		</form>
-		<h1>Presentazione</h1>
+		<a tabindex="8" name="contenutopagina"> <h1>Presentazione</h1> </a>
 		<p>Testo presentazione...</p>
 		<span id="immPres">Immagine presentazione </span>
 		<div id="news">
@@ -64,9 +73,15 @@
 					<li class="alternate">News 7</li>
 				</ul>
 		</div>
+
+		<!-- Link nascosto che porta al menù -->
+		<a tabindex="9" href="#menuNascosto" class="nascosto">Torna al menu</a>
 	</div>
-	
+	<!-- script per nascondere la parte amministrativa	 -->
+	<script type="text/javascript" src="../script/nascondi.js"></script>
+	<input type="button" onclick="return nascondi('login')" value="Gestione amministratore">
 	<div id="login">
+
 		<form action="" method="post">
 			<fieldset>
 				<legend>Login amministratore</legend>

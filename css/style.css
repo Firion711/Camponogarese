@@ -29,6 +29,10 @@ body {
 	color: white;
 }
 
+#login {
+	display:none;
+}
+
 #logo{
 	width: 6em;
 	height: 6em;
@@ -76,7 +80,7 @@ body {
 	width: 100%;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
-    color: black;
+    	color: black;
 	font-weight: bold;
 	text-decoration: none;
 	background-color: #FD6F2C; /* contrasto con testo OK */
@@ -87,8 +91,8 @@ body {
 	float: left;
 	width: 100%;
 	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-    color: white;
+	padding-bottom: 0.5em;    	
+	color: white;
 	font-weight: bold;
 	text-decoration: none;
 	background-color: #990000;
@@ -98,7 +102,13 @@ body {
 /*a:visited colore diverso???*/
 
 #menu a:hover {
-	background-color: #FD6F2C;
+	text-align: center;
+	color: #990000;
+	background-color: white;
+	text-decoration:underline;
+	
+	
+	
 }
 
 /* section */
@@ -192,7 +202,7 @@ body {
 #news ul > li {
 	color: #333;
 }
-
+/* immagini di un evento */
 .immev {
 width: 300px;
 height: 300px;
@@ -207,4 +217,35 @@ height: 300px;
 	padding-bottom:0.8em;
 	padding-left:1.5em;
 	color:
+}
+
+/* nasconde i link,spostandoli dalla visualizzazion, serve solo per lo screen reader*/
+a.nascosto{
+	position: absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow: hidden		;
+}
+
+/* questa clausula si può anche togliere,serve solo a visualizzare il link quando lo scorri con i vari tab */
+a:focus.nascosto 
+{ 
+position:static; 
+width:auto; 
+height:auto; 
+} 
+
+
+.listaEventi{padding-top: 1%;
+border-style:dashed;
+	border-color:blue;
+display:block;}
+
+.linkAncore{
+display:block;
+padding-top: 2%;
+border-style:double;
+	border-color:green;
 }

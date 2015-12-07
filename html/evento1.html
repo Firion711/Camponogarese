@@ -6,7 +6,7 @@
 	<meta name="title" content="Associazione calcistica dilettantistica Camponogarese" />
 	<meta name="description" content="Home page del sito A.C.D. Camponogarese" />
 	<!-- Aggiungere categorie? es: pulcini camponogara, esordienti camponogara... -->
-	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita" />
+	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara" />
 	<meta name="language" content="italian it" />
 	<meta name="author" content="Daniel De Gaspari" />
 	<meta name="author" content="Davide Santimaria" />
@@ -20,11 +20,14 @@
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
+		<!-- link "nascosto" che porta direttamente al contenuto della pagina -->
+		<a tabindex="1" href="#contenutopagina" class="nascosto">Vai al contenuto della pagina</a>
+
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 	</div>
 
 	<div id="path">
-		<p>Ti trovi in: <a href="../index.html" xml:lang="en">Home</a> &gt;&gt; 
+		<p>Ti trovi in: <a href="index.html" xml:lang="en">Home</a> &gt;&gt; 
 		<a href="photogallery.html" xml:lang="en">Photo gallery</a></p> &gt;&gt; Evento1
 	</div>
 
@@ -33,17 +36,20 @@
 
 	<!-- menu laterale sotto al logo, orientamento verticale -->
 	<div id="menu">
+	<!-- link "nascosto" del menù -->
+		<a name="menuNascosto" class="nascosto">Menù</a>
+
 		<ul>
 			<!-- Controllare se ci va lo span... -->
-			<li><a href="index.html"><span xml:lang="en">Home</span></a></li>
-			<li><a href="info.html">Chi siamo</a></li>
-			<li><a href="squadre.html">Squadre</a></li>
+			<li><a tabindex="2" href="index.html"><span xml:lang="en">Home</span></a></li>
+			<li><a tabindex="3" href="info.html">Chi siamo</a></li>
+			<li><a tabindex="4" href="squadre.html">Squadre</a></li>
 			<!-- Modifica: Ho diviso orari e squadre; -->
-			<li><a href="orario.html">Orari</a></li>
+			<li><a tabindex="5" href="orario.html">Orari</a></li>
 			<!-- Photo Gallery in una pagina diversa dalla home -->
-			<li id="CurrentLink"><span xml:lang="en">Photo Gallery</span></li>
-			<li><a href="dovesiamo.html">Dove siamo</a></li>
-			<li><a href="contatti.html">Contatti</a></li>
+			<li><a tabindex="6" href="photogallery.html"><span xml:lang="en">Photo Gallery</span></a></li>
+			<li><a tabindex="7" href="dovesiamo.html">Dove siamo</a></li>
+			<li><a tabindex="8" href="contatti.html">Contatti</a></li>
 		</ul>
 	</div>
 
@@ -53,13 +59,14 @@
 				<input class="casella_input" id="cerca" value="Cerca... " />
 			</fieldset>
 		</form>
-		<img class="immev" src="../immagini/pa1.jpg">
+		<a tabindex="8" name="contenutopagina"><img class="immev" src="../immagini/pa1.jpg"></a>
 		<img class="immev" src="../immagini/pa2.jpg">
 		<img class="immev" src="../immagini/pa3.jpg">
 		<img class="immev" src="../immagini/pa4.jpg">
 		<img class="immev" src="../immagini/pa5.jpg">
 	</div>
-
+	<!-- Link nascosto che porta al menù -->
+		<a href="#menuNascosto" class="nascosto">Torna al menu</a>
 	<div id="footer">
 		<img class="imgValidCode" src="../immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" src="../immagini/vcss.gif" alt="CSS valido" />
 	</div>
