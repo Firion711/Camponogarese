@@ -106,7 +106,7 @@ body {
 	color: #990000;
 	background-color: white;
 	text-decoration:underline;
-	font-size:120%;
+	
 	
 	
 }
@@ -238,14 +238,21 @@ height:auto;
 } 
 
 
-.listaEventi{padding-top: 1%;
-border-style:dashed;
+.listaEventi{
+	padding-top: 1%;
+	border-style:dashed;
 	border-color:blue;
-display:block;}
+	display:block;
+	width: 5%;
+	height: 9em;
+	background-image: url(../immagini/logoEventi.jpg);
+	background-repeat:no-repeat;
+}
 
 .linkAncore{
-display:block;
-padding-top: 2%;
-border-style:double;
+	font-size: 80%;
+	display:block;
+	padding-top: 2%;
+	border-style:double;
 	border-color:green;
 }

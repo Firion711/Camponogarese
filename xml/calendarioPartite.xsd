@@ -4,46 +4,30 @@
     targetNamespace="http://www.camponogarese.it"
     elementFormDefault="qualified">
 	
-	<xs:element name="organizzazione" type="Torganizzazione" />
+	<xs:element name="calendarioPartite" type="Torganizzazione" />
 	
 	
 	<xs:complexType name="Torganizzazione">
 		<xs:sequence>
-			<xs:element name="amministratori" type="Tamministratori" />
-			<xs:element name="dipendenti" type="Tdipendenti" />
+			<xs:element name="squadraDiCasa" type="Tsquadra" />
+			<xs:element name="squadraInTrasferta" type="Tsquadra" />
+			<xs:element name="dataPartita" type="Tdata" />
+	<!--ho messo minOccurs=0 per dare all'admin la possibilità di "preparare l'evento" con il prossimo incontro,cioè intanto mettere la data e le squadre senza il risultato perchè l'incotro deve ancora disputarsi XD (da valutare se ha senso) -->
+			<xs:element name="goalSquadCasa" type="Tgoal" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="goalSquadTrasf" type="Tgoal" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	
-	<!-- amministratori prima di manager per dare la possibilità di aggiungere altre figure all'interno dell'organizzazione -->
-	<xs:complexType name="Tamministratori" >
-		<xs:sequence>
-			<xs:element name="manager" type="Tdati" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-	
-	<!-- si chiama Tdati perchè riuso il tipo anche per i dipendenti-->
-	<xs:complexType name="Tdati" >
-		<xs:sequence>
-			<xs:element name="nome" type="Tnome" />
-			<xs:element name="cognome" type="Tcognome" />
-			<xs:element name="dataNascita" type="Tdata" />
-			<xs:element name="telefono" type="Ttelefono" />
-		</xs:sequence>
-	</xs:complexType>
 
-	<!-- Restrinzione per il nome deve iniziare con una lettere maiuscola e poi una o più lettere minuscole -->		
-	<xs:simpleType name="Tnome" >
-    	<xs:restriction base="xs:string">
-    		<xs:pattern value="([A-Z][a-z]+)"/>
-   		</xs:restriction>
-   	</xs:simpleType>
 
-	<!-- Restrinzione per il cognome deve iniziare con una lettere maiuscola e poi una o più lettere minuscole, inoltre può essere un cognome composto da due parti (es: De Franceschi) -->	
-	<xs:simpleType name="Tcognome">
+	<!-- Restrinzione per il nome delle squadre devono iniziare con una lettere maiuscola e poi una o più lettere minuscole; può essere composta da due parti -->
+	<!-- !!!!!!!!!!!!!! NON SO SE ESISTANO SQUADRE CON IL NOME SPEZZATO !!!!!!!!!! QUINDI NN SO SE HA SENSO -->		
+	<xs:simpleType name="Tsquadra" >
     	<xs:restriction base="xs:string">
     		<xs:pattern value="([A-Z][a-z]+ (&#160; ([A-Z][a-z]+)?))"/>
    		</xs:restriction>
-   	</xs:simpleType>			
+   	</xs:simpleType>
+		
     
 	<!-- Tipo complesso Tdata composto da giorno,mese e anno; non è stato usato il tipo xs:date perchè verrebbe visualizzato in formato italiano -->
 	<xs:complexType name="Tdata">
@@ -88,19 +72,11 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<!-- Tipo che definisce sia numeri di telefonia fissa, sia numeri di telefono cellulare (evitando il prefisso nazionale 0039 iniziale); entrambi defiti secondo la forma: prefisso - numero -->
-	<xs:simpleType name="Ttelefono">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="0?[0..9]{2,3}-[0..9]+" />
+	<!-- Tipo che fefinisce il numero dei goal-->
+	<xs:simpleType name="Tgoal">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0..9]{1,2}" /><!-- più di 99 goal è difficile farli in 90 minuti :P -->
 		</xs:restriction>
 	</xs:simpleType> 
-	
-	
-	<!-- Tipo complesso Tdipendenti -->
-	<xs:complexType name="Tdipendenti">
-		<xs:sequence>
-			<xs:element name="allenatore" type="Tdati" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-	
+		
 </xs:schema>
