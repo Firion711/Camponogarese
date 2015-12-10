@@ -4,10 +4,10 @@
     targetNamespace="http://www.camponogarese.it"
     elementFormDefault="qualified">
 	
-	<xs:element name="calendarioPartite" type="Torganizzazione" />
+	<xs:element name="calendarioPartite" type="TcalendarioPartite" />
 	
 	
-	<xs:complexType name="Torganizzazione">
+	<xs:complexType name="TcalendarioPartite">
 		<xs:sequence>
 			<xs:element name="squadraDiCasa" type="Tsquadra" />
 			<xs:element name="squadraInTrasferta" type="Tsquadra" />
@@ -24,12 +24,20 @@
 	<!-- !!!!!!!!!!!!!! NON SO SE ESISTANO SQUADRE CON IL NOME SPEZZATO !!!!!!!!!! QUINDI NN SO SE HA SENSO -->		
 	<xs:simpleType name="Tsquadra" >
     	<xs:restriction base="xs:string">
-    		<xs:pattern value="([A-Z][a-z]+ (&#160; ([A-Z][a-z]+)?))"/>
+    		<xs:pattern value="([A-Z][a-z]+( ([A-Z][a-z]+))?)" />
    		</xs:restriction>
    	</xs:simpleType>
+	
+	
+	<!-- tipo data semplice con restrizione, stessa cosa come l'altro documento, scelta tra simpleType ristretto e complexType diviso da valutare -->
+	<xs:simpleType name="Tdata">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-3]{1}[0-9]{1}/[0,1]{1}[0-9]{1}/[0-9]{4}" />
+		</xs:restriction>
+	</xs:simpleType>	
 		
     
-	<!-- Tipo complesso Tdata composto da giorno,mese e anno; non è stato usato il tipo xs:date perchè verrebbe visualizzato in formato italiano -->
+	<!-- Tipo complesso Tdata composto da giorno,mese e anno; non è stato usato il tipo xs:date perchè verrebbe visualizzato in formato italiano 
 	<xs:complexType name="Tdata">
 		<xs:sequence>
 			<xs:element name="giorno" type="Tgiorno"/>		 
@@ -38,7 +46,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	
-	<!-- il giorno può esser un valore tra 1 e 31 -->
+	
+	
+	 il giorno può esser un valore tra 1 e 31 
 	<xs:simpleType name="Tgiorno">
 		<xs:restriction base="xs:positiveInteger">
 			<xs:minInclusive value="1" />
@@ -46,7 +56,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<!-- il mese può assumere una enumerazione tra 01 e 12, con inclusi i due separatori / -->	
+	 il mese può assumere una enumerazione tra 01 e 12, con inclusi i due separatori / 
 	<xs:simpleType name="Tmese">
 		<xs:restriction base="xs:string">
 				<xs:enumeration value="/01/" />
@@ -64,18 +74,19 @@
 		</xs:restriction>	
 	</xs:simpleType>
 
-	<!-- l'anno	può essere un intero a 4 cifre compreso tra 1900 e 2016 -->
+	 l'anno	può essere un intero a 4 cifre compreso tra 1900 e 2016 
 	<xs:simpleType name="Tanno">
 		<xs:restriction base="xs:positiveInteger">
 				<xs:minInclusive value="1900" />
 				<xs:maxInclusive value="2016" />
 		</xs:restriction>
 	</xs:simpleType>
+	-->
 	
 	<!-- Tipo che fefinisce il numero dei goal-->
 	<xs:simpleType name="Tgoal">
 		<xs:restriction base="xs:integer">
-			<xs:pattern value="[0..9]{1,2}" /><!-- più di 99 goal è difficile farli in 90 minuti :P -->
+			<xs:pattern value="[0-9]{1,2}" /><!-- più di 99 goal è difficile farli in 90 minuti :P -->
 		</xs:restriction>
 	</xs:simpleType> 
 		

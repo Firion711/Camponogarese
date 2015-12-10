@@ -7,17 +7,17 @@
 	<amministratori>
 		<manager>
 			<nome>Gilby</nome>
-			<cognome>Gilby</cognome>
-			<dataNascita>1/1/1111</dataNascita>
+			<cognome>Gilby Gilby</cognome>
+			<dataNascita>32/12/1999</dataNascita>
 			<telefono>000-0000000</telefono>
 		</manager>
 	</amministratori>
 	<dipendenti>
-		<allenatori>
+		<allenatore>
 			<nome>Gilby</nome>
 			<cognome>Gilby</cognome>
-			<dataNascita>1/1/1111</dataNascita>
+			<dataNascita>02/02/1990</dataNascita>
 			<telefono>000-0000000</telefono>
-		</allenatori>
+		</allenatore>
 	</dipendenti>
 </organizzazione>

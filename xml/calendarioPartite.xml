@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="organizzazione.xslt"?>
+<calendarioPartite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.camponogarese.it"
+	xsi:schemaLocation="http://www.camponogarese.it calendarioPartite.xsd">
+	
+
+	<squadraDiCasa>Camponogarese</squadraDiCasa>
+	<squadraInTrasferta>Sassuolo</squadraInTrasferta>
+	<dataPartita>01/01/2015</dataPartita>
+	<goalSquadCasa>35</goalSquadCasa>
+	<goalSquadTrasf>1</goalSquadTrasf>
+	
+</calendarioPartite>

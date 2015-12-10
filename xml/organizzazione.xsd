@@ -41,52 +41,19 @@
 	<!-- Restrinzione per il cognome deve iniziare con una lettere maiuscola e poi una o più lettere minuscole, inoltre può essere un cognome composto da due parti (es: De Franceschi) -->	
 	<xs:simpleType name="Tcognome">
     	<xs:restriction base="xs:string">
-    		<xs:pattern value="([A-Z][a-z]+ (&#160; ([A-Z][a-z]+)?))"/>
+    		<xs:pattern value="([A-Z][a-z]+( ([A-Z][a-z]+))?)" />
    		</xs:restriction>
    	</xs:simpleType>			
     
-	<!-- Tipo complesso Tdata composto da giorno,mese e anno; non è stato usato il tipo xs:date perchè verrebbe visualizzato in formato italiano -->
-	<xs:complexType name="Tdata">
-		<xs:sequence>
-			<xs:element name="giorno" type="Tgiorno"/>		 
-			<xs:element name="mese" type="Tmese"/>
-			<xs:element name="anno" type="Tanno"/>				
-		</xs:sequence>
-	</xs:complexType>
-	
-	<!-- il giorno può esser un valore tra 1 e 31 -->
-	<xs:simpleType name="Tgiorno">
-		<xs:restriction base="xs:positiveInteger">
-			<xs:minInclusive value="1" />
-			<xs:maxInclusive value="31" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- il mese può assumere una enumerazione tra 01 e 12, con inclusi i due separatori / -->	
-	<xs:simpleType name="Tmese">
+	<!-- Scelto tipo semplice con restrizione per semplicità di implementazione (aggiunta date tramite form/gestione con perl), formato DD/MM/YYYY ma permette cose come 32/15/2015 -->
+	<xs:simpleType name="Tdata">
 		<xs:restriction base="xs:string">
-				<xs:enumeration value="/01/" />
-				<xs:enumeration value="/02/" />
-				<xs:enumeration value="/03/" />
-				<xs:enumeration value="/04/" />
-				<xs:enumeration value="/05/" />
-				<xs:enumeration value="/06/" />
-				<xs:enumeration value="/07/" />
-				<xs:enumeration value="/08/" />
-				<xs:enumeration value="/09/" />
-				<xs:enumeration value="/10/" />
-				<xs:enumeration value="/11/" />
-				<xs:enumeration value="/12/" />
-		</xs:restriction>	
-	</xs:simpleType>
-
-	<!-- l'anno	può essere un intero a 4 cifre compreso tra 1900 e 2016 -->
-	<xs:simpleType name="Tanno">
-		<xs:restriction base="xs:positiveInteger">
-				<xs:minInclusive value="1900" />
-				<xs:maxInclusive value="2016" />
+			<xs:pattern value="[0-3]{1}[0-9]{1}/[0,1]{1}[0-9]{1}/[0-9]{4}" />
 		</xs:restriction>
 	</xs:simpleType>
+	
+
+
 	
 	<!-- Tipo che definisce sia numeri di telefonia fissa, sia numeri di telefono cellulare (evitando il prefisso nazionale 0039 iniziale); entrambi defiti secondo la forma: prefisso - numero -->
 	<xs:simpleType name="Ttelefono">
