@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="calendarioPartite.xslt"?>
+<calendarioPartite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.camponogarese.it"
+	xsi:schemaLocation="http://www.camponogarese.it calendarioPartite.xsd">
+	
+	<!-- 4° partita campionato -->
+	<squadraDiCasa>Camponogarese</squadraDiCasa>
+	<squadraInTrasferta>Thermal Teolo</squadraInTrasferta>
+	<dataPartita>06/09/2015</dataPartita>
+	<goalSquadCasa>3</goalSquadCasa>
+	<goalSquadTrasf>0</goalSquadTrasf>
+
+	<!-- 3° partita campionato -->
+	<squadraDiCasa>Camponogarese</squadraDiCasa>
+	<squadraInTrasferta>Bussolengo</squadraInTrasferta>
+	<dataPartita>06/09/2015</dataPartita>
+	<goalSquadCasa>0</goalSquadCasa>
+	<goalSquadTrasf>1</goalSquadTrasf>
+
+	<!-- 2° partita campionato -->
+	<squadraDiCasa>Solesinese</squadraDiCasa>
+	<squadraInTrasferta>Camponogarese</squadraInTrasferta>
+	<dataPartita>13/09/2015</dataPartita>
+	<goalSquadCasa>0</goalSquadCasa>
+	<goalSquadTrasf>0</goalSquadTrasf>
+
+	<!-- 1° partita campionato -->
+	<squadraDiCasa>Camponogarese</squadraDiCasa>
+	<squadraInTrasferta>Clodiense</squadraInTrasferta>
+	<dataPartita>06/09/2015</dataPartita>
+	<goalSquadCasa>2</goalSquadCasa>
+	<goalSquadTrasf>1</goalSquadTrasf>
+
+</calendarioPartite>

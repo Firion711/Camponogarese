@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="organizzazione.xslt"?>
+<organizzazione xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.camponogarese.it"
+	xsi:schemaLocation="http://www.camponogarese.it organizzazione.xsd">
+	
+	<amministratori>
+		<manager>
+			<nome>Gilby</nome>
+<<<<<<< HEAD
+			<cognome>Gilby</cognome>
+			<dataNascita>01/01/1111</dataNascita>
+=======
+			<cognome>Gilby Gilby</cognome>
+			<dataNascita>32/12/1999</dataNascita>
+>>>>>>> 9bfa4d0d38b0ea8c745072ba00106dbfc66738bd
+			<telefono>000-0000000</telefono>
+		</manager>
+	</amministratori>
+	<dipendenti>
+		<allenatore>
+			<nome>Gilby</nome>
+			<cognome>Gilby</cognome>
+<<<<<<< HEAD
+			<dataNascita>01/01/1111</dataNascita>
+=======
+			<dataNascita>02/02/1990</dataNascita>
+>>>>>>> 9bfa4d0d38b0ea8c745072ba00106dbfc66738bd
+			<telefono>000-0000000</telefono>
+		</allenatore>
+	</dipendenti>
+</organizzazione>
