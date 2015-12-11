@@ -243,8 +243,8 @@ height:auto;
 	border-style:dashed;
 	border-color:blue;
 	display:block;
-	width: 5%;
-	height: 9em;
+	width: 200px;
+	height: 200px;
 	background-image: url(../immagini/logoEventi.jpg);
 	background-repeat:no-repeat;
 }

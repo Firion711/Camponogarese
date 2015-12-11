@@ -38,7 +38,7 @@ body {
 	height: 6em;
 	float: left;
 	/*Il logo lo lasciamo in formato jpg?*/
-	background-image: url(../immagini/logo.jpg);
+	background-image: url(../immagini/logo.png);
 	background-repeat:no-repeat;
 	margin-top: 1em;
 	margin-left: 0.5em;
