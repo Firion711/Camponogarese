@@ -256,3 +256,16 @@ height:auto;
 	border-style:double;
 	border-color:green;
 }
+
+/* Sezione dedicata alla mappa di "Dove siamo" */
+
+#frameMappa {
+	width:100%;
+	height: 20em;
+}
+
+.print {
+	display: none;
+}
+
+

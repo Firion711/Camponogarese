@@ -18,7 +18,7 @@
 <!--	<meta http-equiv="refresh" content="3" /> -->
 </head>
 
-<body>
+<body onload="replaceMap()">
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>

@@ -38,7 +38,7 @@ body {
 	height: 6em;
 	float: left;
 	/*Il logo lo lasciamo in formato jpg?*/
-	background-image: url(../immagini/logo.jpg);
+	background-image: url(../immagini/logo.png);
 	background-repeat:no-repeat;
 	margin-top: 1em;
 	margin-left: 0.5em;
@@ -256,3 +256,16 @@ height:auto;
 	border-style:double;
 	border-color:green;
 }
+
+/* Sezione dedicata alla mappa di "Dove siamo" */
+
+#frameMappa {
+	width:100%;
+	height: 20em;
+}
+
+#fotoMappa {
+	display: none;
+}
+
+

@@ -14,11 +14,11 @@
 	<meta name="author" content="Emanuele Carraro" />
 	<meta name="author" content="Jordan Gottardo" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-
-	<meta http-equiv="refresh" content="30" />
+	<script type="text/javascript" src="../script/script.js"></script>
+	
 </head>
 
-<body>
+<body onload="replaceMap()">
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
@@ -66,11 +66,11 @@
 
 			<!-- in javascript, aggiungere funzione onload per rimpiazzare la mappa-->
 			<div id="divMappa">
-					<p>Consulta la seguente mappa:</p>
+				<p>Consulta la seguente mappa:</p>
 					<div id="visualizzaMappa">
-						<a href="https://www.google.it/maps/place/Via+Parolini,+11,+30010+Camponogara+VE/@45.384382,12.075781,17z/data=!4m2!3m1!1s0x477ec7ace369e9db:0xfe2a4c9605f9ae2b"><img id="googleMaps" src="../immagini/mappa.png" alt="Mappa della posizione del campo" width="100%" height="100%"/></a>
-					</div>
+					<a href="https://www.google.it/maps/place/Via+Parolini,+11,+30010+Camponogara+VE/@45.384382,12.075781,17z/data=!4m2!3m1!1s0x477ec7ace369e9db:0xfe2a4c9605f9ae2b"><img id="fotoMappa" class="print" src="../immagini/mappa.png" alt="Mappa della posizione del campo" width="100%" height="100%"/></a>
 				</div>
+			</div>
 	<!-- Link nascosto che porta al menù -->			
 		<a tabindex="10" href="#menuNascosto" class="nascosto">Torna al menu</a>		
 	</div>
