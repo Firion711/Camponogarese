@@ -7,26 +7,17 @@
 	<amministratori>
 		<manager>
 			<nome>Gilby</nome>
-<<<<<<< HEAD
 			<cognome>Gilby</cognome>
 			<dataNascita>01/01/1111</dataNascita>
-=======
-			<cognome>Gilby Gilby</cognome>
-			<dataNascita>32/12/1999</dataNascita>
->>>>>>> 9bfa4d0d38b0ea8c745072ba00106dbfc66738bd
 			<telefono>000-0000000</telefono>
 		</manager>
 	</amministratori>
 	<dipendenti>
-		<allenatore>
+		<allenatori>
 			<nome>Gilby</nome>
 			<cognome>Gilby</cognome>
-<<<<<<< HEAD
 			<dataNascita>01/01/1111</dataNascita>
-=======
-			<dataNascita>02/02/1990</dataNascita>
->>>>>>> 9bfa4d0d38b0ea8c745072ba00106dbfc66738bd
 			<telefono>000-0000000</telefono>
-		</allenatore>
+		</allenatori>
 	</dipendenti>
 </organizzazione>
