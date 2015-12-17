@@ -269,3 +269,29 @@ height:auto;
 }
 
 
+/* Pagina "Chi Siamo"*/
+#section ul{
+	list-style: square;
+}
+
+#ulChiSiamo > li{
+	margin-top: 1em;
+}
+
+#section ul ul{
+	list-style: disc;
+}
+
+#section ul ul li{
+	margin-left: 2em;
+}
+
+
+#section ul ul ul{
+	list-style: circle;
+}
+
+#section ul ul ul li{
+	margin-left: 4em;
+	
+}
