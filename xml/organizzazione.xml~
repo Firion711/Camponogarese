@@ -3,21 +3,20 @@
 <organizzazione xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns="http://www.camponogarese.it"
 	xsi:schemaLocation="http://www.camponogarese.it organizzazione.xsd">
-
+	
 	<amministratori>
 		<manager>
-			<nome>Nome1</nome>
-			<cognome>Cognome1</cognome>
-			<dataNascita>01/01/2000</dataNascita>
+			<nome>Gilby</nome>
+			<cognome>Gilby</cognome>
+			<dataNascita>01/01/1111</dataNascita>
 			<telefono>000-0000000</telefono>
 		</manager>
 	</amministratori>
-	
 	<dipendenti>
 		<allenatori>
-			<nome>Nome2</nome>
-			<cognome>Cognome2</cognome>
-			<dataNascita>02/02/2002</dataNascita>
+			<nome>Gilby</nome>
+			<cognome>Gilby</cognome>
+			<dataNascita>01/01/1111</dataNascita>
 			<telefono>000-0000000</telefono>
 		</allenatori>
 	</dipendenti>

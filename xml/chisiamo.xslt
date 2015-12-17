@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.camponogarese.it">
-<xsl:output method='xml' version='1.0' encoding='UTF-8' indent='yes'
-doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
-
-	<xsl:template match="/">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://www.camponogarese.it" exclude-result-prefixes="p">
+<xsl:output method="html" version="1.0" encoding="UTF-8" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" indent="no" /> 
+<xsl:template match="/">
 <!-- qua ci andrà la parte in comune definitiva -->
 
 		<body>
