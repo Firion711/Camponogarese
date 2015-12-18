@@ -125,6 +125,7 @@ body {
 }
 
 #ricerca{
+
 	border: none;
 	float: right;
 	width: 30%;
@@ -141,6 +142,7 @@ body {
 }
 
 #cerca{
+
 	float: right;
 }
 
@@ -237,25 +239,76 @@ width:auto;
 height:auto; 
 } 
 
-
-.listaEventi{
-	padding-top: 1%;
-	border-style:dashed;
-	border-color:blue;
-	display:block;
-	width: 200px;
-	height: 200px;
-	background-image: url(../immagini/logoEventi.jpg);
-	background-repeat:no-repeat;
-}
+/* Sezione PHOTO GALLERY */
 
 .linkAncore{
-	font-size: 80%;
 	display:block;
-	padding-top: 2%;
+	font-size: 100%;
+	padding: 1%;
 	border-style:double;
-	border-color:green;
+	border-width: 1em;
+	border-color:#717D7D;
+	
 }
+
+.linkAncore li{   
+   	list-style-type: none;
+   	display: inline-block;
+   	margin: 0;
+    padding: 0;
+    border: 1px solid #555;
+}
+
+.linkAncore li a{
+	display: block;
+	background-color: #f1f1f1;
+	width: 19em;
+	text-align: center;
+}
+.linkAncore li a:hover:not(.active){
+	
+	color:white;
+	background-color:#555;
+}
+
+li > a.active{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.listaEventi{
+	margin:0.5em 0em 0.5em;
+	border-style: double;
+    border-width:0.1em;
+	border-color:black;
+	padding:0.5em 0em 0.5em ;
+	height:auto;
+	width:auto;
+	display:block;
+	background-color:#339933;
+}
+
+a.evento{
+	display:block;
+	height:2em;
+	width: auto;
+	margin: 1em;
+	padding: 1em 0em 1em;
+    border: 1px solid #ccc;
+	text-align: center;
+}
+
+a:hover.evento {
+	background-image: url(../immagini/pallone.jpg);
+	background-size:contain;
+        background-repeat: no-repeat;
+	background-color:white;
+ 	border: 1px solid #777;
+	color:#E42217;
+
+}
+
+
 
 /* Sezione dedicata alla mappa di "Dove siamo" */
 

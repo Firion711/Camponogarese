@@ -237,25 +237,61 @@ width:auto;
 height:auto; 
 } 
 
+/* Sezione photogallery */
 
 .listaEventi{
-	padding-top: 1%;
-	border-style:dashed;
-	border-color:blue;
+	margin:0.5em 0em 0.5em;
+	border-style: double;
+    	border-width:0.1em;
+	border-color:black;
+	padding:0.5em 0em 0.5em ;
+	height:auto;
+	width:auto;
 	display:block;
-	width: 200px;
-	height: 200px;
-	background-image: url(../immagini/logoEventi.jpg);
-	background-repeat:no-repeat;
+	background-color:#339933;
+}
+
+a.evento{
+	display:block;
+	height:2em;
+	width: auto;
+	margin: 1em;
+	padding: 1em 0em 1em;
+    	border: 1px solid #ccc;
+	text-align: center;
+}
+
+a:hover.evento{
+	background-image: url(../immagini/pallone.jpg);
+	background-size:contain;
+        background-repeat: no-repeat;
+	background-color:white;
+ 	border: 1px solid #777;
+	color:#E42217;
+
+
+}
+
+ul.linkAncore{   
+   	list-style-type: none;
 }
 
 .linkAncore{
-	font-size: 80%;
-	display:block;
-	padding-top: 2%;
+	font-size: 90%;
+	padding: 1%;
 	border-style:double;
-	border-color:green;
+	border-width: 1em;
+	border-color:#717D7D;
+	
 }
+
+
+/*a:hover.linkAncore{
+	font-size: 100%;
+	color:#E42217;
+	background-color:#990000;
+}*/
+
 
 /* Sezione dedicata alla mappa di "Dove siamo" */
 
@@ -264,8 +300,34 @@ height:auto;
 	height: 20em;
 }
 
-#fotoMappa {
+.print {
 	display: none;
 }
 
 
+/* Pagina "Chi Siamo"*/
+#section ul{
+	list-style: square;
+}
+
+#ulChiSiamo > li{
+	margin-top: 1em;
+}
+
+#section ul ul{
+	list-style: disc;
+}
+
+#section ul ul li{
+	margin-left: 2em;
+}
+
+
+#section ul ul ul{
+	list-style: circle;
+}
+
+#section ul ul ul li{
+	margin-left: 4em;
+	
+}
