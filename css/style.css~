@@ -105,10 +105,7 @@ body {
 	text-align: center;
 	color: #990000;
 	background-color: white;
-	text-decoration:underline;
-	
-	
-	
+	text-decoration:underline;	
 }
 
 /* section */
@@ -204,11 +201,7 @@ body {
 #news ul > li {
 	color: #333;
 }
-/* immagini di un evento */
-.immev {
-width: 300px;
-height: 300px;
-}
+
 
 #section p {
 	padding-bottom:0.5em;
@@ -308,7 +301,44 @@ a:hover.evento {
 
 }
 
+/* Sezione dedicata all' evento prototipo */
 
+#jsDisabilitato{
+	display:none;
+}
+#jsAbilitato{
+	display:block;
+}
+
+
+#big_img img {
+            width:37em;
+            height: 28em;
+            margin:1em 2em 0em 2em;
+}
+.listaFoto{
+            width:50em;
+            background-color: #000;
+           
+}
+.listaFoto img{
+            width:10em;
+            height: 7em;
+            margin:1em 0em 0em 1em;
+            border:0.5em solid red;
+            border-radius: 2em;
+            opacity: 0.5;
+            cursor: pointer;
+}
+.listaFoto img:hover{
+            opacity: 1;
+	    border:0.5em solid green;
+}
+/* immagini di un evento */
+.immev {
+width: 40em;
+height: 35em;
+}
 
 /* Sezione dedicata alla mappa di "Dove siamo" */
 

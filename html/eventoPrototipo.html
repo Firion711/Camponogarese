@@ -13,10 +13,11 @@
 	<meta name="author" content="Emanuele Carraro" />
 	<meta name="author" content="Jordan Gottardo" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<script type="text/javascript" src="../script/script.js"></script>
 
 </head>
 
-<body>
+<body onload="controlloJava()">
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
@@ -28,7 +29,7 @@
 
 	<div id="path">
 		<p>Ti trovi in: <a href="index.html" xml:lang="en">Home</a> &gt;&gt; 
-		<a href="photogallery.html" xml:lang="en">Photo gallery</a></p> &gt;&gt; Evento1
+		<a href="photogallery.html" xml:lang="en">Photo gallery</a></p> &gt;&gt; EventoPrototipo
 	</div>
 
 	<!-- menu "rapido" di fianco al logo, orientamento orizzontale -->
@@ -53,17 +54,51 @@
 		</ul>
 	</div>
 
-	<div id="section">
-		<form method="post" action="">
-			<fieldset id="ricerca">
-				<input class="casella_input" id="cerca" value="Cerca... " />
-			</fieldset>
-		</form>
-		<a tabindex="8" name="contenutopagina"><img class="immev" src="../immagini/pa1.jpg"></a>
-		<img class="immev" src="../immagini/pa2.jpg">
-		<img class="immev" src="../immagini/pa3.jpg">
-		<img class="immev" src="../immagini/pa4.jpg">
-		<img class="immev" src="../immagini/pa5.jpg">
+	<div id="section" >
+		<div id="jsDisabilitato">
+			<a tabindex="8" name="contenutopagina">
+				<img class="immev" src="../immagini/foto-1.jpg" alt="Foto dove i due giocatori si driblano">
+			</a>
+			
+			<img class="immev" src="../immagini/foto-2.jpg" alt="Foto della squadra Camponogarese">
+			<img class="immev" src="../immagini/foto-3.jpg" alt="Foto durante l'allenamento">
+			<img class="immev" src="../immagini/foto-4.jpg" alt="Foto che riprende l'azione in area di rigore">
+			<img class="immev" src="../immagini/foto-5.jpg" alt="Foto della riunione con allenatore e dirigente">
+			<img class="immev" src="../immagini/foto-6.jpg" alt="Foto del contrasto durante l'allenamento">
+			<img class="immev" src="../immagini/foto-7.jpg" alt="Foto che riprende una azione difensiva del Camponogarese">
+		</div>
+		<!-- Con javascript abilitato-->
+		<div id="jsAbilitato" onload="gallery()">
+			<div class="wrapper">
+	       		<div id="big_img">
+	          		<img src="../immagini/foto-1.jpg" id="myPicture" alt="Foto dove i due giocatori si driblano"/>
+	       		</div>
+
+		       <div class="listaFoto">
+		          <img src="../immagini/foto-1.jpg" onclick="gallery()"  id="foto-1" 
+		          alt="Foto dove i due giocatori si driblano"/>
+
+		          <img src="../immagini/foto-2.jpg"  onclick="gallery()" id="foto-2" 
+		          alt="Foto della squadra Camponogarese"/>
+
+		          <img src="../immagini/foto-3.jpg"  onclick="gallery()" id="foto-3" 
+		          alt="Foto durante l' allenamento"/>
+
+		          <img src="../immagini/foto-4.jpg"  onclick="gallery()" id="foto-4" 
+		          alt="Foto che riprende l'azione in area di rigore"/>
+
+		          <img src="../immagini/foto-5.jpg"  onclick="gallery()" id="foto-5" 
+		          alt="Foto della riunione con allenatore e dirigente"/>
+
+		          <img src="../immagini/foto-6.jpg"  onclick="gallery()" id="foto-6" 
+		          alt="Foto del contrasto durante l'allenamento"/>
+
+		          <img src="../immagini/foto-7.jpg"  onclick="gallery()" id="foto-7" 
+		          alt="Foto che riprende una azione difensiva del Camponogarese"/>  
+
+		       </div>
+	    	</div>
+	    </div>
 	</div>
 	<!-- Link nascosto che porta al menù -->
 		<a href="#menuNascosto" class="nascosto">Torna al menu</a>
