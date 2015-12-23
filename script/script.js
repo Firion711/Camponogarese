@@ -31,7 +31,7 @@ function controlloJava() {
 }
 
 /* funzione per modificare l'immagine grande sugli eventi */
-
+window.onload = gallery;
 function gallery(){
      var tutteLeImmagini = document.images; //salvo tutte le immagini in questa variabile
      for(var i=0; i<tutteLeImmagini.length; i++){

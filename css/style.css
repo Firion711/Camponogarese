@@ -312,11 +312,12 @@ a:hover.evento {
 
 
 #big_img img {
+	    
             width:37em;
             height: 28em;
             margin:1em 2em 0em 2em;
 }
-.listaFoto{
+.listaFoto{ 
             width:50em;
             background-color: #000;
            

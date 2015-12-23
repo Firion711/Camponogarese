@@ -22,11 +22,11 @@ function replaceMap() {
 
 function controlloJava() {
 //salvo in 2 variabili i valori dei due id
-	var jsd1 = document.getElementById("jsDisabilitato")
-	var jsa1 = document.getElementById("jsAbilitato");
+	var jsd = document.getElementById("jsDisabilitato")
+	var jsa = document.getElementById("jsAbilitato");
 //se è abilitato java,sicuramente farà questo controllo e nasconderà il div con id= jsDisabilitato
-			jsd1.style.display="none";
-			jsa1.style.display="block";
+			jsd.style.display="none";
+			jsa.style.display="block";
 		
 }
 

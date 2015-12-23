@@ -304,19 +304,20 @@ a:hover.evento {
 /* Sezione dedicata all' evento prototipo */
 
 #jsDisabilitato{
-	display:none;
+	display:block;
 }
 #jsAbilitato{
-	display:block;
+	display:none;
 }
 
 
 #big_img img {
+	    
             width:37em;
             height: 28em;
             margin:1em 2em 0em 2em;
 }
-.listaFoto{
+.listaFoto{ position :relative;
             width:50em;
             background-color: #000;
            
