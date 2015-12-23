@@ -317,7 +317,7 @@ a:hover.evento {
             height: 28em;
             margin:1em 2em 0em 2em;
 }
-.listaFoto{ position :relative;
+.listaFoto{ 
             width:50em;
             background-color: #000;
            
@@ -378,4 +378,28 @@ height: 35em;
 #section ul ul ul li{
 	margin-left: 4em;
 	
+}
+
+/* Pagina calendario partite */
+
+#tabellapartite{
+	margin-left:auto;
+  	margin-right:auto;
+	text-align:center;
+	border: none;
+	
+}
+
+#tabellapartite thead{
+	border:solid;
+	
+}
+
+.vittoria { background-color:green;
+}
+
+.pareggio { background-color:yellow;
+}
+
+.sconfitta { background-color:red;
 }

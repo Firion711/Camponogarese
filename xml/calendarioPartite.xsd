@@ -8,7 +8,21 @@
 	
 	
 	<xs:complexType name="TcalendarioPartite">
-		<xs:sequence maxOccurs="unbounded">
+		<xs:sequence>
+			<xs:element name="piccoliAmici" type="Tcat" />
+			<xs:element name="esordienti" type="Tcat" />
+			<xs:element name="giovanissimi" type="Tcat" />
+		</xs:sequence>	
+	</xs:complexType>
+
+	<xs:complexType name="Tcat">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="partita" type="Tpartita" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Tpartita">	
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
 			<xs:element name="squadraDiCasa" type="Tsquadra" />
 			<xs:element name="squadraInTrasferta" type="Tsquadra" />
 			<xs:element name="dataPartita" type="Tdata" />
@@ -17,7 +31,7 @@
 			<xs:element name="goalSquadTrasf" type="Tgoal" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<!-- Restrinzione per il nome delle squadre devono iniziare con una lettere maiuscola e poi una o più lettere minuscole; può essere composta da due parti -->
 			
 	<xs:simpleType name="Tsquadra" >

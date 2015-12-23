@@ -46,11 +46,12 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 		<ul>
 			<li><a tabindex="2" href="../html/index.html"><span xml:lang="en">Home Page</span></a></li>
 			<li id="CurrentLink">Chi siamo</li>
-			<li><a tabindex="4" href="../html/squadre.html">Squadre</a></li>
-			<li><a tabindex="5" href="../html/orario.html">Orari</a></li>
+			<li><a tabindex="3" href="../html/squadre.html">Squadre</a></li>
+			<li><a tabindex="4" href="../html/orario.html">Orari</a></li>
+			<li><a tabindex="5" href="../xml/calendarioPartite.xml">Calendario partite</a></li>
 			<li><a tabindex="6" href="../html/photogallery.html"> <span xml:lang="en">Photo Gallery </span></a></li>
 			<li><a tabindex="7" href="../html/dovesiamo.html">Dove siamo</a></li>
-			<li><a tabindex="7" href="../html/contatti.html">Contatti</a></li>
+
 		</ul>
 	</div>
 

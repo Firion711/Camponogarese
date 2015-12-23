@@ -379,3 +379,22 @@ height: 35em;
 	margin-left: 4em;
 	
 }
+
+/* Pagina calendario partite */
+
+#tabellapartite{
+	margin-left:auto;
+  	margin-right:auto;
+	text-align:center;
+	border: none;
+	
+}
+
+.vittoria { background-color:green;
+}
+
+.pareggio { background-color:yellow;
+}
+
+.sconfitta { background-color:red;
+}
