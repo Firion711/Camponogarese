@@ -44,7 +44,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	<!-- link "nascosto" del menù -->
 		<a name="menuNascosto" class="nascosto">Menù</a>
 		<ul>
-			<li><a tabindex="2" href="../html/index.html"><span xml:lang="en">Home Page</span></a></li>
+			<li><a tabindex="2" href="../html/index.html"><span xml:lang="en">Home</span></a></li>
 			<li><a tabindex="7" href="../xml/organizzazione.xml">Chi siamo</a></li>
 			<li><a tabindex="4" href="../html/squadre.html">Squadre</a></li>
 			<li><a tabindex="5" href="../html/orario.html">Orari</a></li>
@@ -62,7 +62,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 			<ul>
 				<li><a class="active" name="matchPA">Risultati della categoria piccoli amici</a></li>
 				<li><a href="#matchs">Vai ai risultati della categoria esordienti</a></li>
-				<li><a href="#matchGi">Vai ai risultati della categoria giovanissi</a></li>
+				<li><a href="#matchGi">Vai ai risultati della categoria giovanissimi</a></li>
 			</ul>
 			</div>
 
@@ -131,7 +131,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 			<ul>
 				<li><a href="#matchPA">Vai ai risultati della categoria piccoli amici</a></li>
 				<li><a class="active" name="matchEs">Risultati della categoria esordienti</a></li>
-				<li><a href="#matchGi">Vai ai risultati della categoria giovanissi</a></li>
+				<li><a href="#matchGi">Vai ai risultati della categoria giovanissimi</a></li>
 			</ul>
 		</div>
 				<xsl:for-each select="x:calendarioPartite/x:esordienti/x:partita">
@@ -199,7 +199,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 			<ul>
 				<li><a href="#matchPA">Vai ai risultatu della categoria piccoli amici</a></li>
 				<li><a href="#matchEs">Vai ai risultati della categoria esordienti</a></li>
-				<li><a class="active" name="matchGi">Risultati della categoria giovanissi</a></li>
+				<li><a class="active" name="matchGi">Risultati della categoria giovanissimi</a></li>
 			</ul>
 		</div>
 						<xsl:for-each select="x:calendarioPartite/x:giovanissimi/x:partita">
