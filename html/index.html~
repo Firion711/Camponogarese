@@ -4,8 +4,8 @@
 	<title>Squadra Calcio</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta name="title" content="Associazione calcistica dilettantistica Camponogarese" />
-	<meta name="description" content="Home page del sito A.C.D. Camponogarese" />
+	<meta name="title" content="Home page - Associazione calcistica dilettantistica Camponogarese" />
+	<meta name="description" content="Pagina principale del sito A.C.D. Camponogarese" />
 	<!-- Aggiungere categorie? es: pulcini camponogara, esordienti camponogara... -->
 	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara" />
 	<meta name="language" content="italian it" />
@@ -18,7 +18,7 @@
 <!--	<meta http-equiv="refresh" content="3" /> -->
 </head>
 
-<body onload="replaceMap()">
+<body>
 	<div id="header">
 		<!-- questo span viola la divisione tra presentazione e struttura -->
 		<span id="logo"></span>
@@ -41,36 +41,28 @@
 		<a name="menuNascosto" class="nascosto">Menù</a>
 
 		<ul>
-			<li id="CurrentLink"><span xml:lang="en">Home Page</span></li>
-			<li><a tabindex="2" href="info.html">Chi siamo</a></li>
-			<li><a tabindex="3" href="squadre.html">Squadre</a></li>
-			<!-- Modifica: Ho diviso orari e squadre; -->
-			<li><a tabindex="4" href="orario.html">Orari</a></li>
-			<li><a tabindex="5" href="photogallery.html"> <span xml:lang="en">Photo Gallery</span> </a></li>
-			<li><a tabindex="6" href="dovesiamo.html">Dove siamo</a></li>
-			<li><a tabindex="7" href="contatti.html">Contatti</a></li>
+			<li id="CurrentLink"><span xml:lang="en">Home</span></li>
+			<li><a tabindex="2" href="../xml/organizzazione.xml">Chi siamo</a></li>
+			<li><a tabindex="3" href="../html/squadre.html">Squadre</a></li>
+			<li><a tabindex="4" href="../html/orario.html">Orari</a></li>
+			<li><a tabindex="5" href="../xml/calendarioPartite.xml">Calendario partite</a></li>
+			<li><a tabindex="6" href="../html/photogallery.html"> <span xml:lang="en">Photo Gallery</span> </a></li>
+			<li><a tabindex="7" href="../html/dovesiamo.html">Dove siamo</a></li>
+
 		</ul>
 	</div>
 
 	<div id="section">
-	    <form method="post" action="">
-			<fieldset id="ricerca">
-				<input id="cerca" class="casella_input" value="Cerca... " />
-			</fieldset>
-		</form>
-		<a tabindex="8" name="contenutopagina"> <h1>Presentazione</h1> </a>
+		<a tabindex="8" name="contenutopagina"></a>
+		<h1>Presentazione</h1>
 		<p>Testo presentazione...</p>
 		<span id="immPres">Immagine presentazione </span>
 		<div id="news">
 			<h2>Ultime novit&agrave; </h2>
 				<ul>
-					<li class="alternate">News 1</li>
-					<li>News 2</li>
-					<li class="alternate">News 3</li>
-					<li>News 4</li>
-					<li class="alternate">News 5</li>
-					<li>News 6</li>
-					<li class="alternate">News 7</li>
+					<li>Domenica 20 Dicembre 2015 ore 10.30 : Incontro di calcio GENITORI - STAFF TECNICO [ <a href="../Documenti/Partita_Genitori-Staff-2015.pdf">pdf 385KB</a> ]</li>
+					<li class="alternate">Domenica 20 Dicembre 2015 ore 15.00 : Auguri Natalizi e festa SETTORE GIOVANILE [ <a href="../Documenti/Festa_Natale_2015.pdf">pdf 400KB</a> ]</li>
+					<li>Calendario chiusura periodo Natalizio [ <a href="../Documenti/Chiusura_Natale.pdf">pdf 265KB</a> ]</li>
 				</ul>
 		</div>
 
@@ -79,14 +71,14 @@
 	</div>
 	<!-- script per nascondere la parte amministrativa	 -->
 	<script type="text/javascript" src="../script/script.js"></script>
-	<input type="button" onclick="return nascondi('login')" value="Gestione amministratore">
+	<p><input type="button" onclick="return nascondi('login')" value="Gestione amministratore"></input></p>
 	<div id="login">
 
 		<form action="" method="post">
 			<fieldset>
 				<legend>Login amministratore</legend>
 				<label for="username">Username</label>
-				<input class="casella_input" name="username" id="username" value "Username" maxlength="20" />
+				<input class="casella_input" name="username" id="username" value="Username" maxlength="20" />
 				<label for="password">Password</label>
 				<input class="casella_input" type="password" name="password" id="password" value="Password" maxlength="20" />
 			</fieldset>

@@ -121,7 +121,7 @@ body {
 	margin-top: 1.0em;
 	margin-right: 1.0em;
 	margin-bottom: 1.0em;
-	margin-left: 20%;
+	margin-left: 21%;
 	background-color: white;
 }
 
@@ -166,31 +166,34 @@ body {
 /* Sezione News */
 
 #news {
-	border: 0.2em solid black;
+	border: 2px solid black;
 	margin-top: 1.0em;
-	width: 70%;
+	width: 85%;
 }
 
 #news h2 {
-	font-size: 1.2em;
-	border-bottom: 0.2em solid black;
-	background-color: #303438;
+	font-size: 1.3em;
+	background-color: #990000;
 	font-style: normal;
 	color: white;
-	padding: 0.5em;
+	border-bottom:2px solid black;
+	text-align:center;
 }
 
 #news ul {
 	list-style-type: none;
-	padding: 0.5em;
+	background-color:#D3D3D3;
 }
 
 .alternate {
-	background-color: #f7f7f7;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
 }
 
 #news ul > li {
 	color: #333;
+	padding:0.5em;
 }
 
 
