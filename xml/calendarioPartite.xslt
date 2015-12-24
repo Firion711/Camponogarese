@@ -61,7 +61,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 		<!--link ancore per i risutati delle varie categorie -->
 			<ul>
 				<li><a class="active" name="matchPA">Risultati della categoria piccoli amici</a></li>
-				<li><a href="#matchs">Vai ai risultati della categoria esordienti</a></li>
+				<li><a href="#matchEs">Vai ai risultati della categoria esordienti</a></li>
 				<li><a href="#matchGi">Vai ai risultati della categoria giovanissimi</a></li>
 			</ul>
 			</div>
