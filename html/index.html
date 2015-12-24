@@ -53,12 +53,8 @@
 	</div>
 
 	<div id="section">
-	    <form method="post" action="">
-			<fieldset id="ricerca">
-				<input id="cerca" class="casella_input" value="Cerca... " />
-			</fieldset>
-		</form>
-		<a tabindex="8" name="contenutopagina"> <h1>Presentazione</h1> </a>
+		<a tabindex="8" name="contenutopagina"></a>
+		<h1>Presentazione</h1>
 		<p>Testo presentazione...</p>
 		<span id="immPres">Immagine presentazione </span>
 		<div id="news">
@@ -79,14 +75,14 @@
 	</div>
 	<!-- script per nascondere la parte amministrativa	 -->
 	<script type="text/javascript" src="../script/script.js"></script>
-	<input type="button" onclick="return nascondi('login')" value="Gestione amministratore">
+	<p><input type="button" onclick="return nascondi('login')" value="Gestione amministratore"></input></p>
 	<div id="login">
 
 		<form action="" method="post">
 			<fieldset>
 				<legend>Login amministratore</legend>
 				<label for="username">Username</label>
-				<input class="casella_input" name="username" id="username" value "Username" maxlength="20" />
+				<input class="casella_input" name="username" id="username" value="Username" maxlength="20" />
 				<label for="password">Password</label>
 				<input class="casella_input" type="password" name="password" id="password" value="Password" maxlength="20" />
 			</fieldset>

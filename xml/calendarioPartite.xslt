@@ -69,7 +69,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 		<xsl:for-each select="x:calendarioPartite/x:piccoliAmici/x:partita">
 			<table id="tabellapartite"  summary="Descrive i risultati di una specifica partita">	
 					<caption>
-						<strong>Parita del <xsl:value-of select="x:dataPartita" /></strong>
+						<strong>Partita del <xsl:value-of select="x:dataPartita" /></strong>
 					</caption>
 				
 				<thead>
@@ -84,11 +84,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 						<td><xsl:value-of select="x:squadraDiCasa" /></td>
 						<td><xsl:value-of select="x:squadraInTrasferta" /> </td>
 					</tr>
-
-					<tr>
-						<th scope="col" colspan="2">Risultato</th>
-					</tr>
-
+					
 					<tr>
 						<xsl:choose>	
 						<!-- vittoria -->
@@ -137,7 +133,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 				<xsl:for-each select="x:calendarioPartite/x:esordienti/x:partita">
 			<table id="tabellapartite"  summary="Descrive i risultati di una specifica partita">	
 					<caption>
-						<strong>Parita del <xsl:value-of select="x:dataPartita" /></strong>
+						<strong>Partita del <xsl:value-of select="x:dataPartita" /></strong>
 					</caption>
 				
 				<thead>
@@ -151,10 +147,6 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 					<tr>
 						<td><xsl:value-of select="x:squadraDiCasa" /></td>
 						<td><xsl:value-of select="x:squadraInTrasferta" /> </td>
-					</tr>
-
-					<tr>
-						<th scope="col" colspan="2">Risultato</th>
 					</tr>
 
 					<tr>
@@ -205,7 +197,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 						<xsl:for-each select="x:calendarioPartite/x:giovanissimi/x:partita">
 			<table id="tabellapartite"  summary="Descrive i risultati di una specifica partita">	
 					<caption>
-						<strong>Parita del <xsl:value-of select="x:dataPartita" /></strong>
+						<strong>Partita del <xsl:value-of select="x:dataPartita" /></strong>
 					</caption>
 				
 				<thead>
@@ -219,10 +211,6 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 					<tr>
 						<td><xsl:value-of select="x:squadraDiCasa" /></td>
 						<td><xsl:value-of select="x:squadraInTrasferta" /> </td>
-					</tr>
-
-					<tr>
-						<th scope="col" colspan="2">Risultato</th>
 					</tr>
 
 					<tr>
