@@ -1,0 +1,36 @@
+<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
+	<fieldset>
+		<legend>Aggiungi personale</legend>
+		
+			<fieldset>
+				<legend>Scegli grado societario</legend>
+				<label for="amministratore">Amministratore</label>
+				<input type="radio" name="grado" id="amministratore" value="amministratore" checked="true" />
+				<label for="dipendente">Dipendente</label>
+				<input type="radio" name="grado" id="dipendente" value="dipendente" />
+			</fieldset>
+			
+			<fieldset>
+				<legend>Scegli ruolo</legend>
+				<label for="manager">Manager</label>
+				<input type="radio" name="ruolo" id="manager" value="manager" checked="true" />
+				<label for="allenatore">Allenatore</label>
+				<input type="radio" name="ruolo" id="allenatore" value="allenatore" />
+			</fieldset>
+			
+			<fieldset>
+				<legend>Dati</legend>
+				<label for="nome">Nome</label>
+				<input type="text" name="nome" maxlength="20"/>
+				<label for="cognome">Cognome</label>
+				<input type="text" name="cognome" maxlength="20"/>
+				<label for="data">Data</label>
+				<input type="text" name="data" maxlength="10"/>
+				<label for="telefono">Telefono</label>
+				<input type="telefono" name="telefono" maxlength="10"/>
+			</fieldset>
+			
+			
+			
+	</fieldset>
+</form>
