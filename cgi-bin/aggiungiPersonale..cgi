@@ -26,49 +26,81 @@ $data =~ s[<>&]/*/g;
 my $telefono=$pagina->param("telefono");
 $telefono =~ s/[<>&]/*/g;
 
-#controllo coerenza ruolo-grado
-if  (($grado eq 'amministratore' && $ruolo eq 'allenatore')||($grado eq 'dipendente' && $ruolo eq 'manager')) {die("Mismatch grado/ruolo");}
+my $errore=0;
+my $mismatch;
+my $errNome;
+my $errCognome;
+my $errData;
+my $errTelefono;
 
+#controllo coerenza ruolo-grado
+if  (($grado eq 'amministratore' && $ruolo eq 'allenatore')||($grado eq 'dipendente' && $ruolo eq 'manager'))
+{
+	$errore=1;
+	$mismatch="Mismatch grado-ruolo";
+}
 
 #controllo coerenza dati letti
 
-	if (length($nome)<2) {die("Nome troppo corto");}
-	if (length($cognome)<2) {die("Cognome troppo corto");}
-	if (length($data)!=10) {die("Data non valida");}
-	if (length($telefono)<6) {die("Telefono troppo corto");}
+	if (length($nome)<2) 
+	{
+		$errore=1;
+		$errNome="Nome troppo corto";
+	}
+	if (length($cognome)<2) 
+	{
+		$errore=1;
+		$errCognome="Cognome troppo corto";
+	}
+	if (length($data)!=10)
+	{
+		$errore=1;
+		$errData="Data non valida";
+	}
+	if (length($telefono)<6) 
+	{
+		$errore=1;
+		$errTelefono="Telefono non valido";
+	}
 
-
+#aggiungere lock?
 #my $file="../xml/organizzazione.xml";
 #open(my $riuscito, '>>', $file) || die "Impossibile aprire il file";
 #flock($riuscito, LOCK_EX) || die "Impossibile ottenere il lock";
 
-
-my $file="../xml/organizzazione.xml";
-my $parser=XML::LibXML->new();
-my $doc=$parser->parse_file($file);
-my $radice=$doc->getDocumentElement;
-my @organizzazione=$radice->getElementsByTagName('organizzazione');
-$nuovoPersonale=
-"
-<nome>$nome</nome>
-<cognome>$cognome</cognome>
-<data>$data</data>
-<telefono>$telefono</telefono>
-";
-my $frammento=$parser->parse_balanced_chunks($nuovoPersonale);
-if ($ruolo eq 'manager')
+if ($errore==0)
 {
-my $padre=$doc->findnodes('//manager');
-$padre->[0]->appendChild($nuovoPersonale);
-}
+	my $file="../xml/organizzazione.xml";
+	my $parser=XML::LibXML->new();
+	my $doc=$parser->parse_file($file);
+	my $radice=$doc->getDocumentElement;
+	my @organizzazione=$radice->getElementsByTagName('organizzazione');
+	$nuovoPersonale=
+	"
+	<nome>$nome</nome>
+	<cognome>$cognome</cognome>
+	<data>$data</data>
+	<telefono>$telefono</telefono>
+	";
+	my $frammento=$parser->parse_balanced_chunks($nuovoPersonale);
+	if ($ruolo eq 'manager')
+	{
+	my $padre=$doc->findnodes('//manager');
+	$padre->[0]->appendChild($nuovoPersonale);
+	}	
 
-if ($ruolo eq 'allenatore')
+	if ($ruolo eq 'allenatore')
+	{
+	my $padre=$doc->findnodes('//allenatori');
+	$padre->[0]->appendChild($nuovoPersonale);
+	}
+
+	my $file="../xml/organizzazione.xml";
+	open(OUT, ">$file") || die "Impossibile aprire il file";
+	print OUT $doc->toString;
+	close (OUT);
+}
+else
 {
-my $padre=$doc->findnodes('//allenatori');
-$padre->[0]->appendChild($nuovoPersonale);
+	#stampa pagina errori generata dinamicamente (ristampare anche form con gli stessi dati che aveva messo l'utente)
 }
-
-my $file="../xml/organizzazione.xml";
-open(OUT, ">$file") || die "Impossibile aprire il file";
-print OUT $doc->toString;
-close (OUT);
