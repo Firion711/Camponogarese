@@ -1,13 +1,13 @@
 /*Togliere i commenti alla fine per avere un file di minori dimensioni*/
 
 *{
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 }
 
 body, html{
 	margin: auto;
-	font-size:100%;
+	font-size: 100%;
 	/*Da rivedere il font-family;*/
 	font-family: Verdana, Helvetica, sans-serif;
 	background-color: #D9D9D9;
@@ -103,8 +103,6 @@ body {
 	border-left: 6px solid #FF3300;
 }
 
-/*a:visited colore diverso???*/
-
 #menu a:hover {
 	text-align: center;
 	color: #990000;
@@ -113,8 +111,6 @@ body {
 }
 
 /* section */
-
-/*Sistemare l'inquadratura...*/
 
 #section{
 	padding: 2em;
@@ -176,8 +172,8 @@ body {
 	background-color: #990000;
 	font-style: normal;
 	color: white;
-	border-bottom:2px solid black;
-	text-align:center;
+	border-bottom: 2px solid black;
+	text-align: center;
 }
 
 #news ul {
@@ -196,14 +192,14 @@ body {
 	padding:0.5em;
 }
 
-
 #section p {
 	padding-bottom:0.5em;
 }
 
 /* Pagina "dove siamo" */
+
 #info {
-	display:inline-block;
+	display: inline-block;
 	padding: 0.5em;
 	border: 1px solid black;
 	background-color: #FFFF99;
@@ -211,7 +207,8 @@ body {
 	margin-bottom: 1em;
 }
 
-/* nasconde i link,spostandoli dalla visualizzazion, serve solo per lo screen reader*/
+/* nasconde i link, spostandoli dalla visualizzazione, serve solo per lo screen reader*/
+
 a.nascosto{
 	position: absolute;
 	left: -10000px;
@@ -222,11 +219,12 @@ a.nascosto{
 }
 
 /* questa clausula si può anche togliere,serve solo a visualizzare il link quando lo scorri con i vari tab */
+
 a:focus.nascosto 
 { 
-position: static; 
-width: auto; 
-height: auto; 
+	position: static; 
+	width: auto; 
+	height: auto; 
 } 
 
 /* Sezione PHOTO GALLERY */
@@ -257,6 +255,7 @@ height: auto;
 	margin: 0.2em;
 	border-bottom: 0.5em solid #66CC66;
 }
+
 .linkAncore li a:hover:not(.active){
 	color: black;
 	background-color:#CCFFCC;
@@ -295,16 +294,16 @@ a:hover.evento {
 	background-color: white;
  	border: 1px solid #777;
 	color: #E42217;
-
 }
 
 /* Sezione dedicata all' evento prototipo */
 
 #jsDisabilitato{
-	display:block;
+	display: block;
 }
+
 #jsAbilitato{
-	display:none;
+	display: none;
 }
 
 #big_img img {   
@@ -312,11 +311,13 @@ a:hover.evento {
     height: 28em;
     margin: 1em 2em 0em 2em;
 }
+
 .listaFoto{ 
     width: 50em;
     background-color: #000;
            
 }
+
 .listaFoto img{
     width: 10em;
     height: 7em;
@@ -326,11 +327,14 @@ a:hover.evento {
     opacity: 0.5;
     cursor: pointer;
 }
+
 .listaFoto img:hover{
     opacity: 1;
 	border: 0.5em solid green;
 }
+
 /* immagini di un evento */
+
 .immev {
 	width: 40em;
 	height: 35em;
@@ -346,7 +350,6 @@ a:hover.evento {
 .print {
 	display: none;
 }
-
 
 /* Pagina "Chi Siamo"*/
 
