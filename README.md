@@ -5,7 +5,7 @@ Davide:	tecnologie (xhtml, xml, xslt, xpath, funzioni JavaScript) + pagine (cale
 
 Emanuele:	tecnologie (xhtml, css) + pagine ("home" e "squadre") + struttura sito (header, menù, section, footer ...) 
 
-Jordan:	
+Jordan:	tecnologie (xhtml, xml, xslt, perl) + pagine ( orari, chisiamo, sezione amministrativa)
 
 Daniel: tecnologie (xhtml,  xml, xslt, perl, JavaScript) + pagine (sezione "ultime novità" nella home, sezione amministrativa, "dove siamo" e relativo JavaScript)
 
