@@ -3,7 +3,7 @@ Suddivisioni
 
 Davide:	tecnologie (xhtml, xml, xslt, xpath, funzioni JavaScript) + pagine (calendario partite, photogallery, eventoprototipo)
 
-Emanuele:	tecnologie (xhtml, css) + pagine ("home" e "squadre") + struttura sito (header, menù, section, footer ...) 
+Emanuele:	tecnologie (xhtml, css) + pagine ("home" e "squadre") + struttura sito (header, menù, section, footer ...) + relazione
 
 Jordan:	tecnologie (xhtml, xml, xslt, perl) + pagine ( orari, chisiamo, sezione amministrativa)
 
