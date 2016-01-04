@@ -1,16 +1,16 @@
 // funzione per rendere a scomparsa il login dell'amministratore
-function nascondi(a){
-//salvo sulla variabile nasc, lo style dell'elemento passato
-var nasc=document.getElementById(a);
-if(!nasc) return true;
-if(nasc.style.display=="block"){
-nasc.style.display="none"
-}
-else{
-nasc.style.display="block"
-}
-return false;
-}
+	function nascondi(a){
+	//salvo sulla variabile nasc, lo style dell'elemento passato
+		var nasc=document.getElementById(a);
+			if(!nasc) return true;
+				if(nasc.style.display=="block"){
+					nasc.style.display="none"
+					}
+				else{
+					nasc.style.display="block"
+				}
+			return false;
+	}
 
 //funzione che sostituisce l'immagine della mappa con la mappa in google maps
 function replaceMap() {
@@ -21,6 +21,7 @@ function replaceMap() {
 // funzione che verifica se javascript è abilitato e mostra due finestre diverse a seconda del risultato
 
 function controlloJava() {
+
 //salvo in 2 variabili i valori dei due id
 	var jsd = document.getElementById("jsDisabilitato")
 	var jsa = document.getElementById("jsAbilitato");
@@ -31,14 +32,14 @@ function controlloJava() {
 }
 
 /* funzione per modificare l'immagine grande sugli eventi */
-
+//window.onload = gallery;
 function gallery(){
      var tutteLeImmagini = document.images; //salvo tutte le immagini in questa variabile
-     for(var i=0; i<tutteLeImmagini.length; i++){
+    for(var i=0; i<tutteLeImmagini.length; i++){
 
 	tutteLeImmagini[i].onclick = CambiaImmagine; //ogni volta che si clicca sull'immagine,chiama la funzione CambiaImmagine
-         
-     }
+
+    }
 }
 
 //dichiarazione della funzione CambiaImmagine
