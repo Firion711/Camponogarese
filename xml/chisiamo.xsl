@@ -20,7 +20,8 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	<meta name="author" content="Davide Santimaria" />
 	<meta name="author" content="Emanuele Carraro" />
 	<meta name="author" content="Jordan Gottardo" />
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
 	
 </head>
 
