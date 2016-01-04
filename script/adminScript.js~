@@ -1,0 +1,49 @@
+// serie di funzioni per rendere visibili le varie opzioni in base ai checkbox selezionati
+function cbCheck(){
+	var elem = document.getElementById("sceltaRuolo");
+	var grados1 = document.getElementById("amministratore");
+	var grados2 = document.getElementById("dipendente");
+	var ruolo1 = document.getElementById("mangerHide");
+	var ruolo2 = document.getElementById("allenatHide");
+if ((grados1.checked) || (grados2.checked)) {
+	elem.style.display = "block";
+
+	if (grados1.checked){
+		ruolo1.style.display = "block";
+		ruolo2.style.display = "none";		
+		}
+
+		else{
+		ruolo2.style.display = "block";
+		ruolo1.style.display = "none";
+		}
+	}
+};
+
+function cbCheck1(){
+	var elem = document.getElementById("listaDati");
+	var grados1 = document.getElementById("amministratore");
+	var grados2 = document.getElementById("dipendente");
+	var ruolo1 = document.getElementById("mangerHide");
+	var ruolo2 = document.getElementById("allenatHide");
+if ((grados1.checked) || (grados2.checked)) {
+	elem.style.display = "block";
+
+	if (grados1.checked){
+		ruolo1.style.display = "block";
+		ruolo2.style.display = "none";		
+		}
+
+		else{
+		ruolo2.style.display = "block";
+		ruolo1.style.display = "none";
+		}
+	}
+};
+function hideRuolo () {
+     document.getElementById("sceltaRuolo").style.display = "none";
+};
+
+function hideDati () {
+     document.getElementById("listaDati").style.display = "none";
+};

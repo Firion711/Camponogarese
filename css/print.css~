@@ -163,10 +163,6 @@ a:hover.evento {
  	border: 1px solid black;
 }
 
-#jsDisabilitato{
-	display: block;
-}
-
 #jsAbilitato{
 	display:none;
 }

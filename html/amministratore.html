@@ -1,23 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+	<title>Admin Page - Camponogarese</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<script type="text/javascript" src="../script/adminScript.js"></script>
+
+</head>
+<body onload="hideRuolo(); hideDati();">
+
 <form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
 	<fieldset>
 		<legend>Aggiungi personale</legend>
-		
 			<fieldset>
 				<legend>Scegli grado societario</legend>
-				<label for="amministratore">Amministratore</label>
-				<input type="radio" name="grado" id="amministratore" value="amministratore" checked="true" />
-				<label for="dipendente">Dipendente</label>
-				<input type="radio" name="grado" id="dipendente" value="dipendente" />
+						<label for="amministratore">Amministratore</label>
+						<input type="radio" name="grado" id="amministratore" value="amministratore"  
+						onclick="cbCheck();" />
+					
+					
+						<label for="dipendente">Dipendente</label>
+						<input type="radio" name="grado" id="dipendente" value="dipendente" onclick="cbCheck();"/>
+						
 			</fieldset>
-			
+
+		<div id="sceltaRuolo">
 			<fieldset>
 				<legend>Scegli ruolo</legend>
-				<label for="manager">Manager</label>
-				<input type="radio" name="ruolo" id="manager" value="manager" checked="true" />
-				<label for="allenatore">Allenatore</label>
-				<input type="radio" name="ruolo" id="allenatore" value="allenatore" />
+					<div id="mangerHide">
+						<label for="manager">Manager</label>
+						<input type="radio" name="ruolo" id="manager" value="manager" onclick="cbCheck1();"/>
+					</div>
+					
+					<div id="allenatHide">	
+						<label for="allenatore">Allenatore</label>
+						<input type="radio" name="ruolo" id="allenatore" value="allenatore" onclick="cbCheck1();"/>
+					</div>
 			</fieldset>
-			
+		</div>
+		<div id="listaDati">
 			<fieldset>
 				<legend>Dati</legend>
 				<label for="nome">Nome</label>
@@ -29,8 +50,11 @@
 				<label for="telefono">Telefono</label>
 				<input type="telefono" name="telefono" maxlength="10"/>
 			</fieldset>
-			
+		</div>	
 			
 			
 	</fieldset>
 </form>
+
+</boby>
+</html>

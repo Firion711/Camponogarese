@@ -21,18 +21,22 @@ function replaceMap() {
 // funzione che verifica se javascript è abilitato e mostra due finestre diverse a seconda del risultato
 
 function controlloJava() {
-
+var mq = window.matchMedia( "print" );
 //salvo in 2 variabili i valori dei due id
 	var jsd = document.getElementById("jsDisabilitato")
 	var jsa = document.getElementById("jsAbilitato");
 //se è abilitato java,sicuramente farà questo controllo e nasconderà il div con id= jsDisabilitato
-			jsd.style.display="none";
+			if (mq.matches) {
+			jsd.style.display="block";
+			jsa.style.display="none";
+		}
+	else {
+jsd.style.display="none";
 			jsa.style.display="block";
-		
+}
 }
 
 /* funzione per modificare l'immagine grande sugli eventi */
-//window.onload = gallery;
 function gallery(){
      var tutteLeImmagini = document.images; //salvo tutte le immagini in questa variabile
     for(var i=0; i<tutteLeImmagini.length; i++){
