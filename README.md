@@ -1,9 +1,9 @@
 #TecWeb
 Suddivisioni: 
 Davide	
-Emanuele	
+Emanuele:	tecnologie (xhtml, css) + pagine ("home" e "squadre") + struttura sito (header, menù, section, footer ...) 
 Jordan	
-Daniel = xhtml, sezione "ultime novità" nella home, xml, xslt, perl, sezione amministrativa, pagina "dove siamo" (e relativo JavaScript)
+Daniel: tecnologie (xhtml,  xml, xslt, perl, JavaScript) + pagine (sezione "ultime novità" nella home, sezione amministrativa, "dove siamo" e relativo JavaScript)
 
 <strong>Valutazione progetti</strong>
 
