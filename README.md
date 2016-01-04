@@ -1,7 +1,7 @@
 #TecWeb
 Suddivisioni
 
-Davide:	
+Davide:	tecnologie (xhtml, xml, xslt,xpath,funzioni "idiote" JavaScript) + pagine (calendario partite, photogallery,eventoprototipo)
 
 Emanuele:	tecnologie (xhtml, css) + pagine ("home" e "squadre") + struttura sito (header, menù, section, footer ...) 
 
