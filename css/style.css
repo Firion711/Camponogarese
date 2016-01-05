@@ -38,17 +38,23 @@ body {
 	height: 6em;
 	float: left;
 	/*Il logo lo lasciamo in formato jpg?*/
-	background-image: url(../immagini/logo.png);
+	background-image: url(../immagini/logo2.png);
 	background-repeat:no-repeat;
-	margin-top: 1em;
+	margin-top: 0.5em;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
 
 #header h1 {
-	padding-top: 1em;
-	margin-bottom:1.5em;
+	padding: 1em;
 	padding-left: 10%;
+	border: 1px solid #FFCC00;
+    border-radius: 25px;
+	background: #ff3200; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #ff3200 0%, #720000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #ff3200 0%,#720000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #ff3200 0%,#720000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3200', endColorstr='#720000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /* Sezione path */
@@ -294,6 +300,45 @@ a:hover.evento {
 	background-color: white;
  	border: 1px solid #777;
 	color: #E42217;
+}
+
+/* Squadre */
+
+#squadra{
+	float: right;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 40em;
+	height: 17em;
+	max-width: 800px;
+	max-height: 350px;
+}
+
+#listaSquadre{
+	margin-top: 3em;
+	list-style-type: none;
+	font-size: 1.2em;
+	margin-bottom: 20%;
+}
+
+#piccoliamici, #esordienti, #giovanissimi{
+	font-size: 1.1em;
+	border: 1px solid red;
+	border-left: 6px solid #FF3300;
+	background-color: #FF6633;
+	padding: 1em;
+}
+
+#piccoliamici_section, #esordienti_section, #giovanissimi_section{
+	border: 1px solid red;
+	border-top: none;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
+}
+
+.listaGiocatori{
+	margin-left: 1.5em;
+	list-style-type: none;
 }
 
 /* Sezione dedicata all' evento prototipo */

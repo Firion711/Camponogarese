@@ -16,18 +16,14 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara, calendario, partite" />
 	<meta name="language" content="italian it" />
 	<!-- Come mettere più author? 1 meta con più nomi, separati da virgola, o più meta (valida)-->
-	<meta name="author" content="Daniel De Gaspari" />
-	<meta name="author" content="Davide Santimaria" />
-	<meta name="author" content="Emanuele Carraro" />
-	<meta name="author" content="Jordan Gottardo" />
+	<meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
-	
 </head>
 
 <body>
 	<div id="header">
-		<!-- questo span viola la divisione tra presentazione e struttura -->
+		
 		<span id="logo"></span>
 
 		<!-- link "nascosto" che porta direttamente al contenuto della pagina -->
