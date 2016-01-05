@@ -27,7 +27,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 		<span id="logo"></span>
 
 		<!-- link "nascosto" che porta direttamente al contenuto della pagina -->
-			<a tabindex="1" href="#contenutopagina" class="nascosto">Vai al contenuto della pagina</a>
+			<a href="#contenutopagina" class="nascosto">Vai al contenuto della pagina</a>
 
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 	</div>
@@ -41,13 +41,13 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	<!-- link "nascosto" del menù -->
 		<a name="menuNascosto" class="nascosto">Menù</a>
 		<ul>
-			<li><a tabindex="2" href="../html/index.html"><span xml:lang="en">Home</span></a></li>
-			<li><a tabindex="7" href="../xml/organizzazione.xml">Chi siamo</a></li>
-			<li><a tabindex="4" href="../html/squadre.html">Squadre</a></li>
-			<li><a tabindex="5" href="../html/orario.html">Orari</a></li>
+			<li><a href="../html/index.html"><span xml:lang="en">Home</span></a></li>
+			<li><a href="../xml/organizzazione.xml">Chi siamo</a></li>
+			<li><a href="../html/squadre.html">Squadre</a></li>
+			<li><a href="../html/orario.html">Orari</a></li>
 			<li id="CurrentLink">Calendario partite</li>
-			<li><a tabindex="6" href="../html/photogallery.html"> <span xml:lang="en">Photo Gallery </span></a></li>
-			<li><a tabindex="7" href="../html/dovesiamo.html">Dove siamo</a></li>
+			<li><a href="../html/photogallery.html"> <span xml:lang="en">Photo Gallery </span></a></li>
+			<li><a href="../html/dovesiamo.html">Dove siamo</a></li>
 			
 		</ul>
 	</div>
