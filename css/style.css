@@ -118,6 +118,7 @@ body {
 	margin-bottom: 1.0em;
 	margin-left: 21%;
 	background-color: white;
+	overflow: hidden;
 }
 
 .casella_input{
@@ -298,40 +299,80 @@ a:hover.evento {
 /* Squadre */
 
 #squadra{
-	float: right;
 	margin-top: 2em;
 	margin-bottom: 2em;
-	width: 40em;
-	height: 17em;
+	width: 37em;
+	height: 15em;
 	max-width: 800px;
 	max-height: 350px;
 }
 
-#listaSquadre{
-	margin-top: 3em;
+.listaSquadre{
 	list-style-type: none;
-	font-size: 1.2em;
-	margin-bottom: 20%;
+	font-size: 1.1em;
+	background-color: #ff9e54;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+	float: left;
+	width: 100%;
+}
+
+.listaSquadre li {
+	float: left;
+	margin: 0 1em 0 1em;
+}
+
+.listaSquadre .selected{
+	border-bottom: 6px solid red;
+}
+
+.listaSquadre a{
+	text-decoration: none;
+    display: block;
+    border-bottom: 6px solid #fc6;
+    color: #102847;
+	padding: 0 0.5em;
+}
+
+.listaSquadre a:hover{
+	text-decoration: none;
+    display: block;
+    border-bottom: 6px solid red;
+    color: black;
+	padding: 0 0.5em;
 }
 
 #piccoliamici, #esordienti, #giovanissimi{
-	font-size: 1.1em;
-	border: 1px solid red;
-	border-left: 6px solid #FF3300;
-	background-color: #FF6633;
-	padding: 1em;
-}
-
-#piccoliamici_section, #esordienti_section, #giovanissimi_section{
-	border: 1px solid red;
+	border: 1px solid #ff9e54;
 	border-top: none;
 	margin-bottom: 1.5em;
-	padding: 1.5em;
+	padding: 2em;
 }
 
 .listaGiocatori{
 	margin-left: 1.5em;
 	list-style-type: none;
+	float: left;
+}
+
+.parent { 
+	overflow: hidden; 
+}
+
+.listaGiocatori li{
+	float: left;
+	padding: 0.2em;
+}
+
+.ruoli{
+	list-style-type: none;
+	margin-top: 0.5em;
+	margin-right: 5em;
+}
+
+.ruoli li{
+	float: initial;
 }
 
 /* Sezione dedicata all' evento prototipo */
