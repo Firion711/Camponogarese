@@ -248,23 +248,24 @@ a:focus.nascosto
 
 .linkAncore li a{
 	display: block;
-	background-color: #99FF99;
+	background-color: #FF9933;
 	padding: 0.8em;
 	text-align: center;
 	text-decoration: none;
 	margin: 0.2em;
-	border-bottom: 0.5em solid #66CC66;
+	border-bottom: 0.5em solid #CC3300;
 }
 
 .linkAncore li a:hover:not(.active){
 	color: black;
-	background-color:#CCFFCC;
+	background-color:#FFFF66;
+	border-bottom: 0.5em solid #FF3300;
 }
 
 li > a.active{
-    background-color: #66CC66;
+    background-color: #FFCC33;
     color: #003333;
-	border-bottom: 0.5em solid #003333;
+	border-bottom: 0.5em solid #FF3300;
 }
 
 .listaEventi{
@@ -274,7 +275,10 @@ li > a.active{
 	height: auto;
 	width: auto;
 	display: block;
-	background-color: #CCFF99;
+}
+
+.listaEventi a{
+	background-color: #FFFF66;
 }
 
 a.evento{
@@ -372,7 +376,7 @@ a:hover.evento {
 }
 
 .ruoli li{
-	float: initial;
+	float: none;
 }
 
 /* Sezione dedicata all' evento prototipo */
