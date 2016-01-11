@@ -82,7 +82,7 @@ print <<ENDHTML;
 ENDHTML
 	
 #----- campo username errato------
-if($user ne "user" and $pwd eq "pwd") {	
+if($user ne "user" and $pwd eq "pwd" and length $user ne "0") {	
 print <<ENDHTML;
 	<p>Username errato.</p>
 	<p>Ricompila i campi d'accesso.</p>
@@ -90,7 +90,7 @@ ENDHTML
 } 
 
 #----- campo password errato------
-if($user eq "user" and $pwd ne "pwd") {	
+if($user eq "user" and $pwd ne "pwd" and length $pwd ne "0") {	
 print <<ENDHTML;
 	<p>Password errata.</p>
 	<p>Ricompila i campi d'accesso.</p>
@@ -98,7 +98,7 @@ ENDHTML
 }  
 
 #----- entrambi i campi user errati------
-if($user ne "user" and $pwd ne "pwd" and length $user ne '0' and length $pwd ne '0') {	
+if($user ne "user" and $pwd ne "pwd" and length $user ne "0" and length $pwd ne "0") {	
 print <<ENDHTML;
 	<p>Username e Password errati.</p>
 	<p>Ricompila i campi d'accesso.</p>
