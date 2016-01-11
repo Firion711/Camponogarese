@@ -495,3 +495,15 @@ a:hover.evento {
 .sconfitta { 
 	background-color: #FF0000;
 }
+
+/*Admin page*/
+
+#fail img{
+	float:left;
+	height: 15%;
+	width: 18%;
+	margin-top: 1.0em;
+	margin-right: 1%;
+	margin-bottom: 1.0em;
+	margin-left: 1%;
+}
