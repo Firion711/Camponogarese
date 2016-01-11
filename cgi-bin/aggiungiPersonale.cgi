@@ -29,7 +29,7 @@ my $telefono=$input->param("telefono");
 $telefono =~ s/[<>&]//g;
 
 
-my $filepath="../perl/organizzazione.xml";
+my $filepath="../xml/organizzazione.xml";
 
 my $errore=0;
 my $mismatch;
