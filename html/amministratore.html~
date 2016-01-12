@@ -50,8 +50,9 @@
 				<label for="telefono">Telefono</label>
 				<input type="telefono" name="telefono" maxlength="10"/>
 			</fieldset>
-		</div>
-		<input type="submit" value="Invia dati">
+		</div>	
+			
+			
 	</fieldset>
 </form>
 

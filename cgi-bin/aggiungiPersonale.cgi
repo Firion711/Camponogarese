@@ -114,7 +114,7 @@ if ($errore==0)
 	}
 
 	#apro il file su cui serializzare
-	open(OUT, ">$filepath") or die ("Errore nel salvataggio del file");
+	open(OUT, "$filepath") or die ("Errore nel salvataggio del file");
 	#scrivo sul file
 	print OUT $doc->toString;
 	#chiudo il file
@@ -127,7 +127,7 @@ if ($errore==0)
 	print <<EOF;
 	 <html><head>
 	 <title>Amministratore</title>
-	 <script type="text/javascript" src="../perl/script.js"></script>
+	 <script type="text/javascript" src="script.js"></script>
 	 </head>
 	 <body onload="caricamento();">
 	 <div>
@@ -159,10 +159,10 @@ if ($errore==0)
 	 <span><input type="text"  id="cognome" name="cognome" maxlength="20" /></span>
 	 <br />
 	 <label for="data">Data</label>
-	 <input type="text" id="data" name="data" maxlength="10" />
+	 <span><input type="text" id="data" name="data" maxlength="10" /></span>
 	 <br />
 	 <label for="telefono">Telefono</label>
-	 <input type="telefono" id="telefono" name="telefono" maxlength="10" />
+	 <span><input type="telefono" id="telefono" name="telefono" maxlength="10" /></span>
 	 <br />
 	 </fieldset>
 	 </fieldset>
@@ -178,7 +178,7 @@ else
 	print <<EOF;
 	 <html><head>
 	 <title>Amministratore</title>
-	 <script type="text/javascript" src="../perl/script.js"></script>
+	 <script type="text/javascript" src="script.js"></script>
 	 </head>
 	 <body onload="caricamento();">
 	
@@ -276,10 +276,10 @@ EOF
 	 <span><input type="text" id="cognome" name="cognome" maxlength="20" value="$cognome" /></span>
 	 <br />
 	 <label for="data">Data</label>
-	 <input type="text" id="data" name="data" maxlength="10" value="$data" />
+	 <span><input type="text" id="data" name="data" maxlength="10" value="$data" /></span>
 	 <br />
 	 <label for="telefono">Telefono</label>
-	 <input type="telefono" id="telefono" name="telefono" maxlength="10" value="$telefono" />
+	 <span><input type="telefono" id="telefono" name="telefono" maxlength="10" value="$telefono" /></span>
 	 <br />
 	 </fieldset>
 	 </fieldset>
