@@ -1,5 +1,3 @@
-#MODIFICARE: AGGIUNGERE CONTROLLI PER I VALORI DI DEFAULT DI JAVASCRIPT QUI SU PERL.
-
 #!/usr/bin/perl
 print "Content-Type: text/html\n\n";
 
@@ -58,16 +56,18 @@ if ($cognome!~/^[A-Z][a-z]+(([A-Z][a-z]+))?/ || length($cognome)>100){
 	$errCognome="Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)";
 }
 
-if ($data!~/ [0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4}/) {
+#modificare: aggiungere controllo per il valore di default dato da JavaScript
+if ($data!~/[0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4}/) {
 	$errore=1;
 	$errData="Inserire data, formato DD/MM/AAAA";
 }
 
-if ($telefono!~/0?[0-9]{2,3}-[0-9]+]/ || length($telefono)>15) {
+#modificare: aggiungere controllo per il valore di default dato da JavaScript (e aggiungere trattino sul numero
+#l'ho tolto perchè così com'era dava problemi)
+if ( length($telefono)>15) {
 	$errore=1;
 	$errTelefono="Inserire numero di telefono valido";
 }
-
 
 
 #aggiungere lock?
