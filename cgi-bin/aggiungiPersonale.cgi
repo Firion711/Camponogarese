@@ -1,5 +1,3 @@
-#MODIFICARE: AGGIUNGERE CONTROLLI PER I VALORI DI DEFAULT DI JAVASCRIPT QUI SU PERL.
-
 #!/usr/bin/perl
 print "Content-Type: text/html\n\n";
 
@@ -115,8 +113,10 @@ if ($errore==0)
 		}
 	}
 
+
+
 	#apro il file su cui serializzare
-	open(OUT, "$filepath") or die ("Errore nel salvataggio del file");
+	open(OUT, ">$filepath") or die ("Errore nel salvataggio del file");
 	#scrivo sul file
 	print OUT $doc->toString;
 	#chiudo il file
