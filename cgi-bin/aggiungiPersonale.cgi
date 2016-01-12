@@ -1,3 +1,5 @@
+#MODIFICARE: AGGIUNGERE CONTROLLI PER I VALORI DI DEFAULT DI JAVASCRIPT QUI SU PERL.
+
 #!/usr/bin/perl
 print "Content-Type: text/html\n\n";
 
