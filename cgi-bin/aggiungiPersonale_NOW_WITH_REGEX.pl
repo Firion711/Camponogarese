@@ -46,25 +46,25 @@ if  (( $grado eq 'amministratore' && $ruolo eq 'allenatore') || ($grado eq 'dipe
 
 #Controllo dati letti
 #controllo coerenza dati letti
-if ($nome!~/^[A-Z][a-z]+/ || length($nome)>100) {
+if ($nome!~/^[A-Z][a-z]+/ || length($nome)>100 || $nome=="Inserire nome"){
 	$errore=1;
 	$errNome="Inserire un nome lungo almeno 2, prima lettera maiuscola";
 }
 
-if ($cognome!~/^[A-Z][a-z]+(([A-Z][a-z]+))?/ || length($cognome)>100){
+if ($cognome!~/^[A-Z][a-z]+(([A-Z][a-z]+))?/ || length($cognome)>100 || $cognome=="Inserire cognome"){
 	$errore=1;
 	$errCognome="Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)";
 }
 
 #modificare: aggiungere controllo per il valore di default dato da JavaScript
-if ($data!~/[0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4}/) {
+if ($data!~/([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/ || $data=="Inserire data" {
 	$errore=1;
 	$errData="Inserire data, formato DD/MM/AAAA";
 }
 
 #modificare: aggiungere controllo per il valore di default dato da JavaScript (e aggiungere trattino sul numero
-#l'ho tolto perchè così com'era dava problemi)
-if ( length($telefono)>15) {
+#controllare se funziona  il trattino dopo l'aggiunta dell'escaping
+if ( $telefono!~/(0?[0-9]{2,3}\-[0-9]+)|(0?[0-9]{2,3}[0-9]+)/ || length($telefono)>15 || $telefono=="Inserire telefono") {
 	$errore=1;
 	$errTelefono="Inserire numero di telefono valido";
 }
