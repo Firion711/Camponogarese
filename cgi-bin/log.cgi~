@@ -97,7 +97,7 @@ print <<ENDHTML;
 	<form action="../cgi-bin/aggiungiPersonale.cgi" method="post">
 		<fieldset>
 			<legend>Aggiungi organizzazione</legend>
-			<input type="submit" value="aggiungi" name="aggiungi"></input>
+			<input type="submit" value="Aggiungi" name="Aggiungi"></input>
 		</fieldset>
 	</form>
 </div>

@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="organizzazione.xslt"?>
-<organizzazione xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns="http://www.camponogarese.it"
-	xsi:schemaLocation="http://www.camponogarese.it organizzazione.xsd">
+<?xml-stylesheet type="text/xsl" href="chisiamo.xsl"?>
+<organizzazione xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.camponogarese.it" xsi:schemaLocation="http://www.camponogarese.it organizzazione.xsd">
 	
 	<amministratori>
 		<manager>
-			<nome>Gilby</nome>
-			<cognome>Gilby</cognome>
-			<dataNascita>01/01/1111</dataNascita>
+			<nome>Nomeuno</nome>
+			<cognome>Cognomeuno</cognome>
+			<dataNascita>01/01/2000</dataNascita>
 			<telefono>000-0000000</telefono>
 		</manager>
+		<manager>
+			<nome>Nomedue</nome>
+			<cognome>Cognomedue</cognome>
+			<dataNascita>02/02/2000</dataNascita>
+			<telefono>000-0000000</telefono>
+		</manager>
+	
+		<manager>
+			<nome>Daniel</nome>
+			<cognome>De Gaspari</cognome>
+			<data>27-08-1994</data>
+			<telefono>041414141</telefono>
+		</manager>
+	
+		<manager>
+			<nome>Daniel</nome>
+			<cognome>De Gaspari</cognome>
+			<dataNascita>27-08-1994</dataNascita>
+			<telefono>041414141</telefono>
+		</manager>
 	</amministratori>
+	
 	<dipendenti>
 		<allenatori>
-			<nome>Gilby</nome>
-			<cognome>Gilby</cognome>
-			<dataNascita>01/01/1111</dataNascita>
+			<nome>Nometre</nome>
+			<cognome>Cognometre</cognome>
+			<dataNascita>02/02/2002</dataNascita>
 			<telefono>000-0000000</telefono>
 		</allenatori>
 	</dipendenti>
 </organizzazione>
+<!-- Questo e' valido -->
