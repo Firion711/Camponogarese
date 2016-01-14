@@ -13,7 +13,7 @@
 			<nome>Nomedue</nome>
 			<cognome>Cognomedue</cognome>
 			<dataNascita>02/02/2000</dataNascita>
-			<telefono>000-0000000</telefono>
+			<telefono>0000000000</telefono>
 		</manager>
 	
 		<manager>
@@ -67,19 +67,19 @@
 			<telefono>000-0000000</telefono>
 		</allenatori>
 	
-		<allenatore>
+		<allenatori>
 			<nome>Riccardo</nome>
 			<cognome>Mao</cognome>
 			<dataNascita>01/01/1994</dataNascita>
 			<telefono>041-414141</telefono>
-		</allenatore>
+		</allenatori>
 	
-		<allenatore>
+		<allenatori>
 			<nome>Riccardo</nome>
 			<cognome>Mao</cognome>
 			<dataNascita>01/01/1994</dataNascita>
 			<telefono>041-414141</telefono>
-		</allenatore>
+		</allenatori>
 	
 		<allenatori>
 			<nome>Riccardo</nome>

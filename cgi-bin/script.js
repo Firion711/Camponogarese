@@ -1,10 +1,10 @@
 //creo array associativo
 var dettagli_form =
 {
-	"nome": ["Inserire nome", /^[A-Z][a-z]+/, "Inserire un nome lungo almeno 2, prima lettera maiuscola"],
-	"cognome": ["Inserire cognome", /^[A-Z][a-z]+( ([A-Z][a-z]+))?/, "Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)"],
-	"data":["Inserire data", /[0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4}/, "Inserire data, formato DD/MM/AAAA"],
-	"telefono":["Inserire telefono", /0?[0-9]{2,3}-[0-9]+/, "Inserire numero di telefono valido"]
+	"nome": ["Inserire nome", /[A-Z][a-z]+/, "Inserire un nome lungo almeno 2, prima lettera maiuscola"],
+	"cognome": ["Inserire cognome", /[A-Z][a-z]+(([A-Z][a-z]+))?/, "Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)"],
+	"data":["Inserire data", /([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
+	"telefono":["Inserire telefono", /(0?[0-9]{2,3}\-[0-9]+)|(0?[0-9]{2,3}[0-9]+)/, "Inserire numero di telefono valido, formati consentiti 111-111111 oppure 111111111"]
 	
 }
 
