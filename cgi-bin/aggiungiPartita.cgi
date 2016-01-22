@@ -109,31 +109,31 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 	$errCategoria="Scegliere categoria corretta"; #Non potrà mai accadere ma per sicurezza c'è
 }
 
-	if ($casa!~/[A-Z][a-z]+(\s([A-Z][a-z]+))?/ || length($casa)>100 || $casa eq "Inserire squadra di casa")
+	if ($casa!~/^[A-Z][a-z]+(\s([A-Z][a-z]+))?$/ || length($casa)>100 || $casa eq "Inserire squadra di casa")
 	{
 		$errore=1;
 		$errCasa="Inserire nome squadra di casa, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti";
 	}
 	
-	if ($trasf!~/[A-Z][a-z]+(\s([A-Z][a-z]+))?/ || length($trasf)>100 || $trasf eq "Inserire squadra in trasferta")
+	if ($trasf!~/^[A-Z][a-z]+(\s([A-Z][a-z]+))?$/ || length($trasf)>100 || $trasf eq "Inserire squadra in trasferta")
 	{
 		$errore=1;
 		$errTrasf="Inserire nome squadra in trasferta, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti";
 	}
 	
-	if ($data!~/([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/ || $data eq "Inserire data") 
+	if ($data!~/^([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})$/ || $data eq "Inserire data") 
 	{
 		$errore=1;
 		$errData="Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA";
 	}
 	
-	if ($goalCasa!~/[0-9]{1,2}/  || $goalCasa eq "Inserire goal della squadra di casa")
+	if ($goalCasa!~/^[0-9]{1,2}$/  || $goalCasa eq "Inserire goal della squadra di casa")
 	{
 		$errore=1;
 		$errGoalCasa="Inserire goal squadra di casa, 0-99";
 	}
 	
-		if ($goalTrasf!~/[0-9]{1,2}/  || $goalTrasf	eq "Inserire goal della squadra in trasferta"
+		if ($goalTrasf!~/^[0-9]{1,2}$/  || $goalTrasf	eq "Inserire goal della squadra in trasferta"
 	{
 		$errore=1;
 		$errGoalCasa="Inserire goal squadra in trasferta, 0-99";

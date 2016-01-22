@@ -1,44 +1,32 @@
 //creo array associativo
-var form_personale =
+var form_personale=
 {
-	"nome": ["Inserire nome", /[A-Z][a-z]+/, "Inserire un nome lungo almeno 2, prima lettera maiuscola"],
-	"cognome": ["Inserire cognome", /[A-Z][a-z]+(\s([A-Z][a-z]+))?/, "Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)"],
-	"data":["Inserire data", /([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
-	"telefono":["Inserire telefono", /(0?[0-9]{2,3}\-[0-9]+)|(0?[0-9]{2,3}[0-9]+)/, "Inserire numero di telefono valido, formati consentiti 111-111111 oppure 111111111"]
+	"nome": ["Inserire nome", /^[A-Z][a-z]+$/, "Inserire un nome lungo almeno 2, prima lettera maiuscola"],
+	"cognome": ["Inserire cognome", /^[A-Z][a-z]+(\s([A-Z][a-z]+))?$/, "Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)"],
+	"data":["Inserire data", /^([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})$/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
+	"telefono":["Inserire telefono", /^(0?[0-9]{2,3}\-[0-9]+)|(0?[0-9]{2,3}[0-9]+)$/, "Inserire numero di telefono valido, formati consentiti 111-111111 oppure 111111111"]
 	
 }
 
 var form_partite=
 {
-	"casa": ["Inserire squadra di casa", /[A-Z][a-z]+(\s([A-Z][a-z]+))?/, "Inserire nome squadra di casa, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
-	"trasf": ["Inserire squadra in trasferta", /[A-Z][a-z]+(\s([A-Z][a-z]+))?/, "Inserire nome squadra in trasferta, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
-	"data":["Inserire data", /([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
-	"goalCasa": ["Inserire goal della squadra di casa", /[0-9]{1,2}/, "Inserire goal squadra di casa, 0-99"],
-	"goalTrasf": ["Inserire goal della squadra in trasferta", /[0-9]{1,2}/, "Inserire goal squadra di casa, 0-99"]
+	"casa": ["Inserire squadra di casa", /^[A-Z][a-z]+( ([A-Z][a-z]+))?$/, "Inserire nome squadra di casa, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
+	"trasf": ["Inserire squadra in trasferta", /^[A-Z][a-z]+( ([A-Z][a-z]+))?$/, "Inserire nome squadra in trasferta, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
+	"data":["Inserire data", /^([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})$/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
+	"goalCasa": ["Inserire goal della squadra di casa", /^[0-9]{1,2}$/, "Inserire goal squadra di casa, 0-99"],
+	"goalTrasf": ["Inserire goal della squadra in trasferta", /^[0-9]{1,2}$/, "Inserire goal squadra di casa, 0-99"]
 	
 }
 
-function caricamentoPersonale() //carica i dati nei campi
+function caricamento(array) //carica i dati nei campi
 {
-for (var key in form_personale)
+for (var key in array)
 	{
 		var input=document.getElementById(key);
-		campoDefault(input);
+		campoDefault(array, input);
 
-		input.onfocus=function(){campoPerInput(this);}; //toglie l'aiuto
-		input.onblur=function(){validazioneCampo(this);}; //fa la validazione del campo
-	}
-}
-
-function caricamentoPartite() //carica i dati nei campi
-{
-for (var key in form_partite)
-	{
-		var input=document.getElementById(key);
-		campoDefault(input);
-
-		input.onfocus=function(){campoPerInput(this);}; //toglie l'aiuto
-		input.onblur=function(){validazioneCampo(this);}; //fa la validazione del campo
+		input.onfocus=function(){campoPerInput(array, this);}; //toglie l'aiuto
+		input.onblur=function(){validazioneCampo(array, this);}; //fa la validazione del campo
 	}
 }
 
@@ -46,19 +34,20 @@ for (var key in form_partite)
 
 
 
-function campoDefault(input)
+
+function campoDefault(array, input)
 {
 	if (input.value=="")
 	{
 		input.className="default-text";
-		input.value=dettagli_form[input.id][0];
+		input.value=array[input.id][0];
 	}
 }
 
 
-function campoPerInput(input)
+function campoPerInput(array, input)
 {
-	if (input.value==dettagli_form[input.id][0])
+	if (input.value==array[input.id][0])
 	{
 		input.value="";
 		input.className="";
@@ -66,7 +55,7 @@ function campoPerInput(input)
 }
 
 
-function validazioneCampo(input)
+function validazioneCampo(array, input)
 {
 	var p=input.parentNode; //prende lo span
 
@@ -77,11 +66,11 @@ if (errore)
 	p.removeChild(errore)
 }
 
-	var regex=dettagli_form[input.id][1];
+	var regex=array[input.id][1];
 	var text=input.value;
-	if ((text==dettagli_form[input.id][0]) || text.search(regex)!=0) //occhio! controllo che l'input sia diverso dal placeholder (con il primo check)
+	if ((text==array[input.id][0]) || text.search(regex)!=0) //occhio! controllo che l'input sia diverso dal placeholder (con il primo check)
 	{
-		mostraErrore(input);
+		mostraErrore(array, input);
 		return false;
 	}
 	return true;
@@ -90,17 +79,17 @@ if (errore)
 function validazioneForm()
 {
 	var corretto=true;
-	for (var key in dettagli_form)
+	for (var key in array)
 	{
 		var input=document.getElementById(key);
-		var risultato=validazioneCampo(input);
+		var risultato=validazioneCampo(array, input);
 		corretto=corretto&&risultato;
 	}
 	return corretto;
 }
 
 
-function mostraErrore(input)
+function mostraErrore(array, input)
 {
 	console.log(input);
 	var p=input.parentNode;
@@ -110,6 +99,6 @@ function mostraErrore(input)
 	//
 	//input.id="errore";
 
-	e.appendChild(document.createTextNode(dettagli_form[input.id][2]));
+	e.appendChild(document.createTextNode(array[input.id][2]));
 	p.appendChild(e);
 }

@@ -166,25 +166,25 @@ if  (( $grado eq 'amministratore' && $ruolo eq 'allenatori') || ($grado eq 'dipe
 
 #Controllo dati letti
 #controllo coerenza dati letti
-if ($nome!~/[A-Z][a-z]+/ || length($nome)>100 || $nome eq "Inserire nome"){
+if ($nome!~/^[A-Z][a-z]+$/ || length($nome)>100 || $nome eq "Inserire nome"){
 	$errore=1;
 	$errNome="Inserire un nome lungo almeno 2, prima lettera maiuscola";
 }
 
-if ($cognome!~/[A-Z][a-z]+(\s([A-Z][a-z]+))?/ || length($cognome)>100 || $cognome eq "Inserire cognome"){
+if ($cognome!~/^[A-Z][a-z]+(\s([A-Z][a-z]+))?$/ || length($cognome)>100 || $cognome eq "Inserire cognome"){
 	$errore=1;
 	$errCognome="Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)";
 }
 
 #modificare: aggiungere controllo per il valore di default dato da JavaScript
-if ($data!~/([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/ || $data eq "Inserire data") {
+if ($data!~/^([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})$/ || $data eq "Inserire data") {
 	$errore=1;
 	$errData="Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA";
 }
 
 #modificare: aggiungere controllo per il valore di default dato da JavaScript (e aggiungere trattino sul numero
 #controllare se funziona  il trattino dopo l'aggiunta dell'escaping
-if ( $telefono!~/(0?[0-9]{2,3}\-[0-9]+)|(0?[0-9]{2,3}[0-9]+)/ || length($telefono)>15 || $telefono eq "Inserire telefono") {
+if ( $telefono!~/^(0?[0-9]{2,3}\-[0-9]+)|(0?[0-9]{2,3}[0-9]+)$/ || length($telefono)>15 || $telefono eq "Inserire telefono") {
 	$errore=1;
 	$errTelefono="Inserire numero di telefono valido, formati consentiti 111-111111 oppure 111111111";
 }
@@ -252,7 +252,7 @@ if ($errore==0)
 	 <title>Amministratore</title>
 	 <script type="text/javascript" src="script.js"></script>
 	 </head>
-	 <body onload="caricamentoPersonale();">
+	 <body onload="caricamento(form_personale);">
 	 <div>
 	 <p>Inserimento avvenuto con successo!</p>
 	 </div>
@@ -302,7 +302,7 @@ else
 	 <title>Amministratore</title>
 	 <script type="text/javascript" src="script.js"></script>
 	 </head>
-	 <body onload="caricamentoPersonale();">
+	 <body onload="caricamento(form_personale);">
 	
 	 <div>
 	 <ul>
