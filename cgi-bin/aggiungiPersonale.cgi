@@ -171,7 +171,7 @@ if ($nome!~/[A-Z][a-z]+/ || length($nome)>100 || $nome eq "Inserire nome"){
 	$errNome="Inserire un nome lungo almeno 2, prima lettera maiuscola";
 }
 
-if ($cognome!~/[A-Z][a-z]+(([A-Z][a-z]+))?/ || length($cognome)>100 || $cognome eq "Inserire cognome"){
+if ($cognome!~/[A-Z][a-z]+(\s([A-Z][a-z]+))?/ || length($cognome)>100 || $cognome eq "Inserire cognome"){
 	$errore=1;
 	$errCognome="Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)";
 }
@@ -246,13 +246,13 @@ if ($errore==0)
 
 
 
-	#Ristampo la form dicendo "EHY BRO TUTTO OK NON HAI SPRECATO IL TUO TEMPO"
+	#Ristampo la form
 	print <<EOF;
 	 <html><head>
 	 <title>Amministratore</title>
 	 <script type="text/javascript" src="script.js"></script>
 	 </head>
-	 <body onload="caricamento();">
+	 <body onload="caricamentoPersonale();">
 	 <div>
 	 <p>Inserimento avvenuto con successo!</p>
 	 </div>
@@ -302,7 +302,7 @@ else
 	 <title>Amministratore</title>
 	 <script type="text/javascript" src="script.js"></script>
 	 </head>
-	 <body onload="caricamento();">
+	 <body onload="caricamentoPersonale();">
 	
 	 <div>
 	 <ul>
