@@ -57,7 +57,7 @@ else { #Accesso consentito;
 my $input= new CGI;
 
 #Se arrivo dalla pagina di disambiguazione;
-if ($input->param("aggiungiPartite")) {
+if ($input->param("aggiungiPartita")) {
 
 	#stampare pagina "vergine" senza errori 
 	#
