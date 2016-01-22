@@ -38,3 +38,18 @@ function hideRuolo () {
 function hideDati () {
      document.getElementById("listaDati").style.display = "none";
 };
+
+
+/* Dopo aver scelto la categoria delle partite, mette a disposizione la compilazione dei campi dati */
+function cbCheckPartite(){
+	var elem = document.getElementById("listaDati");
+	var ruolo1 = document.getElementById("piccoliAmici");
+	var ruolo2 = document.getElementById("esordienti");
+	var ruolo3 = document.getElementById("giovanissimi");
+
+if ((ruolo1.checked) || (ruolo2.checked) || (ruolo3.checked)) {
+	elem.style.display = "block";
+
+	}
+};
+

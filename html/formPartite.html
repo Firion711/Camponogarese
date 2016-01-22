@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+	<title>Form - Camponogarese</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<script type="text/javascript" src="../script/adminScript.js"></script>
+
+</head>
+<body onload="hideDati();">
+
+<form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
+	<fieldset>
+		<legend>Aggiungi il risultato della prossima partita</legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+						<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  
+						onclick="cbCheckPartite();" />
+					
+					
+						<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti"  
+						onclick="cbCheckPartite();" />
+						
+						<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi"  
+						onclick="cbCheckPartite();" />
+			</fieldset>
+
+		<div id="listaDati">
+			<fieldset>
+				<legend>Inserisci i dati</legend>
+				<label for="casa">Squadra di casa</label>
+				<input type="text" name="casa" maxlength="20"/>
+				<label for="trasferta">Squadra in trasferta</label>
+				<input type="text" name="trasferta" maxlength="20"/>
+				<label for="data">Data</label>
+				<input type="text" name="data" maxlength="10"/>
+				<label for="goalCasa">Goal della squadra di casa</label>
+				<input type="number" name="goalCasa" maxlength="2"/>
+				<label for="goalTrasf">Goal della squadra in trasferta</label>
+				<input type="number" name="goalTrasf" maxlength="2"/>
+			</fieldset>
+		</div>
+		<input type="submit" value="Invia dati">
+	</fieldset>
+</form>
+
+</boby>
+</html>
