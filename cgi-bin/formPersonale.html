@@ -1,42 +1,51 @@
-<html><head>
-	 <title>Amministratore</title>
-	 <script type="text/javascript" src="script.js"></script>
+<html>
+	<head>
+		<title>Amministratore</title>
+		<script type="text/javascript" src="script.js"></script>
 	 </head>
-	 <body onload="caricamento(form_personale);">
-	 <form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
-	 <fieldset>
-	 <legend>Aggiungi personale</legend>
-	 <fieldset>
-	 <legend>Scegli grado societario</legend>
-	 <label for="amministratore">Amministratore</label>
-	 <input type="radio" name="grado" id="amministratore" value="amministratore" checked="true" />
-	 <label for="dipendente">Dipendente</label>
-	 <input type="radio" name="grado" id="dipendente" value="dipendente" />
-	 </fieldset>
-	 <fieldset>
-	 <legend>Scegli ruolo</legend>
-	 <label for="manager">Manager</label>
-	 <input type="radio" name="ruolo" id="manager" value="manager"  checked="true" />
-	 <label for="allenatori">allenatori</label>
-	 <input type="radio" name="ruolo" id="allenatori" value="allenatori" />
-	 </fieldset>
-	 <fieldset>
-	 <legend>Dati</legend>
-	 <label for="nome">Nome</label>
-	 <span><input type="text" id="nome" name="nome" maxlength="20" /></span>
-	 <br />
-	 <label for="cognome">Cognome</label>
-	 <span><input type="text"  id="cognome" name="cognome" maxlength="20" /></span>
-	 <br />
-	 <label for="data">Data</label>
-	 <span><input type="text" id="data" name="data" maxlength="10" /></span>
-	 <br />
-	 <label for="telefono">Telefono</label>
-	 <span><input type="telefono" id="telefono" name="telefono" maxlength="20" /></span>
-	 <br />
-	 </fieldset>
-	 </fieldset>
-	 <input type="submit" value="Invia" onclick="validazioneForm();">
+	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
+		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
+			<fieldset>
+				<legend>Aggiungi personale</legend>
+				<fieldset>
+					<legend>Scegli grado societario</legend>
+					<label for="amministratore">Amministratore</label>
+					<input type="radio" name="grado" id="amministratore" value="amministratore" onclick="cbCheck();"/>
+					 <label for="dipendente">Dipendente</label>
+					 <input type="radio" name="grado" id="dipendente" value="dipendente" onclick="cbCheck();" />
+				</fieldset>
+				<div id="sceltaRuolo">
+					<fieldset>
+						<legend>Scegli ruolo</legend>
+						<div id="mangerHide">
+							<label for="manager">Manager</label>
+							<input type="radio" name="ruolo" id="manager" value="manager" onclick="cbCheck1();" />
+						</div>
+						<div id="allenatHide">	
+							<label for="allenatori">Allenatori</label>
+							<input type="radio" name="ruolo" id="allenatori" value="allenatori" onclick="cbCheck1();"/>
+						</div>
+					</fieldset>
+				</div>
+				<div id="listaDati">
+					<fieldset>
+						 <legend>Dati</legend>
+						 <label for="nome">Nome</label>
+						 <span><input type="text" id="nome" name="nome" maxlength="20" /></span>
+						 <br />
+						 <label for="cognome">Cognome</label>
+						 <span><input type="text"  id="cognome" name="cognome" maxlength="20" /></span>
+						 <br />
+						 <label for="data">Data</label>
+						 <span><input type="text" id="data" name="data" maxlength="10" /></span>
+						 <br />
+						 <label for="telefono">Telefono</label>
+						 <span><input type="telefono" id="telefono" name="telefono" maxlength="20" /></span>
+						 <br />
+					</fieldset>
+				<div id="listaDati">
+			</fieldset>
+			<input type="submit" value="Invia">
 	 </form>
-	 </body>
-	 </html>
+	</body>
+</html>

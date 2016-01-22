@@ -62,64 +62,56 @@ my $input= new CGI;
 if ($input->param("aggiungiPersonale")) {
 
 print <<EOF;
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<head>
-	<title>Admin Page - Camponogarese</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	<script type="text/javascript" src="../script/adminScript.js"></script>
-
-</head>
-<body onload="hideRuolo(); hideDati();">
-
-<form id="formPersonale" action="../cgi-bin/aggiungiPersonale.cgi" method="post">
-	<fieldset>
-		<legend>Aggiungi personale</legend>
+<html>
+	<head>
+		<title>Amministratore</title>
+		<script type="text/javascript" src="script.js"></script>
+	 </head>
+	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
+		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
 			<fieldset>
-				<legend>Scegli grado societario</legend>
-						<label for="amministratore">Amministratore</label>
-						<input type="radio" name="grado" id="amministratore" value="amministratore"  
-						onclick="cbCheck();" />
-					
-					
-						<label for="dipendente">Dipendente</label>
-						<input type="radio" name="grado" id="dipendente" value="dipendente" onclick="cbCheck();"/>
-						
+				<legend>Aggiungi personale</legend>
+				<fieldset>
+					<legend>Scegli grado societario</legend>
+					<label for="amministratore">Amministratore</label>
+					<input type="radio" name="grado" id="amministratore" value="amministratore" onclick="cbCheck();"/>
+					 <label for="dipendente">Dipendente</label>
+					 <input type="radio" name="grado" id="dipendente" value="dipendente" onclick="cbCheck();" />
+				</fieldset>
+				<div id="sceltaRuolo">
+					<fieldset>
+						<legend>Scegli ruolo</legend>
+						<div id="mangerHide">
+							<label for="manager">Manager</label>
+							<input type="radio" name="ruolo" id="manager" value="manager" onclick="cbCheck1();" />
+						</div>
+						<div id="allenatHide">	
+							<label for="allenatori">Allenatori</label>
+							<input type="radio" name="ruolo" id="allenatori" value="allenatori" onclick="cbCheck1();"/>
+						</div>
+					</fieldset>
+				</div>
+				<div id="listaDati">
+					<fieldset>
+						 <legend>Dati</legend>
+						 <label for="nome">Nome</label>
+						 <span><input type="text" id="nome" name="nome" maxlength="20" /></span>
+						 <br />
+						 <label for="cognome">Cognome</label>
+						 <span><input type="text"  id="cognome" name="cognome" maxlength="20" /></span>
+						 <br />
+						 <label for="data">Data</label>
+						 <span><input type="text" id="data" name="data" maxlength="10" /></span>
+						 <br />
+						 <label for="telefono">Telefono</label>
+						 <span><input type="telefono" id="telefono" name="telefono" maxlength="20" /></span>
+						 <br />
+					</fieldset>
+				<div id="listaDati">
 			</fieldset>
-
-		<div id="sceltaRuolo">
-			<fieldset>
-				<legend>Scegli ruolo</legend>
-					<div id="mangerHide">
-						<label for="manager">Manager</label>
-						<input type="radio" name="ruolo" id="manager" value="manager" onclick="cbCheck1();"/>
-					</div>
-					
-					<div id="allenatHide">	
-						<label for="allenatori">allenatori</label>
-						<input type="radio" name="ruolo" id="allenatori" value="allenatori" onclick="cbCheck1();"/>
-					</div>
-			</fieldset>
-		</div>
-		<div id="listaDati">
-			<fieldset>
-				<legend>Dati</legend>
-				<label for="nome">Nome</label>
-				<input type="text" name="nome" maxlength="20"/>
-				<label for="cognome">Cognome</label>
-				<input type="text" name="cognome" maxlength="20"/>
-				<label for="data">Data</label>
-				<input type="text" name="data" maxlength="10"/>
-				<label for="telefono">Telefono</label>
-				<input type="telefono" name="telefono" maxlength="10"/>
-			</fieldset>
-		</div>
-		<input type="submit" value="Invia dati">
-	</fieldset>
-</form>
-
-</boby>
+			<input type="submit" value="Invia">
+	 </form>
+	</body>
 </html>
 EOF
 
@@ -248,54 +240,60 @@ if ($errore==0)
 
 	#Ristampo la form
 	print <<EOF;
-	 <html><head>
-	 <title>Amministratore</title>
-	 <script type="text/javascript" src="script.js"></script>
+	 <html>
+	<head>
+		<title>Amministratore</title>
+		<script type="text/javascript" src="script.js"></script>
 	 </head>
-	 <body onload="caricamento(form_personale);">
-	 <div>
-	 <p>Inserimento avvenuto con successo!</p>
-	 </div>
-	 <form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
-	 <fieldset>
-	 <legend>Aggiungi personale</legend>
-	 <fieldset>
-	 <legend>Scegli grado societario</legend>
-	 <label for="amministratore">Amministratore</label>
-	 <input type="radio" name="grado" id="amministratore" value="amministratore" checked="true" />
-	 <label for="dipendente">Dipendente</label>
-	 <input type="radio" name="grado" id="dipendente" value="dipendente" />
-	 </fieldset>
-	 <fieldset>
-	 <legend>Scegli ruolo</legend>
-	 <label for="manager">Manager</label>
-	 <input type="radio" name="ruolo" id="manager" value="manager"  checked="true" />
-	 <label for="allenatori">allenatori</label>
-	 <input type="radio" name="ruolo" id="allenatori" value="allenatori" />
-	 </fieldset>
-	 <fieldset>
-	 <legend>Dati</legend>
-	 <label for="nome">Nome</label>
-	 <span><input type="text" id="nome" name="nome" maxlength="20" /></span>
-	 <br />
-	 <label for="cognome">Cognome</label>
-	 <span><input type="text"  id="cognome" name="cognome" maxlength="20" /></span>
-	 <br />
-	 <label for="data">Data</label>
-	 <span><input type="text" id="data" name="data" maxlength="10" /></span>
-	 <br />
-	 <label for="telefono">Telefono</label>
-	 <span><input type="telefono" id="telefono" name="telefono" maxlength="10" /></span>
-	 <br />
-	 </fieldset>
-	 </fieldset>
-	 <input type="submit" value="Invia">
+	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
+		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
+			<fieldset>
+				<legend>Aggiungi personale</legend>
+				<fieldset>
+					<legend>Scegli grado societario</legend>
+					<label for="amministratore">Amministratore</label>
+					<input type="radio" name="grado" id="amministratore" value="amministratore" onclick="cbCheck();"/>
+					 <label for="dipendente">Dipendente</label>
+					 <input type="radio" name="grado" id="dipendente" value="dipendente" onclick="cbCheck();" />
+				</fieldset>
+				<div id="sceltaRuolo">
+					<fieldset>
+						<legend>Scegli ruolo</legend>
+						<div id="mangerHide">
+							<label for="manager">Manager</label>
+							<input type="radio" name="ruolo" id="manager" value="manager" onclick="cbCheck1();" />
+						</div>
+						<div id="allenatHide">	
+							<label for="allenatori">Allenatori</label>
+							<input type="radio" name="ruolo" id="allenatori" value="allenatori" onclick="cbCheck1();"/>
+						</div>
+					</fieldset>
+				</div>
+				<div id="listaDati">
+					<fieldset>
+						 <legend>Dati</legend>
+						 <label for="nome">Nome</label>
+						 <span><input type="text" id="nome" name="nome" maxlength="20" /></span>
+						 <br />
+						 <label for="cognome">Cognome</label>
+						 <span><input type="text"  id="cognome" name="cognome" maxlength="20" /></span>
+						 <br />
+						 <label for="data">Data</label>
+						 <span><input type="text" id="data" name="data" maxlength="10" /></span>
+						 <br />
+						 <label for="telefono">Telefono</label>
+						 <span><input type="telefono" id="telefono" name="telefono" maxlength="20" /></span>
+						 <br />
+					</fieldset>
+				<div id="listaDati">
+			</fieldset>
+			<input type="submit" value="Invia">
 	 </form>
-	 </body>
-	 </html>
+	</body>
+</html>
 EOF
 }
-else
+else #Stampa la form con gli errori (wizard javascript disabilitato volutamente)
 {
 	print <<EOF;
 	 <html><head>

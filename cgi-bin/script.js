@@ -133,7 +133,7 @@ if ((grados1.checked) || (grados2.checked)) {
 function cbCheck1(){
 	var elem = document.getElementById("listaDati");
 	var ruolo1 = document.getElementById("manager");
-	var ruolo2 = document.getElementById("allenatore");
+	var ruolo2 = document.getElementById("allenatori");
 
 if ((ruolo1.checked) || (ruolo2.checked)) {
 	elem.style.display = "block";
