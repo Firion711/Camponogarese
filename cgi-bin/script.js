@@ -1,16 +1,26 @@
 //creo array associativo
-var dettagli_form =
+var form_personale =
 {
 	"nome": ["Inserire nome", /[A-Z][a-z]+/, "Inserire un nome lungo almeno 2, prima lettera maiuscola"],
-	"cognome": ["Inserire cognome", /[A-Z][a-z]+(([A-Z][a-z]+))?/, "Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)"],
+	"cognome": ["Inserire cognome", /[A-Z][a-z]+(\s([A-Z][a-z]+))?/, "Inserire un cognome lungo almeno 2, prima lettera maiuscola (cognomi con spazio consentiti)"],
 	"data":["Inserire data", /([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
 	"telefono":["Inserire telefono", /(0?[0-9]{2,3}\-[0-9]+)|(0?[0-9]{2,3}[0-9]+)/, "Inserire numero di telefono valido, formati consentiti 111-111111 oppure 111111111"]
 	
 }
 
-function caricamento() //carica i dati nei campi
+var form_partite=
 {
-for (var key in dettagli_form)
+	"casa": ["Inserire squadra di casa", /[A-Z][a-z]+(\s([A-Z][a-z]+))?/, "Inserire nome squadra di casa, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
+	"trasf": ["Inserire squadra in trasferta", /[A-Z][a-z]+(\s([A-Z][a-z]+))?/, "Inserire nome squadra in trasferta, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
+	"data":["Inserire data", /([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
+	"goalCasa": ["Inserire goal della squadra di casa", /[0-9]{1,2}/, "Inserire goal squadra di casa, 0-99"],
+	"goalTrasf": ["Inserire goal della squadra in trasferta", /[0-9]{1,2}/, "Inserire goal squadra di casa, 0-99"]
+	
+}
+
+function caricamentoPersonale() //carica i dati nei campi
+{
+for (var key in form_personale)
 	{
 		var input=document.getElementById(key);
 		campoDefault(input);
@@ -19,6 +29,22 @@ for (var key in dettagli_form)
 		input.onblur=function(){validazioneCampo(this);}; //fa la validazione del campo
 	}
 }
+
+function caricamentoPartite() //carica i dati nei campi
+{
+for (var key in form_partite)
+	{
+		var input=document.getElementById(key);
+		campoDefault(input);
+
+		input.onfocus=function(){campoPerInput(this);}; //toglie l'aiuto
+		input.onblur=function(){validazioneCampo(this);}; //fa la validazione del campo
+	}
+}
+
+
+
+
 
 function campoDefault(input)
 {
