@@ -84,22 +84,29 @@ print <<ENDHTML;
   Control Panel</span></p></div>
  	<div id="menu">
 	<ul>
-			<!--<li id="CurrentLink"><span xml:lang="en">Control Panel</span></li> -->
-			<li><a href="../html/amministratore.html">Gestione personale</a></li>
-			<li><a href="">Gestione calendario</a></li>
-			<li><a href='logout.cgi'>Logout</a></li>
+			<li> 
+				<form action="../cgi-bin/aggiungiPersonale.cgi" method="post">
+				<input type="submit" value="Aggiungi personale" name="Aggiungi personale"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="../cgi-bin/aggiungiPersonale.cgi" method="post">
+				<input type="submit" value="Aggiungi partite" name="Aggiungi partite"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="../cgi-bin/logout.cgi" method="post">
+				<input type="submit" value="logout" name="Logout"></input>
+				</form>
+			</li>
+			
 		</ul>
 	</div>
 	<div id="section">
 	<h2>Benvenuto</h2> 
-<img src="../immagini/wellcome.jpg" ></img>
+<img src="../immagini/wellcome.jpg" alt="immagine di benvenuto" ></img>
 
-	<form action="../cgi-bin/aggiungiPersonale.cgi" method="post">
-		<fieldset>
-			<legend>Aggiungi organizzazione</legend>
-			<input type="submit" value="aggiungi" name="aggiungi"></input>
-		</fieldset>
-	</form>
+
 </div>
 </body>
 </html>

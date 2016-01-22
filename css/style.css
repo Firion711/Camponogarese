@@ -70,6 +70,26 @@ body {
 	margin-left: 1%;
 }
 
+#menu form input{
+float: left;
+	width: 100%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;    	
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #990000;
+	text-align: center;
+	margin: 0 1em 3px 0;
+	border-left: 6px solid #FF3300;
+}
+
+#menu form input:hover {
+	text-align: center;
+	color: #990000;
+	background-color: white;
+	text-decoration: none;	
+}
 #menu ul {
 	list-style-type: none;
 }
