@@ -59,11 +59,69 @@ my $input= new CGI;
 #Se arrivo dalla pagina di disambiguazione;
 if ($input->param("aggiungiPartita")) {
 
-	#stampare pagina "vergine" senza errori 
-	#
-	#
-	#
-	#
+	print <<EOF;
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+	<title>Form - Camponogarese</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="icon" href="immagini/logo.png" type="image/png" />
+	<script type="text/javascript" src="script/adminScript.js"></script>
+
+</head>
+<body onload="hideDati(); caricamento(form_partite);">
+
+<form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
+	<fieldset>
+		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+						<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  
+						onclick="cbCheckPartite();" />
+					
+					
+						<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti"  
+						onclick="cbCheckPartite();" />
+						
+						<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi"  
+						onclick="cbCheckPartite();" />
+			</fieldset>
+
+		<div id="listaDati">
+			<fieldset>
+				<legend><strong>Inserisci i dati</strong></legend>
+				<label for="casa">Squadra di casa</label>
+				<span><input type="text" id="casa" name="casa" maxlength="20"/></span>
+				<br />
+				<label for="trasferta">Squadra in trasferta</label>
+				<span><input type="text" id="trasferta" name="trasferta" maxlength="20"/></span>
+				<br />
+				<label for="data">Data</label>
+				<span><input type="text" id="data" name="data" maxlength="10"/></span>
+				<br />
+				<label for="goalCasa">Goal della squadra di casa</label>
+				<span><input type="number" id="goalCasa" name="goalCasa" min="0" max="99"/></span>
+				<br/>
+				<label for="goalTrasf">Goal della squadra in trasferta</label>
+				<span><input type="number" id="goalTrasf" name="goalTrasf" min="0" max="99"/></span>
+				<br />
+				
+			</fieldset>
+			<input type="submit" value="Invia dati">
+		</div>
+		
+	</fieldset>
+</form>
+
+</boby>
+</html>
+	
+EOF
 }
 
 else #Ho provato ad inserire un dato;
@@ -178,22 +236,91 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		close(OUT);
 		
 		
-		#RISTAMPARE FORM AGGIUNTA CON SUCCESSO
-		#
-		#
-		#
-		#
-		#
+		print <<EOF;
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+	<title>Form - Camponogarese</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="icon" href="immagini/logo.png" type="image/png" />
+	<script type="text/javascript" src="script/adminScript.js"></script>
+
+</head>
+<body onload="hideDati(); caricamento(form_partite);">
+<div id="successo">Aggiunta avvenuta con successo!</div>
+<form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
+	<fieldset>
+		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+						<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  
+						onclick="cbCheckPartite();" />
+					
+					
+						<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti"  
+						onclick="cbCheckPartite();" />
+						
+						<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi"  
+						onclick="cbCheckPartite();" />
+			</fieldset>
+
+		<div id="listaDati">
+			<fieldset>
+				<legend><strong>Inserisci i dati</strong></legend>
+				<label for="casa">Squadra di casa</label>
+				<span><input type="text" id="casa" name="casa" maxlength="20"/></span>
+				<br />
+				<label for="trasferta">Squadra in trasferta</label>
+				<span><input type="text" id="trasferta" name="trasferta" maxlength="20"/></span>
+				<br />
+				<label for="data">Data</label>
+				<span><input type="text" id="data" name="data" maxlength="10"/></span>
+				<br />
+				<label for="goalCasa">Goal della squadra di casa</label>
+				<span><input type="number" id="goalCasa" name="goalCasa" min="0" max="99"/></span>
+				<br/>
+				<label for="goalTrasf">Goal della squadra in trasferta</label>
+				<span><input type="number" id="goalTrasf" name="goalTrasf" min="0" max="99"/></span>
+				<br />
+				
+			</fieldset>
+			<input type="submit" value="Invia dati">
+		</div>
+		
+	</fieldset>
+</form>
+
+</boby>
+</html>
+	
+EOF
 		
 	}
 	else
 	{
+			print <<EOF;
+				print <<EOF;
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+	<title>Form - Camponogarese</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="icon" href="immagini/logo.png" type="image/png" />
+	<script type="text/javascript" src="script/adminScript.js"></script>
+
+</head>
+<body onload="hideDati(); caricamento(form_partite);">
+<div>
+<ul>
+EOF
 	
-		#RISTAMPARE FORM ERRORI (INIZIO)
-		#
-		#
-		#
-		#
 			if (length($errCategoria)>0)
 			{
 				print "<li>$errCategoria</li>";
@@ -222,14 +349,101 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 				print "<li>$errGoalTrasf</li>";
 			}
 			
-		#RISTAMPARE RESTO FORM ERRORI
-		#
-		#
-		#
-		#
+print <<EOF;
+</ul>
+</div>
+<form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
+EOF
+
+		if ($categoria eq 'piccoliAmici')
+		{
+		print <<EOF;
+			<fieldset>
+		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+						<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici" checked="true" />
+						<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti" />
+						
+						<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" />
+			</fieldset>
+EOF
+
+		if ($categoria eq 'esordienti')
+		{
+		print <<EOF;
+			<fieldset>
+		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+						<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  />
+						<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti" checked="true" />
+						
+						<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi"  />
+			</fieldset>
+EOF
+		
+		}
+		
+				if ($categoria eq 'esordienti')
+		{
+		print <<EOF;
+			<fieldset>
+		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+						<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  />
+						<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti" />
+						
+						<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" checked="true"  />
+			</fieldset>
+EOF
+		
+		}
+
+		print <<EOF;
+			<div id="listaDati">
+			<fieldset>
+				<legend><strong>Inserisci i dati</strong></legend>
+				<label for="casa">Squadra di casa</label>
+				<span><input type="text" id="casa" name="casa" maxlength="20"/></span>
+				<br />
+				<label for="trasferta">Squadra in trasferta</label>
+				<span><input type="text" id="trasferta" name="trasferta" maxlength="20"/></span>
+				<br />
+				<label for="data">Data</label>
+				<span><input type="text" id="data" name="data" maxlength="10"/></span>
+				<br />
+				<label for="goalCasa">Goal della squadra di casa</label>
+				<span><input type="number" id="goalCasa" name="goalCasa" min="0" max="99"/></span>
+				<br/>
+				<label for="goalTrasf">Goal della squadra in trasferta</label>
+				<span><input type="number" id="goalTrasf" name="goalTrasf" min="0" max="99"/></span>
+				<br />
+				
+			</fieldset>
+			<input type="submit" value="Invia dati">
+		</div>
+		
+	</fieldset>
+</form>
+
+</boby>
+</html>
+		
+EOF
 		
 
 	}
 }
 }
-
+}
