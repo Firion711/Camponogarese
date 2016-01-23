@@ -248,11 +248,13 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		#definisco il nuovo elemento da inserire;
 		my $elemento =
 		"
-		<squadraDiCasa>$casa</squadraDiCasa>
-		<squadraInTrasferta>$trasferta</squadraInTrasferta>
-		<dataPartita>$data/</dataPartita>
-		<goalSquadCasa>$goalCasa</goalSquadCasa>
-		<goalSquadTrasf>$goalTrasf</goalSquadTrasf>
+		<partita>
+			<squadraDiCasa>$casa</squadraDiCasa>
+			<squadraInTrasferta>$trasferta</squadraInTrasferta>
+			<dataPartita>$data/</dataPartita>
+			<goalSquadCasa>$goalCasa</goalSquadCasa>
+			<goalSquadTrasf>$goalTrasf</goalSquadTrasf>
+		</partita>
 		";
 		
 			#creo un nuovo nodo + controllo;
