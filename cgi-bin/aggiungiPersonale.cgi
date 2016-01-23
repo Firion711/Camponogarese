@@ -5,8 +5,9 @@ use CGI;
 use XML::LibXML;
 use CGI::Carp qw/fatalsToBrowser warningsToBrowser/;
 use CGI::Session ( '-ip_match' );
+use strict;
 
-$session = CGI::Session->load();
+my $session = CGI::Session->load();
 
 #Permesso negato.
 if($session->is_expired or $session->is_empty)
