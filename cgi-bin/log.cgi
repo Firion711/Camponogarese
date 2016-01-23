@@ -86,12 +86,12 @@ print <<ENDHTML;
 	<ul>
 			<li> 
 				<form action="aggiungiPersonale.cgi" method="post">
-				<input type="submit" value="aggiungiPersonale" name="aggiungiPersonale"></input>
+				<input type="submit" value="Aggiungi personale" name="aggiungiPersonale"></input>
 				</form>
 			</li>
 			<li> 
 				<form action="aggiungiPartita.cgi" method="post">
-				<input type="submit" value="aggiungiPartita" name="aggiungiPartita"></input>
+				<input type="submit" value="Aggiungi partita" name="aggiungiPartita"></input>
 				</form>
 			</li>
 			<li> 

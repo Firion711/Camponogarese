@@ -57,6 +57,13 @@
 			<dataNascita>27-08-1994</dataNascita>
 			<telefono>041414141</telefono>
 		</manager>
+	
+		<manager>
+			<nome>Davide</nome>
+			<cognome>Santimaria</cognome>
+			<dataNascita>29/07/1989</dataNascita>
+			<telefono>3288297421</telefono>
+		</manager>
 	</amministratori>
 	
 	<dipendenti>

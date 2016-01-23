@@ -79,7 +79,33 @@ print <<EOF;
 		<script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
 	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
-		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
+	 <div id="header">
+		<span id="logo"></span>
+		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+	</div>
+		<div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="log.cgi">Control Panel</a></span>&gt Inserimento personale</p></div>
+ 	<div id="menu">
+	<ul>
+			<li> 
+				<form action="log.cgi" method="post">
+				<input type="submit" value="Control panel" name="Accedi"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="aggiungiPartita.cgi" method="post">
+				<input type="submit" value="Aggiungi partita" name="aggiungiPartita"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="logout.cgi" method="post">
+				<input type="submit" value="logout" name="Logout"></input>
+				</form>
+			</li>
+			
+		</ul>
+	</div>
+	<div id="section">
+	<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
 			<fieldset>
 				<legend>Aggiungi personale</legend>
 				<fieldset>
@@ -124,6 +150,7 @@ print <<EOF;
 			</fieldset>
 			
 	 </form>
+	 </div>
 	</body>
 </html>
 EOF
@@ -270,6 +297,31 @@ if ($errore==0)
 	 <script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
 	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
+	 <div id="header">
+		<span id="logo"></span>
+		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+	</div>
+		<div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="log.cgi">Control Panel</a></span>&gt Inserimento personale</p></div>
+ 	<div id="menu">
+	<ul>
+			<li> 
+				<form action="log.cgi" method="post">
+				<input type="submit" value="Control panel" name="Accedi"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="aggiungiPartita.cgi" method="post">
+				<input type="submit" value="Aggiungi partita" name="aggiungiPartita"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="logout.cgi" method="post">
+				<input type="submit" value="logout" name="Logout"></input>
+				</form>
+			</li>
+			
+		</ul>
+	</div>
 		<div id="successo">Inserimento avvenuto con successo!</div>
 		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
 			<fieldset>
@@ -316,6 +368,7 @@ if ($errore==0)
 			</fieldset>
 			
 	 </form>
+	 </div>
 	</body>
 </html>
 EOF
@@ -340,7 +393,31 @@ else #Stampa la form con gli errori (wizard javascript disabilitato volutamente)
 	 <script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
 	 <body onload="caricamento(form_personale);">
-	
+	<div id="header">
+		<span id="logo"></span>
+		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+	</div>
+		<div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="log.cgi">Control Panel</a></span>&gt Inserimento personale</p></div>
+ 	<div id="menu">
+	<ul>
+			<li> 
+				<form action="log.cgi" method="post">
+				<input type="submit" value="Control panel" name="Accedi"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="aggiungiPartita.cgi" method="post">
+				<input type="submit" value="Aggiungi partita" name="aggiungiPartita"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="logout.cgi" method="post">
+				<input type="submit" value="logout" name="Logout"></input>
+				</form>
+			</li>
+			
+		</ul>
+	</div>
 	 <div>
 	 <ul>
 EOF
@@ -442,10 +519,12 @@ EOF
 	 <span><input type="telefono" id="telefono" name="telefono" maxlength="10" value="$telefono" /></span>
 	 <br />
 	 </fieldset>
+	 <input type="submit" value="Invia">
 	 </div>
 	 </fieldset>
-	 <input type="submit" value="Invia">
+	 
 	 </form>
+	 </div>
 	 </body>
 	 </html>
 EOF

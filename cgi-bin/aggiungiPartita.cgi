@@ -5,8 +5,9 @@ use CGI;
 use XML::LibXML;
 use CGI::Carp qw/fatalsToBrowser warningsToBrowser/;
 use CGI::Session ( '-ip_match' );
+use strict;
 
-$session = CGI::Session->load();#Permesso negato.
+my $session = CGI::Session->load();#Permesso negato.
 if($session->is_expired or $session->is_empty)
 {
 print <<ENDHTML;
@@ -61,19 +62,51 @@ if ($input->param("aggiungiPartita")) {
 
 	print <<EOF;
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<head>
-	<title>Form - Camponogarese</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-	<link rel="icon" href="immagini/logo.png" type="image/png" />
-	<script type="text/javascript" src="script/adminScript.js"></script>
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+	<head>
+	  <title>Inserimento partita</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	  <meta name="title" content="Inserimento partita - Associazione calcistica dilettantistica Camponogarese" />
+	  <meta name="description" content="Pagina inserimento personale A.C.D. Camponogarese" />
+	  <meta name="keywords" content="Camponogarese,partita" />
+	  <meta name="language" content="italian it" />
+	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
+		<script type="text/javascript" src="../public_html/script/adminScript.js"></script>
+	 </head>
+	 <body onload="hideDati(); caricamento(form_partite);">
+	 <div id="header">
+		<span id="logo"></span>
+		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+	</div>
+		<div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="log.cgi">Control Panel</a></span>&gt Inserimento partita</p></div>
+ 	<div id="menu">
+	<ul>
+			<li> 
+				<form action="log.cgi" method="post">
+				<input type="submit" value="Control panel" name="Accedi"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="aggiungiPersonale.cgi" method="post">
+				<input type="submit" value="Aggiungi personale" name="aggiungiPersonale"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="logout.cgi" method="post">
+				<input type="submit" value="Logout" name="Logout"></input>
+				</form>
+			</li>
+			
+		</ul>
+	</div>
+	<div id="section">
 
-</head>
-<body onload="hideDati(); caricamento(form_partite);">
 
-<form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
+<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
 	<fieldset>
 		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 			<fieldset>
@@ -117,7 +150,7 @@ if ($input->param("aggiungiPartita")) {
 		
 	</fieldset>
 </form>
-
+</div>
 </boby>
 </html>
 	
@@ -173,7 +206,7 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		$errCasa="Inserire nome squadra di casa, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti";
 	}
 	
-	if ($trasf!~/^[A-Z][a-z]+(\s([A-Z][a-z]+))?$/ || length($trasf)>100 || $trasf eq "Inserire squadra in trasferta")
+	if ($trasferta!~/^[A-Z][a-z]+(\s([A-Z][a-z]+))?$/ || length($trasferta)>100 || $trasferta eq "Inserire squadra in trasferta")
 	{
 		$errore=1;
 		$errTrasf="Inserire nome squadra in trasferta, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti";
@@ -191,7 +224,7 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		$errGoalCasa="Inserire goal squadra di casa, 0-99";
 	}
 	
-		if ($goalTrasf!~/^[0-9]{1,2}$/  || $goalTrasf	eq "Inserire goal della squadra in trasferta"
+		if ($goalTrasf!~/^[0-9]{1,2}$/  || $goalTrasf	eq "Inserire goal della squadra in trasferta")
 	{
 		$errore=1;
 		$errGoalCasa="Inserire goal squadra in trasferta, 0-99";
@@ -216,7 +249,7 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		my $elemento =
 		"
 		<squadraDiCasa>$casa</squadraDiCasa>
-		<squadraInTrasferta>$trasf</squadraInTrasferta>
+		<squadraInTrasferta>$trasferta</squadraInTrasferta>
 		<dataPartita>$data/</dataPartita>
 		<goalSquadCasa>$goalCasa</goalSquadCasa>
 		<goalSquadTrasf>$goalTrasf</goalSquadTrasf>
@@ -226,7 +259,7 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		my $fragment = $parser->parse_balanced_chunk($elemento);
 
 		my @categorie = $radice->getElementsByTagName($categoria);
-		$categoria[0]->appendChild($fragment);
+		$categorie[0]->appendChild($fragment);
 		
 		#apro il file su cui serializzare
 		open(OUT, ">$filepath") or die ("Errore nel salvataggio del file");
@@ -237,20 +270,51 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		
 		
 		print <<EOF;
-		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<head>
-	<title>Form - Camponogarese</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-	<link rel="icon" href="immagini/logo.png" type="image/png" />
-	<script type="text/javascript" src="script/adminScript.js"></script>
-
-</head>
-<body onload="hideDati(); caricamento(form_partite);">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+	<head>
+	  <title>Inserimento partita</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	  <meta name="title" content="Inserimento partita - Associazione calcistica dilettantistica Camponogarese" />
+	  <meta name="description" content="Pagina inserimento personale A.C.D. Camponogarese" />
+	  <meta name="keywords" content="Camponogarese,partita" />
+	  <meta name="language" content="italian it" />
+	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
+		<script type="text/javascript" src="../public_html/script/adminScript.js"></script>
+	 </head>
+	 <body onload="hideDati(); caricamento(form_partite);">
+	 <div id="header">
+		<span id="logo"></span>
+		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+	</div>
+		<div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="log.cgi">Control Panel</a></span>&gt Inserimento partita</p></div>
+ 	<div id="menu">
+	<ul>
+			<li> 
+				<form action="log.cgi" method="post">
+				<input type="submit" value="Control panel" name="Accedi"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="aggiungiPersonale.cgi" method="post">
+				<input type="submit" value="Aggiungi personale" name="aggiungiPersonale"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="logout.cgi" method="post">
+				<input type="submit" value="Logout" name="Logout"></input>
+				</form>
+			</li>
+			
+		</ul>
+	</div>
+	<div id="section">
 <div id="successo">Aggiunta avvenuta con successo!</div>
-<form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
+<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
 	<fieldset>
 		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 			<fieldset>
@@ -294,7 +358,7 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		
 	</fieldset>
 </form>
-
+</div>
 </boby>
 </html>
 	
@@ -305,18 +369,49 @@ EOF
 	{
 			print <<EOF;
 				print <<EOF;
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<head>
-	<title>Form - Camponogarese</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-	<link rel="icon" href="immagini/logo.png" type="image/png" />
-	<script type="text/javascript" src="script/adminScript.js"></script>
-
-</head>
-<body onload="hideDati(); caricamento(form_partite);">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+	<head>
+	  <title>Inserimento partita</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	  <meta name="title" content="Inserimento partita - Associazione calcistica dilettantistica Camponogarese" />
+	  <meta name="description" content="Pagina inserimento personale A.C.D. Camponogarese" />
+	  <meta name="keywords" content="Camponogarese,partita" />
+	  <meta name="language" content="italian it" />
+	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
+		<script type="text/javascript" src="../public_html/script/adminScript.js"></script>
+	 </head>
+	 <body onload="hideDati(); caricamento(form_partite);">
+	 <div id="header">
+		<span id="logo"></span>
+		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
+	</div>
+		<div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="log.cgi">Control Panel</a></span>&gt Inserimento partita</p></div>
+ 	<div id="menu">
+	<ul>
+			<li> 
+				<form action="log.cgi" method="post">
+				<input type="submit" value="Control panel" name="Accedi"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="aggiungiPersonale.cgi" method="post">
+				<input type="submit" value="Aggiungi personale" name="aggiungiPersonale"></input>
+				</form>
+			</li>
+			<li> 
+				<form action="logout.cgi" method="post">
+				<input type="submit" value="Logout" name="Logout"></input>
+				</form>
+			</li>
+			
+		</ul>
+	</div>
+	<div id="section">
 <div>
 <ul>
 EOF
@@ -352,7 +447,7 @@ EOF
 print <<EOF;
 </ul>
 </div>
-<form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
+<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
 EOF
 
 		if ($categoria eq 'piccoliAmici')
@@ -371,7 +466,8 @@ EOF
 						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" />
 			</fieldset>
 EOF
-
+		}
+		
 		if ($categoria eq 'esordienti')
 		{
 		print <<EOF;
@@ -436,14 +532,12 @@ EOF
 		
 	</fieldset>
 </form>
-
+</div>
 </boby>
 </html>
 		
 EOF
 		
-
-	}
 }
 }
 }

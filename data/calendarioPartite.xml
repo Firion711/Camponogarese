@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="calendarioPartite.xslt"?>
-<calendarioPartite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns="http://www.camponogarese.it"
-	xsi:schemaLocation="http://www.camponogarese.it calendarioPartite.xsd">
+<calendarioPartite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.camponogarese.it" xsi:schemaLocation="http://www.camponogarese.it calendarioPartite.xsd">
 	
 	<piccoliAmici>
 		<!-- 4° partita campionato -->
@@ -41,7 +39,13 @@
 			<goalSquadTrasf>1</goalSquadTrasf>
 		</partita>
 	
-	</piccoliAmici>
+	
+		<squadraDiCasa>Camponogarese</squadraDiCasa>
+		<squadraInTrasferta>Moseese</squadraInTrasferta>
+		<dataPartita>02/01/2016/</dataPartita>
+		<goalSquadCasa>0</goalSquadCasa>
+		<goalSquadTrasf>1</goalSquadTrasf>
+		</piccoliAmici>
 
 	<esordienti>
 		<!-- 4° partita campionato -->
