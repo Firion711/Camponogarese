@@ -11,7 +11,7 @@ var form_personale=
 var form_partite=
 {
 	"casa": ["Inserire squadra di casa", /^[A-Z][a-z]+( ([A-Z][a-z]+))?$/, "Inserire nome squadra di casa, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
-	"trasf": ["Inserire squadra in trasferta", /^[A-Z][a-z]+( ([A-Z][a-z]+))?$/, "Inserire nome squadra in trasferta, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
+	"trasferta": ["Inserire squadra in trasferta", /^[A-Z][a-z]+( ([A-Z][a-z]+))?$/, "Inserire nome squadra in trasferta, almeno due lettere e prima lettera maiuscola, nomi con spazio consentiti"],
 	"data":["Inserire data", /^([0-3]{1}[0-9]{1}\/[0,1]{1}[0-9]{1}\/[0-9]{4})|([0-3]{1}[0-9]{1}\-[0,1]{1}[0-9]{1}\-[0-9]{4})$/, "Inserire data, formati consentiti DD/MM/AAAA oppure DD-MM-AAAA"],
 	"goalCasa": ["Inserire goal della squadra di casa", /^[0-9]{1,2}$/, "Inserire goal squadra di casa, 0-99"],
 	"goalTrasf": ["Inserire goal della squadra in trasferta", /^[0-9]{1,2}$/, "Inserire goal squadra di casa, 0-99"]

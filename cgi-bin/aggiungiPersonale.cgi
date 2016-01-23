@@ -270,6 +270,7 @@ if ($errore==0)
 	 <script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
 	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
+		<div id="successo">Inserimento avvenuto con successo!</div>
 		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
 			<fieldset>
 				<legend>Aggiungi personale</legend>
