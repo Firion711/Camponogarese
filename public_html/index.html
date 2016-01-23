@@ -9,13 +9,13 @@
 	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara" />
 	<meta name="language" content="italian it" />
 	<meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
-	<link rel="icon" href="../immagini/logo.png" type="image/png" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="icon" href="immagini/logo.png" type="image/png" />
 <!--	<meta http-equiv="refresh" content="3" /> -->
 </head>
 
-<body>
+<body onload="nascondi()">
 	<div id="header">
 	
 		<span id="logo"></span>
@@ -39,12 +39,12 @@
 
 		<ul>
 			<li id="CurrentLink"><span xml:lang="en">Home</span></li>
-			<li><a href="../xml/organizzazione.xml">Chi siamo</a></li>
-			<li><a href="../html/squadre.html">Squadre</a></li>
-			<li><a href="../html/orario.html">Orari</a></li>
-			<li><a href="../xml/calendarioPartite.xml">Calendario partite</a></li>
-			<li><a href="../html/photogallery.html"> <span xml:lang="en">Photo Gallery</span> </a></li>
-			<li><a href="../html/dovesiamo.html">Dove siamo</a></li>
+			<li><a href="../data/organizzazione.xml">Chi siamo</a></li>
+			<li><a href="squadre.html">Squadre</a></li>
+			<li><a href="orario.html">Orari</a></li>
+			<li><a href="../data/calendarioPartite.xml">Calendario partite</a></li>
+			<li><a href="photogallery.html"> <span xml:lang="en">Photo Gallery</span> </a></li>
+			<li><a href="dovesiamo.html">Dove siamo</a></li>
 
 		</ul>
 	</div>
@@ -57,9 +57,10 @@
 		<div id="news">
 			<h2>Ultime novit&agrave; </h2>
 				<ul>
-					<li>Domenica 20 Dicembre 2015 ore 10.30 : Incontro di calcio GENITORI - STAFF TECNICO [ <a href="../Documenti/Partita_Genitori-Staff-2015.pdf">pdf 385KB</a> ]</li>
-					<li class="alternate">Domenica 20 Dicembre 2015 ore 15.00 : Auguri Natalizi e festa SETTORE GIOVANILE [ <a href="../Documenti/Festa_Natale_2015.pdf">pdf 400KB</a> ]</li>
-					<li>Calendario chiusura periodo Natalizio [ <a href="../Documenti/Chiusura_Natale.pdf">pdf 265KB</a> ]</li>
+					<li>Domenica 20 Dicembre 2015 ore 10.30 : Incontro di calcio GENITORI - STAFF TECNICO [ 
+					<a href="Documenti/Partita_Genitori-Staff-2015.pdf">pdf 385KB</a> ]</li>
+					<li class="alternate">Domenica 20 Dicembre 2015 ore 15.00 : Auguri Natalizi e festa SETTORE GIOVANILE [ <a href="Documenti/Festa_Natale_2015.pdf">pdf 400KB</a> ]</li>
+					<li>Calendario chiusura periodo Natalizio [ <a href="Documenti/Chiusura_Natale.pdf">pdf 265KB</a> ]</li>
 				</ul>
 		</div>
 
@@ -67,11 +68,11 @@
 		<a href="#menuNascosto" class="nascosto">Torna al menu</a>
 	</div>
 	<!-- script per nascondere la parte amministrativa	 -->
-	<script type="text/javascript" src="../script/script.js"></script>
-	<p><input type="button" onclick="return nascondi('login')" value="Gestione amministratore"></input></p>
+	<script type="text/javascript" src="script/script.js"></script>
+	<p><input type="button" onclick="nascondi();" value="Gestione amministratore"></input></p>
 	<div id="login">
 
-		<form action="../cgi-bin/accesso1.cgi" method="post">
+		<form action="../cgi-bin/accesso.cgi" method="post">
 			<fieldset>
 				<legend>Login amministratore</legend>
 				<label for="username">Username</label>
@@ -84,8 +85,8 @@
 	</div>
 
 	<div id="footer">
-		<img class="imgValidCode" src="../immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" 
-		src="../immagini/vcss.gif" alt="CSS valido" />
+		<img class="imgValidCode" src="immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" 
+		src="immagini/vcss.gif" alt="CSS valido" />
 	</div>
 </body>
 </html>

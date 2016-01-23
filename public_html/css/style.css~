@@ -28,10 +28,10 @@ body {
 	padding-right: 1em;
 	color: white;
 }
-
+/*
 #login {
-	display: none;
-}
+	display:block;
+}*/
 
 #logo{
 	width: 6em;
@@ -528,8 +528,14 @@ a:hover.evento {
 	margin-left: 1%;
 }
 
-#listaDati form{
+#listaDati label{
 	float:left;
-	display:block;
+	width:17%;
+}
 
+.errorSuggestion{
+	color:red;
+	display:block;
+	padding:0.5em 0.1em ;
+	
 }

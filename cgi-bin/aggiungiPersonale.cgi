@@ -23,21 +23,21 @@ print <<ENDHTML;
 	  <meta name="keywords" content="Camponogarese,login" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
-	  <link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
-	  <link rel="icon" href="../immagini/logo.png" type="image/png" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 	</head>
 <body>
 	<div id="header">
 		<span id="logo"></span>
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 	</div>
-  <div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="../html/index.html">Home</a></span>&gt Error Login</p></div>
-  <div id="fail"> <img src="../immagini/failLog.jpg" ></img></div>
+  <div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="../public_html/index.html">Home</a></span>&gt Error Login</p></div>
+  <div id="fail"> <img src="../public_html/immagini/failLog.jpg" ></img></div>
 	<div id="section">
 	<h1>La sessione e' scaduta o non hai effettuato l'accesso!</h1>
 	<p>Effettuare nuovamente il login.</p>
-		<form action="../cgi-bin/accesso1.cgi" method="post">
+		<form action="accesso.cgi" method="post">
 			<fieldset>
 				<legend>Login amministratore</legend>
 				<label for="username">Username</label>
@@ -62,10 +62,21 @@ my $input= new CGI;
 if ($input->param("aggiungiPersonale")) {
 
 print <<EOF;
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
-		<title>Amministratore</title>
-		<script type="text/javascript" src="script.js"></script>
+	  <title>Inserimento personale</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	  <meta name="title" content="Inserimento personale - Associazione calcistica dilettantistica Camponogarese" />
+	  <meta name="description" content="Pagina inserimento personale A.C.D. Camponogarese" />
+	  <meta name="keywords" content="Camponogarese,personale" />
+	  <meta name="language" content="italian it" />
+	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
+		<script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
 	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
 		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
@@ -106,10 +117,12 @@ print <<EOF;
 						 <label for="telefono">Telefono</label>
 						 <span><input type="telefono" id="telefono" name="telefono" maxlength="20" /></span>
 						 <br />
+						 <input type="submit" value="Invia">
 					</fieldset>
-				<div id="listaDati">
+				
+			</div>
 			</fieldset>
-			<input type="submit" value="Invia">
+			
 	 </form>
 	</body>
 </html>
@@ -141,7 +154,7 @@ my $telefono=$input->param("telefono");
 $telefono =~ s/[<>&]//g;
 
 
-my $filepath="../xml/organizzazione.xml";
+my $filepath="../data/organizzazione.xml";
 
 my $errore=0;
 my $mismatch;
@@ -240,10 +253,21 @@ if ($errore==0)
 
 	#Ristampo la form
 	print <<EOF;
-	 <html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
-		<title>Amministratore</title>
-		<script type="text/javascript" src="script.js"></script>
+	  <title>Inserimento personale</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	  <meta name="title" content="Inserimento personale - Associazione calcistica dilettantistica Camponogarese" />
+	  <meta name="description" content="Pagina inserimento personale A.C.D. Camponogarese" />
+	  <meta name="keywords" content="Camponogarese,personale" />
+	  <meta name="language" content="italian it" />
+	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
+	 <script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
 	 <body onload="caricamento(form_personale); hideRuolo(); hideDati();">
 		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
@@ -284,10 +308,12 @@ if ($errore==0)
 						 <label for="telefono">Telefono</label>
 						 <span><input type="telefono" id="telefono" name="telefono" maxlength="20" /></span>
 						 <br />
+						 <input type="submit" value="Invia">
 					</fieldset>
-				<div id="listaDati">
+
+				</div>
 			</fieldset>
-			<input type="submit" value="Invia">
+			
 	 </form>
 	</body>
 </html>
@@ -296,9 +322,21 @@ EOF
 else #Stampa la form con gli errori (wizard javascript disabilitato volutamente)
 {
 	print <<EOF;
-	 <html><head>
-	 <title>Amministratore</title>
-	 <script type="text/javascript" src="script.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+	<head>
+	  <title>Inserimento personale</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	  <meta name="title" content="Inserimento personale - Associazione calcistica dilettantistica Camponogarese" />
+	  <meta name="description" content="Pagina inserimento personale A.C.D. Camponogarese" />
+	  <meta name="keywords" content="Camponogarese,personale" />
+	  <meta name="language" content="italian it" />
+	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
+	 <script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
 	 <body onload="caricamento(form_personale);">
 	
@@ -387,6 +425,7 @@ EOF
 EOF
 	}
 	print <<EOF;
+	<div id="listaDati">
 	 <fieldset>
 	 <legend>Dati</legend>
 	 <label for="nome">Nome</label>
@@ -402,6 +441,7 @@ EOF
 	 <span><input type="telefono" id="telefono" name="telefono" maxlength="10" value="$telefono" /></span>
 	 <br />
 	 </fieldset>
+	 </div>
 	 </fieldset>
 	 <input type="submit" value="Invia">
 	 </form>

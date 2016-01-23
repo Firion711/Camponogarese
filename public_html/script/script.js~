@@ -1,16 +1,13 @@
 // funzione per rendere a scomparsa il login dell'amministratore
-	function nascondi(a){
+	function nascondi(){
 	//salvo sulla variabile nasc, lo style dell'elemento passato
-		var nasc=document.getElementById(a);
-			if(!nasc) return true;
-				if(nasc.style.display=="block"){
-					nasc.style.display="none"
-					}
-				else{
-					nasc.style.display="block"
-				}
-			return false;
-	}
+  
+       var e = document.getElementById('login');
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
 
 //funzione che sostituisce l'immagine della mappa con la mappa in google maps
 function replaceMap() {
@@ -44,5 +41,5 @@ function gallery(){
 //dichiarazione della funzione CambiaImmagine
 function CambiaImmagine(){
      //cambia l'attributo src dell'immagine grande.
-     document.getElementById('myPicture').src ="../immagini/"+this.id+".jpg";
+     document.getElementById('myPicture').src ="immagini/"+this.id+".jpg";
 }

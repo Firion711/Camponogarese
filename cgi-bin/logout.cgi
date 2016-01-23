@@ -12,16 +12,16 @@ print $input->header(-cache_control=>"no-cache, no-store, must-revalidate");
 
 if($session->is_empty){
     print $input->header(-cache_control=>"no-cache, no-store, must-revalidate");
-	print start_html(-head=>meta({-http_equiv => 'Refresh', -content=> '5; URL=../html/index.html'}));
+	print start_html(-head=>meta({-http_equiv => 'Refresh', -content=> '5; URL=../public_html/index.html'}));
 	print qq{<h3>Accesso negato!<p>Attendi il reindirizzamento alla Home Page.</p>
-	o clicca qui <a href="../html/index.html">Home</a></h3>};
+	o clicca qui <a href="../public_html/index.html">Home</a></h3>};
 	print end_html;
 }
 
 else{
   $session->delete();
-	print start_html(-head=>meta({-http_equiv => 'Refresh', -content=> '5; URL=../html/index.html'}));
+	print start_html(-head=>meta({-http_equiv => 'Refresh', -content=> '5; URL=../public_html/index.html'}));
 	print qq{<h3>Logut effettuato con successo!<p>Attendi il reindirizzamento alla Home Page</p>
-	o clicca qui <a href="../html/index.html">Home</a></h3>};
+	o clicca qui <a href="../public_html/index.html">Home</a></h3>};
 	print end_html;
 }

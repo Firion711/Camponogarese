@@ -29,10 +29,6 @@ body {
 	color: white;
 }
 
-#login {
-	display: none;
-}
-
 #logo{
 	width: 6em;
 	height: 6em;
@@ -526,4 +522,16 @@ a:hover.evento {
 	margin-right: 1%;
 	margin-bottom: 1.0em;
 	margin-left: 1%;
+}
+
+#listaDati label{
+	float:left;
+	width:17%;
+}
+
+.errorSuggestion{
+	color:red;
+	display:block;
+	padding:0.5em 0.1em ;
+	
 }

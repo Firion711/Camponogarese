@@ -26,21 +26,21 @@ print <<ENDHTML;
 	  <meta name="keywords" content="Camponogarese,login" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
-	  <link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
-	  <link rel="icon" href="../immagini/logo.png" type="image/png" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 	</head>
 <body>
 	<div id="header">
 		<span id="logo"></span>
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 	</div>
-  <div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="../html/index.html">Home</a></span>&gt Error Login</p></div>
-  <div id="fail"> <img src="../immagini/failLog.jpg" ></img></div>
+  <div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="../public_html/index.html">Home</a></span>&gt Error Login</p></div>
+  <div id="fail"> <img src="../public_html/immagini/failLog.jpg" ></img></div>
 	<div id="section">
 	<h1>La sessione e' scaduta o non hai effettuato l'accesso!</h1>
 	<p>Effettuare nuovamente il login.</p>
-		<form action="../cgi-bin/accesso1.cgi" method="post">
+		<form action="accesso.cgi" method="post">
 			<fieldset>
 				<legend>Login amministratore</legend>
 				<label for="username">Username</label>
@@ -71,31 +71,31 @@ print <<ENDHTML;
 	  <meta name="keywords" content="Camponogarese,login" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
-	  <link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
-	  <link rel="icon" href="../immagini/logo.png" type="image/png" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 	</head>
 <body>
 	<div id="header">
 		<span id="logo"></span>
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
 	</div>
-  <div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="../html/index.html">Home</a></span>&gt <span xml:lang="en">
+  <div id="path"><p>Ti trovi in: <span xml:lang="en"><a href="../public_html/index.html">Home</a></span>&gt <span xml:lang="en">
   Control Panel</span></p></div>
  	<div id="menu">
 	<ul>
 			<li> 
-				<form action="../cgi-bin/aggiungiPersonale.cgi" method="post">
+				<form action="aggiungiPersonale.cgi" method="post">
 				<input type="submit" value="aggiungiPersonale" name="aggiungiPersonale"></input>
 				</form>
 			</li>
 			<li> 
-				<form action="../cgi-bin/aggiungiPersonale.cgi" method="post">
-				<input type="submit" value="aggiungiPartite" name="aggiungiPartite"></input>
+				<form action="aggiungiPartita.cgi" method="post">
+				<input type="submit" value="aggiungiPartita" name="aggiungiPartita"></input>
 				</form>
 			</li>
 			<li> 
-				<form action="../cgi-bin/logout.cgi" method="post">
+				<form action="logout.cgi" method="post">
 				<input type="submit" value="logout" name="Logout"></input>
 				</form>
 			</li>
@@ -104,7 +104,7 @@ print <<ENDHTML;
 	</div>
 	<div id="section">
 	<h2>Benvenuto</h2> 
-<img src="../immagini/wellcome.jpg" alt="immagine di benvenuto" ></img>
+<img src="../public_html/immagini/wellcome.jpg" alt="immagine di benvenuto" ></img>
 
 
 </div>

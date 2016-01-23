@@ -1,16 +1,13 @@
 // funzione per rendere a scomparsa il login dell'amministratore
-	function nascondi(a){
+	function nascondi(){
 	//salvo sulla variabile nasc, lo style dell'elemento passato
-		var nasc=document.getElementById(a);
-			if(!nasc) return true;
-				if(nasc.style.display=="block"){
-					nasc.style.display="none"
-					}
-				else{
-					nasc.style.display="block"
-				}
-			return false;
-	}
+  
+       var e = document.getElementById('login');
+       if(e.style.display != 'none')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
 
 //funzione che sostituisce l'immagine della mappa con la mappa in google maps
 function replaceMap() {
@@ -21,19 +18,14 @@ function replaceMap() {
 // funzione che verifica se javascript è abilitato e mostra due finestre diverse a seconda del risultato
 
 function controlloJava() {
-var mq = window.matchMedia( "print" );
+
 //salvo in 2 variabili i valori dei due id
 	var jsd = document.getElementById("jsDisabilitato")
 	var jsa = document.getElementById("jsAbilitato");
 //se è abilitato java,sicuramente farà questo controllo e nasconderà il div con id= jsDisabilitato
-			if (mq.matches) {
-			jsd.style.display="block";
-			jsa.style.display="none";
-		}
-	else {
-jsd.style.display="none";
+			jsd.style.display="none";
 			jsa.style.display="block";
-}
+		
 }
 
 /* funzione per modificare l'immagine grande sugli eventi */
@@ -49,5 +41,5 @@ function gallery(){
 //dichiarazione della funzione CambiaImmagine
 function CambiaImmagine(){
      //cambia l'attributo src dell'immagine grande.
-     document.getElementById('myPicture').src ="../immagini/"+this.id+".jpg";
+     document.getElementById('myPicture').src ="immagini/"+this.id+".jpg";
 }

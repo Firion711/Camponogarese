@@ -3,15 +3,17 @@
 <head>
 	<title>Form - Camponogarese</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	<script type="text/javascript" src="../script/adminScript.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="icon" href="immagini/logo.png" type="image/png" />
+	<script type="text/javascript" src="script/adminScript.js"></script>
 
 </head>
 <body onload="hideDati();">
 
 <form id="formPersonale" action="../cgi-bin/aggiungiPartite.cgi" method="post">
 	<fieldset>
-		<legend>Aggiungi il risultato della prossima partita</legend>
+		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 			<fieldset>
 				<legend>Scegli la categoria</legend>
 						<label for="piccoliAmici">Piccoli amici</label>
@@ -30,20 +32,27 @@
 
 		<div id="listaDati">
 			<fieldset>
-				<legend>Inserisci i dati</legend>
+				<legend><strong>Inserisci i dati</strong></legend>
 				<label for="casa">Squadra di casa</label>
-				<input type="text" name="casa" maxlength="20"/>
+				<span><input type="text" id="casa" name="casa" maxlength="20"/></span>
+				<br />
 				<label for="trasferta">Squadra in trasferta</label>
-				<input type="text" name="trasferta" maxlength="20"/>
+				<span><input type="text" id="trasferta" name="trasferta" maxlength="20"/></span>
+				<br />
 				<label for="data">Data</label>
-				<input type="text" name="data" maxlength="10"/>
+				<span><input type="text" id="data" name="data" maxlength="10"/></span>
+				<br />
 				<label for="goalCasa">Goal della squadra di casa</label>
-				<input type="number" name="goalCasa" maxlength="2"/>
+				<span><input type="number" id="goalCasa" name="goalCasa" min="0" max="20"/></span>
+				<br/>
 				<label for="goalTrasf">Goal della squadra in trasferta</label>
-				<input type="number" name="goalTrasf" maxlength="2"/>
+				<span><input type="number" id="goalTrasf" name="goalTrasf" min="0" max="20"/></span>
+				<br />
+				
 			</fieldset>
+			<input type="submit" value="Invia dati">
 		</div>
-		<input type="submit" value="Invia dati">
+		
 	</fieldset>
 </form>
 
