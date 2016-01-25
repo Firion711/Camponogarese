@@ -12,7 +12,7 @@ body, html{
 }
 
 a:link:after, a:visited:after {
-	content: " [" attr(href) "] ";
+	content:"['attr(href)']";
 	font-size:90%;
 }
 
@@ -161,6 +161,10 @@ a:hover.evento {
     background-repeat: no-repeat;
 	background-color: white;
  	border: 1px solid black;
+}
+
+#jsDisabilitato{
+	display: block;
 }
 
 #jsAbilitato{
