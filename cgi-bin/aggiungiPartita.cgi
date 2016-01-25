@@ -194,7 +194,7 @@ my $errGoalTrasf;
 
 #Controllo dati letti
 
-if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($categoria eq 'giovanissimi')) )
+if ( !(($categoria eq 'piccoliAmici') || ($categoria eq 'esordienti') || ($categoria eq 'giovanissimi')) )
 {
 	$errore=1;
 	$errCategoria="Scegliere categoria corretta"; #Non potrà mai accadere ma per sicurezza c'è
@@ -315,25 +315,26 @@ if ( !(($categoria eq 'piccoliAmici')|| ($categoria eq 'esordienti') || ($catego
 		</ul>
 	</div>
 	<div id="section">
-<div id="successo">Aggiunta avvenuta con successo!</div>
-<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
-	<fieldset>
-		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
-			<fieldset>
-				<legend>Scegli la categoria</legend>
-						<label for="piccoliAmici">Piccoli amici</label>
-						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  
-						onclick="cbCheckPartite();" />
-					
-					
-						<label for="esordienti">Esordienti</label>
-						<input type="radio" name="categoria" id="esordienti" value="esordienti"  
-						onclick="cbCheckPartite();" />
+
+	<div id="successo">Aggiunta avvenuta con successo!</div>
+	<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
+		<fieldset>
+			<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+				<fieldset>
+					<legend>Scegli la categoria</legend>
+							<label for="piccoliAmici">Piccoli amici</label>
+							<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  
+							onclick="cbCheckPartite();" />
 						
-						<label for="giovanissimi">Giovanissimi</label>
-						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi"  
-						onclick="cbCheckPartite();" />
-			</fieldset>
+						
+							<label for="esordienti">Esordienti</label>
+							<input type="radio" name="categoria" id="esordienti" value="esordienti"  
+							onclick="cbCheckPartite();" />
+							
+							<label for="giovanissimi">Giovanissimi</label>
+							<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi"  
+							onclick="cbCheckPartite();" />
+				</fieldset>
 
 		<div id="listaDati">
 			<fieldset>
@@ -370,7 +371,7 @@ EOF
 	else
 	{
 			print <<EOF;
-				print <<EOF;
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
@@ -415,7 +416,7 @@ EOF
 	</div>
 	<div id="section">
 <div>
-<ul>
+	<ul>
 EOF
 	
 			if (length($errCategoria)>0)
@@ -446,69 +447,21 @@ EOF
 				print "<li>$errGoalTrasf</li>";
 			}
 			
-print <<EOF;
-</ul>
+	print <<EOF;
+	</ul>
 </div>
-<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
-EOF
-
-		if ($categoria eq 'piccoliAmici')
-		{
-		print <<EOF;
+	<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
 			<fieldset>
-		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+				<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 			<fieldset>
 				<legend>Scegli la categoria</legend>
-						<label for="piccoliAmici">Piccoli amici</label>
-						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici" checked="true" />
-						<label for="esordienti">Esordienti</label>
-						<input type="radio" name="categoria" id="esordienti" value="esordienti" />
-						
-						<label for="giovanissimi">Giovanissimi</label>
-						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" />
+					<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici" onclick="cbCheckPartite();"/>
+					<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti" onclick="cbCheckPartite();"/>
+					<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" onclick="cbCheckPartite();"/>
 			</fieldset>
-EOF
-		}
-		
-		if ($categoria eq 'esordienti')
-		{
-		print <<EOF;
-			<fieldset>
-		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
-			<fieldset>
-				<legend>Scegli la categoria</legend>
-						<label for="piccoliAmici">Piccoli amici</label>
-						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  />
-						<label for="esordienti">Esordienti</label>
-						<input type="radio" name="categoria" id="esordienti" value="esordienti" checked="true" />
-						
-						<label for="giovanissimi">Giovanissimi</label>
-						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi"  />
-			</fieldset>
-EOF
-		
-		}
-		
-				if ($categoria eq 'esordienti')
-		{
-		print <<EOF;
-			<fieldset>
-		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
-			<fieldset>
-				<legend>Scegli la categoria</legend>
-						<label for="piccoliAmici">Piccoli amici</label>
-						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici"  />
-						<label for="esordienti">Esordienti</label>
-						<input type="radio" name="categoria" id="esordienti" value="esordienti" />
-						
-						<label for="giovanissimi">Giovanissimi</label>
-						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" checked="true"  />
-			</fieldset>
-EOF
-		
-		}
-
-		print <<EOF;
 			<div id="listaDati">
 			<fieldset>
 				<legend><strong>Inserisci i dati</strong></legend>
