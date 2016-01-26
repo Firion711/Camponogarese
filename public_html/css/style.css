@@ -525,6 +525,7 @@ a:hover.evento {
 }
 
 #listaDati label{
+	padding-right: 1.5em;
 	float:left;
 	width:17%;
 }
@@ -533,4 +534,55 @@ a:hover.evento {
 	color:red;
 	padding:0.5em 0.1em ;
 	
+}
+
+.styleForm{
+    max-width: 600px;
+    background: #FFFF99;
+}
+
+.styleForm fieldset{
+	padding: 1em;
+	border-left: 6px solid #FF3300;
+}
+
+.styleForm input[type="text"], .styleForm input[type="telefono"]{
+    width: 70%;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    height: 30px;
+    margin: 2px 6px 16px 0px;
+}
+
+.styleForm input[type="number"]{
+	width: 20%;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    height: 30px;
+    margin: 2em;
+}
+
+.styleForm label{
+    color: black;
+	padding-right: 0.5em;
+	padding-left: 0.4em;
+}
+
+.styleForm label[for="goalCasa"], .styleForm label[for="goalTrasf"]{
+    display: block;
+	float: none;
+}
+
+.styleForm legend{
+	color: #800000;
+    font-weight: bold;
+	padding-right: 1em;
+	padding-left: 0.4em;
+}
+
+.styleForm input[type="submit"]{
+    padding: 1em;
+    background: #FF9933;
+    border: none;
+    font-weight: bold;
 }

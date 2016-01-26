@@ -106,7 +106,7 @@ print <<EOF;
 		</ul>
 	</div>
 	<div id="section">
-	<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
+	<form id="formPersonale" action="aggiungiPersonale.cgi" method="post" class="styleForm">
 			<fieldset>
 				<legend>Aggiungi personale</legend>
 				<fieldset>
@@ -323,8 +323,9 @@ if ($errore==0)
 			
 		</ul>
 	</div>
+	<div id=section>
 		<div id="successo">Inserimento avvenuto con successo!</div>
-		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
+		<form id="formPersonale" action="aggiungiPersonale.cgi" method="post" class = "styleForm">
 			<fieldset>
 				<legend>Aggiungi personale</legend>
 				<fieldset>

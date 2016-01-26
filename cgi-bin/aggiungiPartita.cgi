@@ -106,7 +106,7 @@ if ($input->param("aggiungiPartita")) {
 	<div id="section">
 
 
-<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
+<form id="formPersonale" action="aggiungiPartita.cgi" method="post" class="styleForm">
 	<fieldset>
 		<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 			<fieldset>
@@ -139,7 +139,7 @@ if ($input->param("aggiungiPartita")) {
 				<br />
 				<label for="goalCasa">Goal della squadra di casa</label>
 				<span><input type="number" id="goalCasa" name="goalCasa" min="0" max="99"/></span>
-				<br/>
+				<br />
 				<label for="goalTrasf">Goal della squadra in trasferta</label>
 				<span><input type="number" id="goalTrasf" name="goalTrasf" min="0" max="99"/></span>
 				<br />
@@ -317,7 +317,7 @@ if ( !(($categoria eq 'piccoliAmici') || ($categoria eq 'esordienti') || ($categ
 	<div id="section">
 
 	<div id="successo">Aggiunta avvenuta con successo!</div>
-	<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
+	<form id="formPersonale" action="aggiungiPartita.cgi" method="post" class = "styleForm">
 		<fieldset>
 			<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 				<fieldset>
