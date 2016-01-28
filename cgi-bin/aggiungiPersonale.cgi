@@ -420,7 +420,7 @@ else #Stampa la form con gli errori (wizard javascript disabilitato volutamente)
 			
 		</ul>
 	</div>
-	 <div>
+	 <div id="section">
 	 <ul>
 EOF
 	if (length($mismatch)>0)
@@ -447,9 +447,8 @@ EOF
 
 	print <<EOF;
 	 </ul>
-	 </div>
 	
-	 <form id="formPersonale" action="aggiungiPersonale.cgi" method="post">
+	 <form id="formPersonale" action="aggiungiPersonale.cgi" method="post" class="styleForm">
 	 <fieldset>
 	 <legend>Aggiungi personale</legend>
 EOF

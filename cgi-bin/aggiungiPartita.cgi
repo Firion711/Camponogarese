@@ -257,7 +257,7 @@ if ( !(($categoria eq 'piccoliAmici') || ($categoria eq 'esordienti') || ($categ
 		</partita>
 		";
 		
-			#creo un nuovo nodo + controllo;
+		#creo un nuovo nodo + controllo;
 		my $fragment = $parser->parse_balanced_chunk($elemento);
 
 		my @categorie = $radice->getElementsByTagName($categoria);
@@ -450,7 +450,7 @@ EOF
 	print <<EOF;
 	</ul>
 </div>
-	<form id="formPersonale" action="aggiungiPartita.cgi" method="post">
+	<form id="formPersonale" action="aggiungiPartita.cgi" method="post" class="styleForm">
 			<fieldset>
 				<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 			<fieldset>
