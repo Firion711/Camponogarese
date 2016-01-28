@@ -76,18 +76,6 @@ if (errore)
 	return true;
 }
 
-function validazioneForm()
-{
-	var corretto=true;
-	for (var key in array)
-	{
-		var input=document.getElementById(key);
-		var risultato=validazioneCampo(array, input);
-		corretto=corretto&&risultato;
-	}
-	return corretto;
-}
-
 
 function mostraErrore(array, input)
 {
