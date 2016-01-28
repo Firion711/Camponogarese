@@ -10,16 +10,15 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 <head>
 	<title>Squadra Calcio</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="title" content="Chi siamo - Camponogarese Associazione calcistica dilettantistica" />
-	<meta name="description" content="Informazioni riguardanti la struttura organizzativa dell'associazione sportiva Camponogarese" />
-	<!-- Aggiungere categorie? es: pulcini camponogara, esordienti camponogara... -->
-	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara, dove siamo" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="title" content="Home page - Associazione calcistica dilettantistica Camponogarese" />
+	<meta name="description" content="Pagina principale del sito A.C.D. Camponogarese" />
+	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara" />
 	<meta name="language" content="italian it" />
-	<!-- Come mettere più author? 1 meta con più nomi, separati da virgola, o più meta (valida)-->
 	<meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
 	<link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />	
-	<link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
+	<link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	<link rel="icon" href="immagini/logo.png" type="image/png" />
 </head>
 
 <body>
@@ -91,7 +90,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 
 	<div id="footer">
 		<img class="imgValidCode" src="../public_html/immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" 
-		src="../public_html/immagini/vcss.gif" alt="CSS valido" />
+		src="../public_html/immagini/vcss.gif" alt="CSS valido" /><img class="imgValidCode" src="../public_html/immagini/valid_wcag_aaa.gif" alt="WCAG valido" />
 	</div>
 	</body>
 </html>
