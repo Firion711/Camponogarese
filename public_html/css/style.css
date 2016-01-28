@@ -21,7 +21,7 @@ body {
 /* Sezione header */
 
 #header{
-	background-color: #800000 ;
+	background-color: #800000;
 	padding-top: 0.1em;
 	padding-bottom: 0.5em;
 	padding-left: 1em;
@@ -33,7 +33,6 @@ body {
 	width: 6em;
 	height: 6em;
 	float: left;
-	/*Il logo lo lasciamo in formato jpg?*/
 	background-image: url(../immagini/logo2.png);
 	background-repeat:no-repeat;
 	margin-top: 0.5em;
@@ -53,6 +52,19 @@ body {
     color: white;
     padding: 0.2em;
     padding-left: 1.0em;
+}
+
+/* Pulsante amministratore */
+
+#button_admin {
+	padding: 0.5em;
+    background: #FFCC66;
+	margin: 0.5em;
+}
+
+#login input[type="submit"]{
+	padding: 0.5em;
+    background: #FFCC33;
 }
 
 /* Sezione menù */
@@ -139,12 +151,18 @@ float: left;
 
 .casella_input{
   height: 2.5em;
-  background: #FFE9B9;
+  background: #FFFF99;
   color: #000000;
   border: none;
   font-size: 10pt;
   border-radius: 5px;
   padding-left: 1%;
+}
+
+#titoloHome{
+	font-size: 2em;
+	color: #800000;
+	margin-bottom: 1em;
 }
 
 #footer{
@@ -450,36 +468,50 @@ a:hover.evento {
 	display: none;
 }
 
-/* Pagina "Chi Siamo"*/
+/* Pagina "Chi Siamo" */
 
-/* Li tolgo temporaneamente, creano conflitti di stile con le altre pagine esistenti
-#section ul{
-	list-style: square;
+#chiSiamo{
+	padding-top: 1em;
+	padding-bottom: 1.5em;
+}
+
+#ulChiSiamo{
+	list-style: none;
+	border-left: 6px solid #FF3300;
+	background-color: #FF9933;
+	width: 40%;
 }
 
 #ulChiSiamo > li{
 	margin-top: 1em;
+	padding: 0.5em;
+	font-size: 1.2em;
 }
 
-#section ul ul{
-	list-style: disc;
+#ulChiSiamo ul li{
+	padding: 0.5em;
+	list-style: none;
 }
 
-#section ul ul li{
-	margin-left: 2em;
+#ulChiSiamo ul ul{
+	list-style: none;
+	border-left: 6px solid #FF3300;
+	margin-left: 1em;
 }
 
-
-#section ul ul ul{
-	list-style: circle;
+#ulChiSiamo ul ul li{
+	padding:0.5em;
 }
 
-#section ul ul ul li{
+#ulChiSiamo ul ul ul{
+	list-style: none;
+	border-left: 6px solid #FF3300;
+	margin-left: 1em;
+}
+
+#ulChiSiamo ul ul ul li{
 	margin-left: 4em;
-	
 }
-
-*/
 
 /* Pagina calendario partite */
 

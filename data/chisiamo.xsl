@@ -56,13 +56,13 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	<div id="section">
 
 		<h1>Chi siamo</h1>
-		<p> Ecco un elenco del personale che lavora presso la nostra associazione. Nell'elenco potrai trovare, oltre a nome e cognome, anche la data di nascita e il numero di telefono, in caso ci fosse bisogno di contatto diretto. Sono tutti appassionati e ci mettono anima e corpo, non esitare a contattarli! XxXxXx
+		<p id="chiSiamo"> Ecco un elenco del personale che lavora presso la nostra associazione. Nell'elenco potrai trovare, oltre a nome e cognome, anche la data di nascita e il numero di telefono, in caso ci fosse bisogno di contatto diretto. Sono tutti appassionati e ci mettono anima e corpo, non esitare a contattarli! XxXxXx
 		</p>
 		
 		<ul id="ulChiSiamo">
-						<li>Amministratori</li>
+						<li><strong>Amministratori</strong></li>
 							<ul>
-								<li xml:lang="en">Manager</li>
+								<li xml:lang="en"><strong>Manager</strong></li>
 								<ul>
 									<xsl:for-each select="x:organizzazione/x:amministratori/x:manager">
 										<li><xsl:value-of select="x:nome" />&#160;
@@ -73,9 +73,9 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 									</xsl:for-each>
 								</ul>
 							</ul>
-						<li>Dipendenti</li>						
+						<li><strong>Dipendenti</strong></li>						
 							<ul>
-								<li>Allenatori</li>
+								<li><strong>Allenatori</strong></li>
 								<ul>
 									<xsl:for-each select="x:organizzazione/x:dipendenti/x:allenatori">
 										<li><xsl:value-of select="x:nome" />&#160;
