@@ -55,7 +55,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 
 	<div id="section">
 
-		<h1>Chi siamo</h1>
+		<h1 class="titolo">Chi siamo</h1>
 		<p id="chiSiamo"> Ecco un elenco del personale che lavora presso la nostra associazione. Nell'elenco potrai trovare, oltre a nome e cognome, anche la data di nascita e il numero di telefono, in caso ci fosse bisogno di contatto diretto. Sono tutti appassionati e ci mettono anima e corpo, non esitare a contattarli! XxXxXx
 		</p>
 		

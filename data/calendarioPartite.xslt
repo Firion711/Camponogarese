@@ -54,6 +54,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	</div>
 
 	<div id="section">
+	<h1 class="titolo">Calendario e risultati delle partite</h1>
 <!-- Calendario PICCOLI AMICI -->
 			<div class="linkAncore">
 		<!--link ancore per i risutati delle varie categorie -->
