@@ -424,28 +424,40 @@ a:hover.evento {
 #big_img img {   
     width: 37em;
     height: 28em;
-    margin: 1em 2em 0em 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 3em;
+	box-shadow: 10px 10px 5px #888888;
 }
 
-.listaFoto{ 
-    width: 50em;
-    background-color: #000;
-           
+.listaFoto{
+	border-left: 6px solid #FF3300;
+	width: 80%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.listaFoto a{
+	text-decoration: none;
 }
 
 .listaFoto img{
     width: 10em;
     height: 7em;
-    margin: 1em 0em 0em 1em;
-    border: 0.5em solid red;
-    border-radius: 2em;
-    opacity: 0.5;
+    margin: 0.5em;
+	margin-bottom: none;
+    border: 1px solid #FF3300;
+    border-radius: 0.1em;
+    opacity: 0.8;
     cursor: pointer;
 }
 
 .listaFoto img:hover{
     opacity: 1;
-	border: 0.5em solid green;
+	border: 2px solid #888888;
+	box-shadow: 10px 10px 5px #888888;
 }
 
 /* immagini di un evento */
