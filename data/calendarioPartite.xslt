@@ -34,7 +34,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	</div>
 
 	<div id="path">
-		<p>Ti trovi in: <a href="../public_html/index.html" xml:lang="en">Home</a> &gt;&gt; Calendario partite</p>
+		<p>Ti trovi in: <a href="../public_html/index.html" xml:lang="en">Home</a> &gt;&gt; Risultati partite</p>
 	</div>
 
 	<!-- menu laterale sotto al logo, orientamento verticale -->
