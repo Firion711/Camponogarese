@@ -18,7 +18,8 @@ body {
 /* Sezione header */
 
 #header{
-	background-color: #800000;
+	background-image: url(../immagini/Campo-da-calcio.jpg);
+	background-size: cover;
 	padding-top: 0.1em;
 	padding-bottom: 0.5em;
 	padding-left: 1em;
@@ -32,7 +33,7 @@ body {
 	float: left;
 	background-image: url(../immagini/logo2.png);
 	background-repeat:no-repeat;
-	margin-top: 0.5em;
+	margin-top: 0.9em;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
@@ -40,6 +41,10 @@ body {
 #header h1 {
 	padding: 1em;
 	padding-left: 10%;
+	color: #C80000;
+	font-size: 2.5em;
+    letter-spacing: .05em;
+    text-shadow: 2px 2px 0px #FD6F2C;
 }
 
 /* Sezione path */
@@ -76,7 +81,7 @@ body {
 }
 
 #menu form input{
-float: left;
+	float: left;
 	width: 100%;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;    	
@@ -447,7 +452,6 @@ a:hover.evento {
     width: 10em;
     height: 7em;
     margin: 0.5em;
-	margin-bottom: none;
     border: 1px solid #FF3300;
     border-radius: 0.1em;
     opacity: 0.8;
@@ -491,7 +495,6 @@ a:hover.evento {
 	background-color: #FDAA4A;
 	width: 40%;
 	margin: 1em;
-	margin-left: none;
 }
 
 #ulChiSiamo > li{
