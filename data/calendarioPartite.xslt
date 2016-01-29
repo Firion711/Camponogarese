@@ -46,7 +46,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 			<li><a href="organizzazione.xml">Chi siamo</a></li>
 			<li><a href="../public_html/squadre.html">Squadre</a></li>
 			<li><a href="../public_html/orario.html">Orari</a></li>
-			<li id="CurrentLink">Calendario partite</li>
+			<li id="CurrentLink">Risultati partite</li>
 			<li><a href="../public_html/photogallery.html"> <span xml:lang="en">Photo Gallery </span></a></li>
 			<li><a href="../public_html/dovesiamo.html">Dove siamo</a></li>
 			
@@ -54,7 +54,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	</div>
 
 	<div id="section">
-	<h1 class="titolo">Calendario e risultati delle partite</h1>
+	<h1 class="titolo">Risultati delle partite</h1>
 <!-- Calendario PICCOLI AMICI -->
 			<div class="linkAncore">
 		<!--link ancore per i risutati delle varie categorie -->

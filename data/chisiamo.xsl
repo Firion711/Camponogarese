@@ -45,7 +45,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 			<li id="CurrentLink">Chi siamo</li>
 			<li><a href="../public_html/squadre.html">Squadre</a></li>
 			<li><a href="../public_html/orario.html">Orari</a></li>
-			<li><a href="calendarioPartite.xml">Calendario partite</a></li>
+			<li><a href="calendarioPartite.xml">Risultati partite</a></li>
 			<li><a href="../public_html/photogallery.html"> <span xml:lang="en">Photo Gallery </span></a></li>
 			<li><a href="../public_html/dovesiamo.html">Dove siamo</a></li>
 
