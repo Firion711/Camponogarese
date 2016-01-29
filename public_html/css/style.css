@@ -478,6 +478,8 @@ a:hover.evento {
 	border-left: 6px solid #FF3300;
 	background-color: #FDAA4A;
 	width: 40%;
+	margin: 1em;
+	margin-left: none;
 }
 
 #ulChiSiamo > li{
