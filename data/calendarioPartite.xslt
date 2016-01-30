@@ -8,7 +8,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <head>
-	<title>Squadra Calcio</title>
+	<title>Risultati partite - Squadra Calcio Camponogarese</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="title" content="Calendario partite - Camponogarese Associazione calcistica dilettantistica" />
 	<meta name="description" content="Calendario di ogni partita per categoria dell'associazione sportiva Camponogarese" />
@@ -251,8 +251,9 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 	</div>
 
 	<div id="footer">
-		<img class="imgValidCode" src="../public_html/immagini/valid-xhtml10.png" alt="XHTML valido" /><img class="imgValidCode" 
-		src="../public_html/immagini/vcss.gif" alt="CSS valido" />
+		<img class="imgValidCode" src="../public_html/immagini/valid-xhtml10.png" alt="XHTML valido" />
+		<img class="imgValidCode" src="../public_html/immagini/vcss.gif" alt="CSS valido" />
+		<img class="imgValidCode" src="immagini/valid_wcag_aaa.gif" alt="WCAG valido" />
 	</div>
 	</body>
 </html>

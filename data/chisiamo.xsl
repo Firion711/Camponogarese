@@ -8,10 +8,10 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" />
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <head>
-	<title>Squadra Calcio</title>
+	<title>Chi siamo - Squadra Calcio Camponogarese</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta name="title" content="Home page - Associazione calcistica dilettantistica Camponogarese" />
+	<meta name="title" content="Chi siamo - Associazione calcistica dilettantistica Camponogarese" />
 	<meta name="description" content="Pagina principale del sito A.C.D. Camponogarese" />
 	<meta name="keywords" content="Camponogarese, associazione, sport, calcio, squadra, partita, piccoli amici camponogara, esordienti camponogara, giovanissimi camponogara" />
 	<meta name="language" content="italian it" />
