@@ -388,7 +388,7 @@ EOF
 	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 		<script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
-	 <body onload="hideDati(); caricamento(form_partite);">
+	 <body onload="caricamento(form_partite);">
 	 <div id="header">
 		<span id="logo"></span>
 		<h1><abbr title="Associazione calcistica dilettantistica">A.C.D.</abbr> Camponogarese</h1>
@@ -451,34 +451,79 @@ EOF
 	</ul>
 </div>
 	<form id="formPersonale" action="aggiungiPartita.cgi" method="post" class="styleForm">
+	
+EOF
+
+	if ($categoria eq 'piccoliAmici')
+	{
+		print <<EOF;
 			<fieldset>
 				<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
 			<fieldset>
 				<legend>Scegli la categoria</legend>
 					<label for="piccoliAmici">Piccoli amici</label>
-						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici" onclick="cbCheckPartite();"/>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici" checked="true" />
 					<label for="esordienti">Esordienti</label>
-						<input type="radio" name="categoria" id="esordienti" value="esordienti" onclick="cbCheckPartite();"/>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti" />
 					<label for="giovanissimi">Giovanissimi</label>
-						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" onclick="cbCheckPartite();"/>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" />
 			</fieldset>
+	
+EOF
+	}
+	
+	if ($categoria eq 'esordienti')
+	{
+		print <<EOF;
+			<fieldset>
+				<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+					<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici" />
+					<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti" checked="true" />
+					<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" />
+			</fieldset>
+EOF
+	}
+	
+		if ($categoria eq 'giovanissimi')
+	{
+		print <<EOF;
+			<fieldset>
+				<legend><strong>Aggiungi il risultato della prossima partita</strong></legend>
+			<fieldset>
+				<legend>Scegli la categoria</legend>
+					<label for="piccoliAmici">Piccoli amici</label>
+						<input type="radio" name="categoria" id="piccoliAmici" value="piccoliAmici" />
+					<label for="esordienti">Esordienti</label>
+						<input type="radio" name="categoria" id="esordienti" value="esordienti" />
+					<label for="giovanissimi">Giovanissimi</label>
+						<input type="radio" name="categoria" id="giovanissimi" value="giovanissimi" checked="true" />
+			</fieldset>
+EOF
+	}
+		
+		print <<EOF;
 			<div id="listaDati">
 			<fieldset>
 				<legend><strong>Inserisci i dati</strong></legend>
 				<label for="casa">Squadra di casa</label>
-				<span><input type="text" id="casa" name="casa" maxlength="20"/></span>
+				<span><input type="text" id="casa" name="casa" maxlength="20" value="$casa" /></span>
 				<br />
 				<label for="trasferta">Squadra in trasferta</label>
-				<span><input type="text" id="trasferta" name="trasferta" maxlength="20"/></span>
+				<span><input type="text" id="trasferta" name="trasferta" maxlength="20" value="$trasferta" /></span>
 				<br />
 				<label for="data">Data</label>
-				<span><input type="text" id="data" name="data" maxlength="10"/></span>
+				<span><input type="text" id="data" name="data" maxlength="10" value="$data" /></span>
 				<br />
 				<label for="goalCasa">Goal della squadra di casa</label>
-				<span><input type="number" id="goalCasa" name="goalCasa" min="0" max="99"/></span>
+				<span><input type="number" id="goalCasa" name="goalCasa" min="0" max="99" value="$goalCasa" /></span>
 				<br/>
 				<label for="goalTrasf">Goal della squadra in trasferta</label>
-				<span><input type="number" id="goalTrasf" name="goalTrasf" min="0" max="99"/></span>
+				<span><input type="number" id="goalTrasf" name="goalTrasf" min="0" max="99" value="$goalTrasf"/></span>
 				<br />
 				
 			</fieldset>
@@ -496,3 +541,4 @@ EOF
 }
 }
 }
+
