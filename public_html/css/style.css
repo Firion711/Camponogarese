@@ -193,6 +193,10 @@ body {
 	word-wrap: break-word;
 }
 
+#tabellaOrari caption{
+	caption-side: bottom;
+}
+
 #tabellaOrari tr:nth-child(odd) {background-color: #FFFF99}
 
 /* Sezione News */
@@ -269,13 +273,13 @@ a:focus.nascosto
 	display: block;
 	font-size: 100%;
 	padding: 1%;
-	border: 3px solid #717D7D;
+	border: 1px solid #717D7D;
 }
 
 .linkAncore ul{
 	display: inline-block;
 	list-style: none;
-	margin-left: 2em;
+	margin-left: 1em;
 }
 
 .linkAncore li{   
@@ -285,29 +289,29 @@ a:focus.nascosto
 .linkAncore li a{
 	display: block;
 	background-color: #FF9933;
-	padding: 0.7em;
+	padding: 0.4em;
 	text-align: center;
 	text-decoration: none;
 	margin: 0.2em;
-	border-bottom: 0.5em solid #CC3300;
+	border-bottom: 0.3em solid #CC3300;
 }
 
 .linkAncore li a:hover:not(.active){
 	color: black;
 	background-color: #FF6633;
-	border-bottom: 0.5em solid #FF3300;
+	border-bottom: 0.3em solid #FF3300;
 }
 
 li > a.active{
     background-color: #880000 ;
     color: white;
 	font-weight: bold;
-	border-bottom: 0.5em solid #FF3300;
+	border-bottom: 0.3em solid #FF3300;
 }
 
 .listaEventi{
 	margin: 0.5em 0em 0.5em;
-	border: 3px solid #717D7D;
+	border: 1px solid #717D7D;
 	padding: 0.5em 0em 0.5em ;
 	height: auto;
 	width: auto;
@@ -492,7 +496,7 @@ a:hover.evento {
 #ulChiSiamo{
 	list-style: none;
 	border-left: 6px solid #FF3300;
-	background-color: #FDAA4A;
+	background-color: #FFCC66;
 	width: 40%;
 	margin: 1em;
 }
