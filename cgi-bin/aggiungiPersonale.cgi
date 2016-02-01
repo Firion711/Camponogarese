@@ -24,8 +24,9 @@ print <<ENDHTML;
 	  <meta name="keywords" content="Camponogarese,login" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen and (min-width: 650px)" />
 	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/small-devices.css" media="screen and (max-width: 650px)" />
 	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 	</head>
 <body>
@@ -74,8 +75,9 @@ print <<EOF;
 	  <meta name="keywords" content="Camponogarese,personale" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen and (min-width: 650px)" />
 	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/small-devices.css" media="screen and (max-width: 650px)" />
 	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 		<script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>
@@ -389,8 +391,9 @@ else #Stampa la form con gli errori (wizard javascript disabilitato volutamente)
 	  <meta name="keywords" content="Camponogarese,personale" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen and (min-width: 650px)" />
 	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/small-devices.css" media="screen and (max-width: 650px)" />
 	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 	 <script type="text/javascript" src="../public_html/script/adminScript.js"></script>
 	 </head>

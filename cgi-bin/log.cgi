@@ -26,8 +26,9 @@ print <<ENDHTML;
 	  <meta name="keywords" content="Camponogarese,login" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen and (min-width: 650px)" />
 	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/small-devices.css" media="screen and (max-width: 650px)" />
 	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 	</head>
 <body>
@@ -71,8 +72,9 @@ print <<ENDHTML;
 	  <meta name="keywords" content="Camponogarese,login" />
 	  <meta name="language" content="italian it" />
 	  <meta name="author" content="Daniel De Gaspari, Davide Santimaria, Emanuele Carraro, Jordan Gottardo" />
-	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/style.css" media="screen and (min-width: 650px)" />
 	  <link rel="stylesheet" type="text/css" href="../public_html/css/print.css" media="print" />
+	  <link rel="stylesheet" type="text/css" href="../public_html/css/small-devices.css" media="screen and (max-width: 650px)" />
 	  <link rel="icon" href="../public_html/immagini/logo.png" type="image/png" />
 	</head>
 <body>

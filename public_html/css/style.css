@@ -279,7 +279,6 @@ a:focus.nascosto
 .linkAncore ul{
 	display: inline-block;
 	list-style: none;
-	margin-left: 1em;
 }
 
 .linkAncore li{   
@@ -288,23 +287,26 @@ a:focus.nascosto
 
 .linkAncore li a{
 	display: block;
-	background-color: #FF9933;
+	background-color: #880000;
 	padding: 0.4em;
 	text-align: center;
 	text-decoration: none;
 	margin: 0.2em;
 	border-bottom: 0.3em solid #CC3300;
+	color: white;
+	font-weight: bold;
 }
 
 .linkAncore li a:hover:not(.active){
-	color: black;
-	background-color: #FF6633;
+	color: #880000;
+	background-color: white;
 	border-bottom: 0.3em solid #FF3300;
+	font-weight: bold;
 }
 
 li > a.active{
-    background-color: #880000 ;
-    color: white;
+    background-color: #FD6F2C;
+	color: black;
 	font-weight: bold;
 	border-bottom: 0.3em solid #FF3300;
 }
@@ -369,13 +371,13 @@ a:hover.evento {
 }
 
 .listaSquadre .selected{
-	border-bottom: 6px solid red;
+	border-bottom: 6px solid #FFCC00;
 }
 
 .listaSquadre a{
 	text-decoration: none;
     display: block;
-    border-bottom: 6px solid #fc6;
+    border-bottom: 6px solid #880000;
     color: #102847;
 	padding: 0 0.5em;
 }
@@ -383,7 +385,7 @@ a:hover.evento {
 .listaSquadre a:hover{
 	text-decoration: none;
     display: block;
-    border-bottom: 6px solid red;
+    border-bottom: 6px solid white;
     color: black;
 	padding: 0 0.5em;
 }
